@@ -1,0 +1,48 @@
+---
+title: "Banco de Dados Tintas Artísticas"
+---
+
+## Funcionalidades
+
+### Catálogo de Pigmentos
+
+Consulta detalhada de pigmentos com:
+
+- Nome comercial  
+- Nome químico  
+- Fórmula  
+- Índice de Cor (CI)  
+- Toxicidade  
+- Estabilidade  
+
+---
+
+### Análises e Comparações
+
+- Comparação entre diferentes tintas  
+- Visualização gráfica de propriedades  
+- Organização por fabricante ou composição  
+
+---
+
+### Dados Técnicos
+
+Registro de:
+
+- Espectros analíticos  
+- Resultados laboratoriais  
+- Estudos de caracterização  
+
+---
+
+## Explorar a Base de Dados
+
+Acesse o catálogo completo e realize buscas por:
+
+- Nome da tinta  
+- Pigmento  
+- Fabricante  
+- Tipo de ligante  
+- Propriedades específicas  
+
+---

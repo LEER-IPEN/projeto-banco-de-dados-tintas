@@ -8,8 +8,18 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: banco.qmd
+        text: Banco De Dados
+      - href: contato.qmd
+        text: Contato
     right:
       - about.qmd
+      - icon: github
+        href: https://github.com/LEER-IPEN/projeto-banco-de-dados-tintas
+  page-footer: "© 2026 Projeto Banco de Dados de Tintas Artísticas - Desenvolvido para pesquisa, ensino e conservação do patrimônio artístico."
+
+filters:
+  - carousel
 
 format:
   html:
@@ -18,6 +28,3 @@ format:
       - brand
     css: styles.css
     toc: true
-
-
-
