@@ -7,13 +7,6 @@
     "text": "O Projeto Banco de Dados Tintas Artísticas tem como objetivo estruturar, armazenar e analisar informações técnicas, químicas e cromáticas de tintas utilizadas em arte, conservação e pesquisa científica."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "index.html#organização-e-análise-de-tintas-artísticas",
     "href": "index.html#organização-e-análise-de-tintas-artísticas",
     "title": "Projeto Banco de Dados Tintas Artísticas",
@@ -54,5 +47,12 @@
     "title": "Projeto Banco de Dados Tintas Artísticas",
     "section": "📬 Contato",
     "text": "📬 Contato\nPara colaborar ou obter mais informações:\n📧 email@exemplo.com\n🌐 Em breve: portal interativo\n\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n© 2026 Projeto Banco de Dados Tintas Artísticas\nDesenvolvido para pesquisa, ensino e conservação do patrimônio artístico."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
   }
 ]
