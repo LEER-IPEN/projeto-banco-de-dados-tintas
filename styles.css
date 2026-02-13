@@ -1,1 +1,12 @@
 /* css styles */
+
+.nav-footer {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    color: white;
+    box-sizing: border-box;
+}

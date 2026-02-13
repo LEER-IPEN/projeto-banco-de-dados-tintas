@@ -1,5 +1,14 @@
 ---
-title: "About"
+title: "Sobre"
 ---
 
-About this site
+Este projeto busca criar uma base de dados confiável e organizada contendo:
+
+- Informações sobre **pigmentos históricos e modernos**
+- Dados de **composição química**
+- Propriedades **físico-químicas**
+- Informações sobre **estabilidade e degradação**
+- Aplicações artísticas e contextos históricos
+
+---
+
