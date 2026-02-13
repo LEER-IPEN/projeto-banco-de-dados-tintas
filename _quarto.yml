@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: "docs"
 
 website:
   title: "LEER - IPEN"
@@ -7,6 +8,7 @@ website:
     left:
       - href: index.qmd
         text: Home
+    right:
       - about.qmd
 
 format:
