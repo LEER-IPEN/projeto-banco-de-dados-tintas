@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Projeto Banco de Dados de Tintas Artísticas",
+    "title": "Banco de Dados de Tintas Artísticas",
     "section": "",
     "text": "Previous\n      \n    \n      \n      \n      Next\nO Projeto Banco de Dados Tintas Artísticas tem como objetivo estruturar, armazenar e analisar informações técnicas, químicas e cromáticas de tintas utilizadas em arte, conservação e pesquisa científica."
   },
@@ -37,7 +37,7 @@
   {
     "objectID": "index.html#público-alvo",
     "href": "index.html#público-alvo",
-    "title": "Projeto Banco de Dados de Tintas Artísticas",
+    "title": "Banco de Dados de Tintas Artísticas",
     "section": "Público-Alvo",
     "text": "Público-Alvo\n\nPesquisadores em conservação e restauro\n\nArtistas\n\nEstudantes de artes e química\n\nLaboratórios de análise de materiais"
   },
@@ -58,9 +58,9 @@
   {
     "objectID": "contato.html",
     "href": "contato.html",
-    "title": "📬 Contato",
+    "title": "Contato",
     "section": "",
-    "text": "Para colaborar ou obter mais informações:\n📧 email@exemplo.com\n🌐 Em breve: portal interativo\n\n\n\n© 2026 Projeto Banco de Dados Tintas Artísticas - Desenvolvido para pesquisa, ensino e conservação do patrimônio artístico."
+    "text": "Para colaborar ou obter mais informações:\n\nemail@exemplo.com\n\nEm breve: portal interativo"
   },
   {
     "objectID": "about.html#sobre-o-projeto",
@@ -72,22 +72,29 @@
   {
     "objectID": "banco.html",
     "href": "banco.html",
-    "title": "Banco de Dados Tintas Artísticas",
+    "title": "Banco de Dados de Tintas Artísticas",
     "section": "",
     "text": "Consulta detalhada de pigmentos com:\n\nNome comercial\n\nNome químico\n\nFórmula\n\nÍndice de Cor (CI)\n\nToxicidade\n\nEstabilidade\n\n\n\n\n\n\nComparação entre diferentes tintas\n\nVisualização gráfica de propriedades\n\nOrganização por fabricante ou composição\n\n\n\n\n\nRegistro de:\n\nEspectros analíticos\n\nResultados laboratoriais\n\nEstudos de caracterização"
   },
   {
     "objectID": "banco.html#funcionalidades",
     "href": "banco.html#funcionalidades",
-    "title": "Banco de Dados Tintas Artísticas",
+    "title": "Banco de Dados de Tintas Artísticas",
     "section": "",
     "text": "Consulta detalhada de pigmentos com:\n\nNome comercial\n\nNome químico\n\nFórmula\n\nÍndice de Cor (CI)\n\nToxicidade\n\nEstabilidade\n\n\n\n\n\n\nComparação entre diferentes tintas\n\nVisualização gráfica de propriedades\n\nOrganização por fabricante ou composição\n\n\n\n\n\nRegistro de:\n\nEspectros analíticos\n\nResultados laboratoriais\n\nEstudos de caracterização"
   },
   {
     "objectID": "banco.html#explorar-a-base-de-dados",
     "href": "banco.html#explorar-a-base-de-dados",
-    "title": "Banco de Dados Tintas Artísticas",
+    "title": "Banco de Dados de Tintas Artísticas",
     "section": "Explorar a Base de Dados",
     "text": "Explorar a Base de Dados\nAcesse o catálogo completo e realize buscas por:\n\nNome da tinta\n\nPigmento\n\nFabricante\n\nTipo de ligante\n\nPropriedades específicas"
+  },
+  {
+    "objectID": "index.html#aaa",
+    "href": "index.html#aaa",
+    "title": "Banco de Dados de Tintas Artísticas",
+    "section": "AAA",
+    "text": "AAA\nProjeto Banco de Dados de Tintas Artísticas - Desenvolvido para pesquisa, ensino e conservação do patrimônio artístico."
   }
 ]

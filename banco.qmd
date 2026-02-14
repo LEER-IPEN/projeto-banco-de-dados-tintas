@@ -1,5 +1,5 @@
 ---
-title: "Banco de Dados Tintas Artísticas"
+title: "Banco de Dados de Tintas Artísticas"
 ---
 
 ## Funcionalidades
