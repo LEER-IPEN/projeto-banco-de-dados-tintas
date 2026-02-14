@@ -1,5 +1,5 @@
 ---
-title: "Projeto Banco de Dados de Tintas Artísticas"
+title: "Banco de Dados de Tintas Artísticas"
 ---
 
 :::: {.carousel}
@@ -44,3 +44,6 @@ O **Projeto Banco de Dados Tintas Artísticas** tem como objetivo estruturar, ar
 - Laboratórios de análise de materiais  
 
 ---
+
+## AAA
+Projeto Banco de Dados de Tintas Artísticas - Desenvolvido para pesquisa, ensino e conservação do patrimônio artístico.

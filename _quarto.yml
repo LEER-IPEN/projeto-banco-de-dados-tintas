@@ -3,20 +3,25 @@ project:
   output-dir: "docs"
 
 website:
-  title: "LEER - IPEN"
+  favicon: assets/imgs/favicon.jpg
+  search: 
+    location: navbar
+    type: overlay
   navbar:
+    logo: assets/imgs/logo.png
     left:
-      - href: index.qmd
-        text: Home
       - href: banco.qmd
         text: Banco De Dados
+      - href: about.qmd
+        text: Sobre
       - href: contato.qmd
         text: Contato
     right:
-      - about.qmd
       - icon: github
         href: https://github.com/LEER-IPEN/projeto-banco-de-dados-tintas
-  page-footer: "© 2026 Projeto Banco de Dados de Tintas Artísticas - Desenvolvido para pesquisa, ensino e conservação do patrimônio artístico."
+  page-footer:
+    center: 
+      "Copyright © 2026 Todos os direitos reservados por LEER - IPEN"
 
 filters:
   - carousel
@@ -28,3 +33,5 @@ format:
       - brand
     css: styles.css
     toc: true
+
+

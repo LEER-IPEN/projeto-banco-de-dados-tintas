@@ -1,8 +1,8 @@
 ---
-title: "📬 Contato"
+title: "Contato"
 ---
 
 Para colaborar ou obter mais informações:
 
-📧 email@exemplo.com  
-🌐 Em breve: portal interativo
+- email@exemplo.com  
+- Em breve: portal interativo

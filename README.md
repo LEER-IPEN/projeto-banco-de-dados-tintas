@@ -1,1 +1,1 @@
-# projeto-banco-de-dados-tintas
+# Projeto - Banco de Dados de Tintas Artísticas
