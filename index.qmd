@@ -38,7 +38,7 @@ O **Projeto Banco de Dados Tintas Artísticas** tem como objetivo estruturar, ar
 
 ---
 
-### Funcionalidades:
+### Funcionalidades
 
 ---
 
