@@ -2,41 +2,78 @@
 title: "Banco de Dados de Tintas Artísticas"
 ---
 
-:::: {.carousel}
+:::: {.carousel .dark .framed}
 
-:::: {.carousel-item image="assets/imgs/image.jpeg"}
+:::: {.carousel-item image="assets/imgs/image.jpeg" caption="Tucano"}
 :::
 
-:::: {.carousel-item image="assets/imgs/image2.jpeg"}
+:::: {.carousel-item image="assets/imgs/image2.jpeg" caption="Carcará"}
 :::
 
-:::: {.carousel-item image="assets/imgs/image3.jpeg"}
+:::: {.carousel-item image="assets/imgs/image3.jpeg" caption="Jacu"}
 :::
 
-:::: {.carousel-item image="assets/imgs/image4.jpeg"}
+:::: {.carousel-item image="assets/imgs/image4.jpeg" caption="Quero-quero"}
 :::
 
-:::: {.carousel-item image="assets/imgs/image5.jpeg"}
+:::: {.carousel-item image="assets/imgs/image5.jpeg" caption="Pica-pau"}
 :::
 
-:::: {.carousel-item image="assets/imgs/image6.jpeg"}
+:::: {.carousel-item image="assets/imgs/image6.jpeg" caption="Gavião-branco"}
 :::
 
-:::: {.carousel-item image="assets/imgs/image7.jpeg"}
+:::: {.carousel-item image="assets/imgs/image7.jpeg" caption="Tucano"}
 :::
 
-:::: {.carousel-item image="assets/imgs/image8.jpeg"}
+:::: {.carousel-item image="assets/imgs/image8.jpeg" caption="Thales !?"}
 :::
 
 :::
 
 ---
+
+### O Projeto
 
 O **Projeto Banco de Dados Tintas Artísticas** tem como objetivo estruturar, armazenar e analisar informações técnicas, químicas e cromáticas de tintas utilizadas em arte, conservação e pesquisa científica.
 
 ---
 
-## Público-Alvo
+### Funcionalidades:
+
+---
+
+#### Dados Técnicos
+
+Registro de:
+
+- Espectros analíticos  
+- Resultados laboratoriais  
+- Estudos de caracterização  
+
+---
+
+#### Catálogo de Pigmentos
+
+Consulta detalhada de pigmentos com:
+
+- Nome comercial  
+- Nome químico  
+- Fórmula  
+- Índice de Cor (CI)  
+- Toxicidade  
+- Estabilidade  
+
+---
+
+#### Análises e Comparações
+
+- Comparação entre diferentes tintas  
+- Visualização gráfica de propriedades  
+- Organização por fabricante ou composição  
+
+---
+
+### Público-Alvo
 
 - Pesquisadores em conservação e restauro  
 - Artistas  
@@ -45,5 +82,4 @@ O **Projeto Banco de Dados Tintas Artísticas** tem como objetivo estruturar, ar
 
 ---
 
-## AAA
-Projeto Banco de Dados de Tintas Artísticas - Desenvolvido para pesquisa, ensino e conservação do patrimônio artístico.
+

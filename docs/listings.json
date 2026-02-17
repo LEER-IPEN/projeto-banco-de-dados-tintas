@@ -1,0 +1,14 @@
+[
+  {
+    "listing": "/banco-de-dados/banco.html",
+    "items": []
+  },
+  {
+    "listing": "/banco.html",
+    "items": [
+      "/tintas/tintas.html",
+      "/tintas/tinta3.html",
+      "/tintas/tinta2.html"
+    ]
+  }
+]

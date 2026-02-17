@@ -1,0 +1,29 @@
+[
+  {
+    "id": "tinta-verde-ftalo",
+    "nome": "Tinta Verde Ftalo",
+    "pigmento": "PG7",
+    "fabricante": "Winsor & Newton",
+    "ligante": "Acrílica",
+    "ci": "74260",
+    "toxicidade": "Baixa"
+  },
+  {
+    "id": "tinta-ocre-amarelo",
+    "nome": "Tinta Ocre Amarelo",
+    "pigmento": "PY43",
+    "fabricante": "Gamblin",
+    "ligante": "Óleo",
+    "ci": "77492",
+    "toxicidade": "Baixa"
+  },
+    {
+    "id": "tinta-azul",
+    "nome": "Tinta Azul",
+    "pigmento": "PY43",
+    "fabricante": "Gamblin",
+    "ligante": "Óleo",
+    "ci": "77492",
+    "toxicidade": "Baixa"
+  }
+]
