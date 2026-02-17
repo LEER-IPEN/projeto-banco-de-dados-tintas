@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sobre</title>
+<title>tinta</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -96,11 +96,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Início</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./banco-de-dados/banco.qmd"> 
+    <a class="nav-link" href="./banco.html"> 
 <span class="menu-text">Banco De Dados</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">Sobre</span></a>
   </li>  
   <li class="nav-item">
@@ -129,36 +129,42 @@ ul.task-list li input[type="checkbox"] {
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Sobre</h1>
+
+
+
+<div id="conteudo">
+
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", async function () {
 
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
 
+  const response = await fetch("/dados/tintas.json");
+  const tintas = await response.json();
 
-<div class="quarto-title-meta">
+  const tinta = tintas.find(t => t.id === id);
 
-    
-  
-    
-  </div>
-  
+  const container = document.getElementById("conteudo");
 
+  if (!tinta) {
+    container.innerHTML = "<p>Tinta não encontrada.</p>";
+    return;
+  }
 
-</header>
-
-
-<p>Este projeto busca criar uma base de dados confiável e organizada contendo:</p>
-<ul>
-<li>Informações sobre <strong>pigmentos históricos e modernos</strong></li>
-<li>Dados de <strong>composição química</strong></li>
-<li>Propriedades <strong>físico-químicas</strong></li>
-<li>Informações sobre <strong>estabilidade e degradação</strong></li>
-<li>Aplicações artísticas e contextos históricos</li>
-</ul>
-<hr>
+  container.innerHTML = `
+    <h1>${tinta.nome}</h1>
+    <p><strong>Pigmento:</strong> ${tinta.pigmento}</p>
+    <p><strong>Fabricante:</strong> ${tinta.fabricante}</p>
+    <p><strong>Ligante:</strong> ${tinta.ligante}</p>
+    <p><strong>CI:</strong> ${tinta.ci}</p>
+    <p><strong>Toxicidade:</strong> ${tinta.toxicidade}</p>
+  `;
+});
+</script>
 
 
 
