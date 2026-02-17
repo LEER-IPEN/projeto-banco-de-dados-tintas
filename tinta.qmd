@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
 
-  const response = await fetch("/dados/tintas.json");
+  const response = await fetch("dados/tintas.json");
   const tintas = await response.json();
 
   const tinta = tintas.find(t => t.id === id);
