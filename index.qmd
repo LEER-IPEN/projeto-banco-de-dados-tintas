@@ -1,8 +1,9 @@
 ---
-title: "Banco de Dados de Tintas Artísticas"
+title: ""
+page-layout: full
 ---
 
-:::: {.carousel .dark .framed}
+:::: {.carousel}
 
 :::: {.carousel-item image="assets/imgs/image.jpeg" caption="Tucano"}
 :::
@@ -29,6 +30,8 @@ title: "Banco de Dados de Tintas Artísticas"
 :::
 
 :::
+
+# Banco de Dados de Tintas Artísticas
 
 ---
 

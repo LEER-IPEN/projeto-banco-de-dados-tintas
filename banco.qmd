@@ -1,6 +1,7 @@
 ---
 title: "Explore a Base de Dados"
 format: html
+page-layout: full
 execute: 
   enebled: false
 ---
