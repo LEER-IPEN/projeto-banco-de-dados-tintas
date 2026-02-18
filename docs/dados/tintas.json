@@ -6,7 +6,8 @@
     "fabricante": "Winsor & Newton",
     "ligante": "Acrílica",
     "ci": "74260",
-    "toxicidade": "Baixa"
+    "toxicidade": "Baixa",
+    "imagem": "dados/espectros/verde-ftalo.jpg"
   },
   {
     "id": "tinta-ocre-amarelo",
@@ -15,7 +16,8 @@
     "fabricante": "Gamblin",
     "ligante": "Óleo",
     "ci": "77492",
-    "toxicidade": "Baixa"
+    "toxicidade": "Baixa",
+    "imagem": "dados/espectros/verde-ftalo.jpg"
   },
     {
     "id": "tinta-azul",
@@ -24,6 +26,7 @@
     "fabricante": "Gamblin",
     "ligante": "Óleo",
     "ci": "77492",
-    "toxicidade": "Baixa"
+    "toxicidade": "Baixa",
+    "imagem": "dados/espectros/verde-ftalo.jpg"
   }
 ]

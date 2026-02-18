@@ -122,14 +122,14 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
@@ -156,12 +156,22 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 
   container.innerHTML = `
-    <h1>${tinta.nome}</h1>
+    <div class="top-bar">
+      <h1>${tinta.nome}</h1>
+      <button onclick="window.print()" class="btn btn-success">
+        Download PDF
+      </button>
+    </div>
+    <div>
+      Espectro de Fluorescência de Raios X - AgV:
+    </div>
+    <img src="${tinta.imagem}" class="imagem-tinta"> 
+
+    <p><strong>Elementos majoritários:</strong></p>
+    <p><strong>Elementos traços:</strong></p>
     <p><strong>Pigmento:</strong> ${tinta.pigmento}</p>
     <p><strong>Fabricante:</strong> ${tinta.fabricante}</p>
     <p><strong>Ligante:</strong> ${tinta.ligante}</p>
-    <p><strong>CI:</strong> ${tinta.ci}</p>
-    <p><strong>Toxicidade:</strong> ${tinta.toxicidade}</p>
   `;
 });
 </script>

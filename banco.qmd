@@ -59,13 +59,22 @@ document.addEventListener("DOMContentLoaded", function () {
       const bloco = document.createElement("div");
 
       bloco.innerHTML = `
-        <a href="tinta.html?id=${item.id}">
-          <strong>${item.nome}</strong>
-        </a>
-        <div>
-          Pigmento: ${item.pigmento} |
-          Fabricante: ${item.fabricante} |
-          Ligante: ${item.ligante}
+        <div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;">
+          
+          <img src="${item.imagem}" 
+              style="width:100px; height:100px; object-fit:cover; border-radius:6px;">
+
+          <div>
+            <a href="tinta.html?id=${item.id}">
+              <strong style="font-size:1.1em;">${item.nome}</strong>
+            </a>
+            <div style="font-size:0.9em; color:#555;">
+              Pigmento: ${item.pigmento} <br>
+              Fabricante: ${item.fabricante} <br>
+              Ligante: ${item.ligante}
+            </div>
+          </div>
+
         </div>
         <hr>
       `;
