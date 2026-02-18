@@ -15,3 +15,18 @@
     color: white;
     box-sizing: border-box;
 }
+
+.imagem-tinta {
+  width: 1100px;
+  max-width: 100%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}

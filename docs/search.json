@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Banco de Dados de Tintas Artísticas",
+    "objectID": "contato.html",
+    "href": "contato.html",
+    "title": "Contato",
     "section": "",
-    "text": "Tucano\n\n\n\n\n\nCarcará\n\n\n\n\n\nJacu\n\n\n\n\n\nQuero-quero\n\n\n\n\n\nPica-pau\n\n\n\n\n\nGavião-branco\n\n\n\n\n\nTucano\n\n\n\n\n\nThales !?\n\n\n\n      \n      \n      Previous\n      \n    \n      \n      \n      Next\n      \n    \n\n\n\nO Projeto\nO Projeto Banco de Dados Tintas Artísticas tem como objetivo estruturar, armazenar e analisar informações técnicas, químicas e cromáticas de tintas utilizadas em arte, conservação e pesquisa científica.\n\n\n\nFuncionalidades\n\n\nDados Técnicos\nRegistro de:\n\nEspectros analíticos\n\nResultados laboratoriais\n\nEstudos de caracterização\n\n\n\n\nCatálogo de Pigmentos\nConsulta detalhada de pigmentos com:\n\nNome comercial\n\nNome químico\n\nFórmula\n\nÍndice de Cor (CI)\n\nToxicidade\n\nEstabilidade\n\n\n\n\nAnálises e Comparações\n\nComparação entre diferentes tintas\n\nVisualização gráfica de propriedades\n\nOrganização por fabricante ou composição\n\n\n\n\n\nPúblico-Alvo\n\nPesquisadores em conservação e restauro\n\nArtistas\n\nEstudantes de artes e química\n\nLaboratórios de análise de materiais"
+    "text": "Para colaborar ou obter mais informações:\n\nemail@exemplo.com\n\nEm breve: portal interativo"
   },
   {
     "objectID": "about.html",
@@ -14,31 +14,17 @@
     "text": "Este projeto busca criar uma base de dados confiável e organizada contendo:\n\nInformações sobre pigmentos históricos e modernos\nDados de composição química\nPropriedades físico-químicas\nInformações sobre estabilidade e degradação\nAplicações artísticas e contextos históricos"
   },
   {
-    "objectID": "banco-de-dados/banco.html",
-    "href": "banco-de-dados/banco.html",
-    "title": "Explore a Base de Dados",
-    "section": "",
-    "text": "Acesse o banco completo e realize buscas por:\n\nNome da tinta\n\nPigmento\n\nFabricante\n\nTipo de ligante\n\nPropriedades específicas\n\n\n  \n\n\n\n\n\nNome\n\n\nPigmento\n\n\nFabricante\n\n\nCI\n\n\nToxicidade\n\n\nEstabilidade"
-  },
-  {
-    "objectID": "contato.html",
-    "href": "contato.html",
-    "title": "Contato",
-    "section": "",
-    "text": "Para colaborar ou obter mais informações:\n\nemail@exemplo.com\n\nEm breve: portal interativo"
-  },
-  {
-    "objectID": "banco-de-dados/tintas/tintas.html",
-    "href": "banco-de-dados/tintas/tintas.html",
-    "title": "Explore a Base de Dados",
-    "section": "",
-    "text": "Busca Avançada\n\n   \n\n\n\n\n\nNome\n\n\nPigmento\n\n\nFabricante\n\n\nLigante\n\n\nCI\n\n\nToxicidade\n\n\nEstabilidade"
-  },
-  {
     "objectID": "banco.html",
     "href": "banco.html",
     "title": "Explore a Base de Dados",
     "section": "",
     "text": "Acesse o banco completo e realize buscas por:\n\nNome da tinta\n\nPigmento\n\nFabricante\n\nTipo de ligante\n\n\n\n  \n Ligante Óleo Acrílica \nPesquisar"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Banco de Dados de Tintas Artísticas",
+    "section": "",
+    "text": "Tucano\n\n\n\n\n\nCarcará\n\n\n\n\n\nJacu\n\n\n\n\n\nQuero-quero\n\n\n\n\n\nPica-pau\n\n\n\n\n\nGavião-branco\n\n\n\n\n\nTucano\n\n\n\n\n\nThales !?\n\n\n\n      \n      \n      Previous\n      \n    \n      \n      \n      Next\n      \n    \n\n\n\nO Projeto\nO Projeto Banco de Dados Tintas Artísticas tem como objetivo estruturar, armazenar e analisar informações técnicas, químicas e cromáticas de tintas utilizadas em arte, conservação e pesquisa científica.\n\n\n\nFuncionalidades\n\n\nDados Técnicos\nRegistro de:\n\nEspectros analíticos\n\nResultados laboratoriais\n\nEstudos de caracterização\n\n\n\n\nCatálogo de Pigmentos\nConsulta detalhada de pigmentos com:\n\nNome comercial\n\nNome químico\n\nFórmula\n\nÍndice de Cor (CI)\n\nToxicidade\n\nEstabilidade\n\n\n\n\nAnálises e Comparações\n\nComparação entre diferentes tintas\n\nVisualização gráfica de propriedades\n\nOrganização por fabricante ou composição\n\n\n\n\n\nPúblico-Alvo\n\nPesquisadores em conservação e restauro\n\nArtistas\n\nEstudantes de artes e química\n\nLaboratórios de análise de materiais"
   }
 ]
