@@ -14,10 +14,13 @@ website:
     left:
       - href: index.qmd
         text: Início
+      - text: "|"
       - href: banco.qmd
         text: Banco De Dados
+      - text: "|"
       - href: about.qmd
         text: Sobre
+      - text: "|"
       - href: contato.qmd
         text: Contato
     right:

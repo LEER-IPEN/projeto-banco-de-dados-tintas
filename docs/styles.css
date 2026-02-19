@@ -16,10 +16,24 @@
     box-sizing: border-box;
 }
 
+.homepage main.content {
+  padding-top: 0 !important;
+}
+
+.homepage .navbar {
+  margin-bottom: 0 !important;
+}
+
+.container-texto {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
 .carousel {
   width: 100%;
   aspect-ratio: 16 / 8;
-  max-height: 650px;
+  max-height: 450px;
   overflow: hidden;
 }
 
@@ -45,7 +59,7 @@
 
   border-top: 2px solid white;
   background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(3px);
 
   color: white !important;
   font-size: 1.4rem;

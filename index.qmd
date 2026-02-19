@@ -1,7 +1,10 @@
 ---
 title: ""
 page-layout: full
+toc: false
+body-classes: homepage
 ---
+:::: {.container-texto}
 
 :::: {.carousel}
 
@@ -85,4 +88,4 @@ Consulta detalhada de pigmentos com:
 
 ---
 
-
+:::

@@ -1,8 +1,15 @@
 ---
-title: "Contato"
+title: ""
+page-layout: full
+toc: false
 ---
+
+:::: {.container-texto}
+
+# Contato
 
 Para colaborar ou obter mais informações:
 
 - email@exemplo.com  
 - Em breve: portal interativo
+:::
