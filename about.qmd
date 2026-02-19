@@ -1,6 +1,12 @@
 ---
-title: "Sobre"
+title: ""
+page-layout: full
+toc: false
 ---
+
+:::: {.container-texto}
+
+# Sobre
 
 Este projeto busca criar uma base de dados confiável e organizada contendo:
 
@@ -11,4 +17,4 @@ Este projeto busca criar uma base de dados confiável e organizada contendo:
 - Aplicações artísticas e contextos históricos
 
 ---
-
+:::

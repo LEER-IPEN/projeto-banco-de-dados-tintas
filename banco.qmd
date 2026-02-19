@@ -1,10 +1,14 @@
 ---
-title: "Explore a Base de Dados"
+title: ""
 format: html
 page-layout: full
 execute: 
   enebled: false
+toc: false
 ---
+:::: {.container-texto}
+
+# Explore a Base de Dados
 
 Acesse o banco completo e realize buscas por:
 
@@ -117,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-
+:::
 
 
 
