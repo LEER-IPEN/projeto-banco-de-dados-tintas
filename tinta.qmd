@@ -8,40 +8,149 @@ execute:
 <div id="conteudo"></div>
 
 <script>
-document.addEventListener("DOMContentLoaded", async function () {
+  document.addEventListener("DOMContentLoaded", async function () {
 
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get("id");
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
 
-  const response = await fetch("dados/tintas.json");
-  const tintas = await response.json();
+    const response = await fetch("dados/tintas.json");
+    const tintas = await response.json();
 
-  const tinta = tintas.find(t => t.id === id);
+    const tinta = tintas.find(t => t.id === id);
+    const container = document.getElementById("conteudo");
 
-  const container = document.getElementById("conteudo");
+    let botoesEspectro = "";
+    let conteudoEspectro = "";
 
-  if (!tinta) {
-    container.innerHTML = "<p>Tinta não encontrada.</p>";
-    return;
-  }
+    if (!tinta) {
+      container.innerHTML = "<p>Tinta não encontrada.</p>";
+      return;
+    }
 
-  container.innerHTML = `
-    <div class="top-bar">
-      <h1>${tinta.nome}</h1>
-      <button onclick="window.print()" class="btn btn-success">
-        Download PDF
-      </button>
-    </div>
-    <div>
-      Espectro de Fluorescência de Raios X - AgV:
-    </div>
-    <img src="${tinta.imagem}" class="imagem-tinta"> 
+    if (tinta.tecnica.sigla === "FRX" && tinta.espectros) {
 
-    <p><strong>Elementos majoritários:</strong></p>
-    <p><strong>Elementos traços:</strong></p>
-    <p><strong>Pigmento:</strong> ${tinta.pigmento}</p>
-    <p><strong>Fabricante:</strong> ${tinta.fabricante}</p>
-    <p><strong>Ligante:</strong> ${tinta.ligante}</p>
-  `;
-});
+      botoesEspectro = `
+        <div class="tabs">
+          <span class="label-tabs">Escolha o tipo:</span>
+          <button class="tab-btn active" data-tab="graf1" data-tipo="AgV">AgV</button>
+          <button class="tab-btn" data-tab="graf2" data-tipo="RhV">RhV</button>
+          <button class="tab-btn" data-tab="graf3" data-tipo="AuV">AuV</button>
+        </div>
+      `;
+
+      conteudoEspectro = `
+        <div class="card-grafico">
+
+          <div class="cabecalho-grafico" id="titulo-grafico">
+            ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - AgV
+          </div>
+
+          <div class="conteudo-grafico active" id="graf1">
+            <div class="titulo-print">
+              ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - AgV
+            </div>
+            <img src="${tinta.espectros.AgV}" class="imagem-tinta">
+          </div>
+
+          <div class="conteudo-grafico" id="graf2">
+            <div class="titulo-print">
+              ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - RhV
+            </div>
+            <img src="${tinta.espectros.RhV}" class="imagem-tinta">
+          </div>
+
+          <div class="conteudo-grafico" id="graf3">
+            <div class="titulo-print">
+              ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - AuV
+            </div>
+            <img src="${tinta.espectros.AuV}" class="imagem-tinta">
+          </div>
+
+        </div>
+      `;
+    } else {
+        const chaveEspectro = Object.keys(tinta.espectros)[0];
+        const caminhoImagem = tinta.espectros[chaveEspectro];
+
+        conteudoEspectro = `
+          <div class="card-grafico">
+
+            <div class="cabecalho-grafico" id="titulo-grafico">
+              ${tinta.tecnica.nome} (${tinta.tecnica.sigla})
+            </div>
+
+            <div class="conteudo-grafico active">
+              <div class="titulo-print">
+                ${tinta.tecnica.nome} (${tinta.tecnica.sigla})
+              </div>
+              <img src="${caminhoImagem}" class="imagem-tinta">
+            </div>
+
+          </div>
+        `;
+    }
+
+    // 
+    container.innerHTML = `
+      <div class="top-bar">
+        <h1>${tinta.nome} - ${tinta.id}</h1>
+        <button onclick="window.print()" class="btn btn-success">
+          Download PDF
+        </button>
+      </div>
+
+      <h3 class="titulo-secao">Informações Gerais</h3>
+      <table class="tabela-dados">
+        <tr><th>ID</th><td>${tinta.id}</td></tr>
+        <tr><th>Nome do Arquivo</th><td>${tinta.filename}</td></tr>
+        <tr><th>Fabricante</th><td>${tinta.fabricante}</td></tr>
+        <tr><th>Pigmento</th><td>${tinta.pigmento}</td></tr>
+        <tr><th>Medium</th><td>${tinta.medium}</td></tr>
+      </table>
+
+      <h3 class="titulo-secao">Dados Analíticos</h3>
+      <table class="tabela-dados">
+        <tr><th>Técnica</th><td>${tinta.tecnica.sigla} - ${tinta.tecnica.nome}</td></tr>
+        <tr><th>Elementos majoritários</th><td>${tinta.elementos_majoritarios}</td></tr>
+        <tr><th>Elementos traço</th><td>${tinta.elementos_traco}</td></tr>
+      </table>
+
+      <h3 class="titulo-secao">Espectros</h3>
+
+      <div class="area-graficos">
+        <div class="area-graficos">
+          ${botoesEspectro}
+          ${conteudoEspectro}
+        </div>
+      </div>
+    `;
+
+    if (tinta.tecnica.sigla === "FRX") {
+
+      document.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.addEventListener("click", function () {
+
+          document.querySelectorAll(".tab-btn")
+            .forEach(b => b.classList.remove("active"));
+
+          document.querySelectorAll(".conteudo-grafico")
+            .forEach(c => c.classList.remove("active"));
+
+          this.classList.add("active");
+
+          const alvo = document.getElementById(this.dataset.tab);
+          if (alvo) {
+            alvo.classList.add("active");
+          }
+
+          const titulo = document.getElementById("titulo-grafico");
+          titulo.textContent =
+            `${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - ${this.dataset.tipo}`;
+
+        });
+      });
+
+    }
+
+  });
 </script>
