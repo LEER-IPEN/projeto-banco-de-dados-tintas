@@ -1,0 +1,79 @@
+---
+title: ""
+format: html
+page-layout: full
+execute: 
+  enebled: false
+toc: false
+---
+:::: {.container-texto}
+
+# Índice Geral do Banco de Tintas
+
+<div id="lista-tintas"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", async function () {
+
+    const response = await fetch("dados/tintas.json");
+    const tintas = await response.json();
+
+    const container = document.getElementById("lista-tintas");
+    container.innerHTML = "";
+
+    // 🔹 Ordem fixa das técnicas
+    const ordemTecnicas = ["FRX", "RAMAN", "FTIR", "AAN"];
+
+    ordemTecnicas.forEach(sigla => {
+
+      // Filtra tintas da técnica atual
+      const grupo = tintas.filter(item => item.tecnica.sigla === sigla);
+
+      if (grupo.length === 0) return;
+
+      // 🔹 Ordenar por ID (opcional mas recomendado)
+      grupo.sort((a, b) => a.id.localeCompare(b.id));
+
+      // 🔹 Criar título da técnica
+      const titulo = document.createElement("h3");
+      titulo.className = "titulo-tecnica";
+      titulo.textContent = `${sigla} - ${grupo.length} Resultados`;
+      container.appendChild(titulo);
+
+      // 🔹 Criar cards
+      grupo.forEach(item => {
+
+        const bloco = document.createElement("a");
+        bloco.className = "card-tinta";
+        bloco.href = `tinta.html?id=${item.id}`;
+
+        bloco.innerHTML = `
+          <div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;">
+
+              <img src="${item.imagem}" class="thumb">
+
+              <div class="info-tinta">
+                <div class="titulo-tinta">
+                  ${item.id} - ${item.nome}
+                </div>
+                <div class="meta">
+                  Técnica: ${item.tecnica.sigla} - ${item.tecnica.nome}<br>
+                  Pigmento: ${item.pigmento}<br>
+                  Fabricante: ${item.fabricante}<br>
+                  Medium: ${item.medium}
+                </div>
+              </div>
+
+          </div>
+        `;
+
+        container.appendChild(bloco);
+
+      });
+
+    });
+
+  });
+</script>
+
+:::

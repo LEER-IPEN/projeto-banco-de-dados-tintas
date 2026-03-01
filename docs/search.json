@@ -18,7 +18,7 @@
     "href": "banco.html",
     "title": "Explore a Base de Dados",
     "section": "",
-    "text": "Explore a Base de Dados\nAcesse o banco completo e realize buscas por:\n\nNome da tinta\n\nPigmento\n\nFabricante\n\nTipo de ligante\n\n\n\n  \n Ligante Óleo Acrílica \nPesquisar"
+    "text": "Explore a Base de Dados\nAcesse o banco completo e realize buscas por:\n\nNome da tinta\n\nPigmento\n\nFabricante\nTécnica\nTipo de medium\n\n\nOu consulte o   Índice Geral \n\n\n\n Técnica FRX AAN RAMAN FTIR \n Medium Óleo Acrílica \nPesquisar\n\n\n\nResultados"
   },
   {
     "objectID": "index.html",
@@ -40,5 +40,19 @@
     "title": "Banco de Dados de Tintas Artísticas",
     "section": "# aaaaaaaaaaaaaaaa",
     "text": "# aaaaaaaaaaaaaaaa\n\nO Projeto\nO Projeto Banco de Dados Tintas Artísticas tem como objetivo estruturar, armazenar e analisar informações técnicas, químicas e cromáticas de tintas utilizadas em arte, conservação e pesquisa científica.\n\n\n\nFuncionalidades\n\n\nDados Técnicos\nRegistro de:\n\nEspectros analíticos\n\nResultados laboratoriais\n\nEstudos de caracterização\n\n\n\n\nCatálogo de Pigmentos\nConsulta detalhada de pigmentos com:\n\nNome comercial\n\nNome químico\n\nFórmula\n\nÍndice de Cor (CI)\n\nToxicidade\n\nEstabilidade\n\n\n\n\nAnálises e Comparações\n\nComparação entre diferentes tintas\n\nVisualização gráfica de propriedades\n\nOrganização por fabricante ou composição\n\n\n\n\n\nPúblico-Alvo\n\nPesquisadores em conservação e restauro\n\nArtistas\n\nEstudantes de artes e química\n\nLaboratórios de análise de materiais"
+  },
+  {
+    "objectID": "banco.html#consulte-o-índice",
+    "href": "banco.html#consulte-o-índice",
+    "title": "Explore a Base de Dados",
+    "section": "",
+    "text": "Medium Óleo Acrílica \nPesquisar"
+  },
+  {
+    "objectID": "indice-banco.html",
+    "href": "indice-banco.html",
+    "title": "Índice Geral do Banco de Tintas",
+    "section": "",
+    "text": "Índice Geral do Banco de Tintas"
   }
 ]

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>tinta</title>
+<title>indice-banco</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -140,197 +140,82 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<div id="conteudo">
+<section id="índice-geral-do-banco-de-tintas" class="level1 container-texto">
+<h1>Índice Geral do Banco de Tintas</h1>
+<div id="lista-tintas">
 
 </div>
 <script>
   document.addEventListener("DOMContentLoaded", async function () {
 
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get("id");
-
     const response = await fetch("dados/tintas.json");
     const tintas = await response.json();
 
-    const tinta = tintas.find(t => t.id === id);
-    const container = document.getElementById("conteudo");
+    const container = document.getElementById("lista-tintas");
+    container.innerHTML = "";
 
-    let botoesEspectro = "";
-    let conteudoEspectro = "";
+    // 🔹 Ordem fixa das técnicas
+    const ordemTecnicas = ["FRX", "RAMAN", "FTIR", "AAN"];
 
-    if (!tinta) {
-      container.innerHTML = "<p>Tinta não encontrada.</p>";
-      return;
-    }
+    ordemTecnicas.forEach(sigla => {
 
-    if (tinta.tecnica.sigla === "FRX" && tinta.espectros) {
+      // Filtra tintas da técnica atual
+      const grupo = tintas.filter(item => item.tecnica.sigla === sigla);
 
-      botoesEspectro = `
-        <div class="tabs">
-          <span class="label-tabs">Escolha o tipo:</span>
-          <button class="tab-btn active" data-tab="graf1" data-tipo="AgV">AgV</button>
-          <button class="tab-btn" data-tab="graf2" data-tipo="RhV">RhV</button>
-          <button class="tab-btn" data-tab="graf3" data-tipo="AuV">AuV</button>
-        </div>
-      `;
+      if (grupo.length === 0) return;
 
-      conteudoEspectro = `
-        <div class="card-grafico">
+      // 🔹 Ordenar por ID (opcional mas recomendado)
+      grupo.sort((a, b) => a.id.localeCompare(b.id));
 
-          <div class="cabecalho-grafico" id="titulo-grafico">
-            ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - AgV
-          </div>
+      // 🔹 Criar título da técnica
+      const titulo = document.createElement("h3");
+      titulo.className = "titulo-tecnica";
+      titulo.textContent = `${sigla} - ${grupo.length} Resultados`;
+      container.appendChild(titulo);
 
-          <div class="conteudo-grafico active" id="graf1">
-            <div class="titulo-print">
-              ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - AgV
-            </div>
-            <img src="${tinta.espectros.AgV}" class="imagem-tinta">
-          </div>
+      // 🔹 Criar cards
+      grupo.forEach(item => {
 
-          <div class="conteudo-grafico" id="graf2">
-            <div class="titulo-print">
-              ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - RhV
-            </div>
-            <img src="${tinta.espectros.RhV}" class="imagem-tinta">
-          </div>
+        const bloco = document.createElement("a");
+        bloco.className = "card-tinta";
+        bloco.href = `tinta.html?id=${item.id}`;
 
-          <div class="conteudo-grafico" id="graf3">
-            <div class="titulo-print">
-              ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - AuV
-            </div>
-            <img src="${tinta.espectros.AuV}" class="imagem-tinta">
-          </div>
+        bloco.innerHTML = `
+          <div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;">
 
-        </div>
-      `;
-    } else {
-        const chaveEspectro = Object.keys(tinta.espectros)[0];
-        const caminhoImagem = tinta.espectros[chaveEspectro];
+              <img src="${item.imagem}" class="thumb">
 
-        conteudoEspectro = `
-          <div class="card-grafico">
-
-            <div class="cabecalho-grafico" id="titulo-grafico">
-              ${tinta.tecnica.nome} (${tinta.tecnica.sigla})
-            </div>
-
-            <div class="conteudo-grafico active">
-              <div class="titulo-print">
-                ${tinta.tecnica.nome} (${tinta.tecnica.sigla})
+              <div class="info-tinta">
+                <div class="titulo-tinta">
+                  ${item.id} - ${item.nome}
+                </div>
+                <div class="meta">
+                  Técnica: ${item.tecnica.sigla} - ${item.tecnica.nome}<br>
+                  Pigmento: ${item.pigmento}<br>
+                  Fabricante: ${item.fabricante}<br>
+                  Medium: ${item.medium}
+                </div>
               </div>
-              <img src="${caminhoImagem}" class="imagem-tinta">
-            </div>
 
           </div>
         `;
-    }
 
-    // 
-    container.innerHTML = `
-      <div class="top-bar">
-        <h1>${tinta.nome} - ${tinta.id}</h1>
-        <button onclick="window.print()" class="btn btn-success">
-          Download PDF
-        </button>
-      </div>
+        container.appendChild(bloco);
 
-      <h3 class="titulo-secao">Informações Gerais</h3>
-      
-<table class="tabela-dados caption-top" data-quarto-postprocess="true">
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">ID</td>
-<td>${tinta.id}</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">Nome do Arquivo</td>
-<td>${tinta.filename}</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">Fabricante</td>
-<td>${tinta.fabricante}</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">Pigmento</td>
-<td>${tinta.pigmento}</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">Medium</td>
-<td>${tinta.medium}</td>
-</tr>
-</tbody>
-</table>
-
-
-      <h3 class="titulo-secao">Dados Analíticos</h3>
-      
-<table class="tabela-dados caption-top" data-quarto-postprocess="true">
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">Técnica</td>
-<td>${tinta.tecnica.sigla} - ${tinta.tecnica.nome}</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">Elementos majoritários</td>
-<td>${tinta.elementos_majoritarios}</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">Elementos traço</td>
-<td>${tinta.elementos_traco}</td>
-</tr>
-</tbody>
-</table>
-
-
-      <h3 class="titulo-secao">Espectros</h3>
-
-      <div class="area-graficos">
-        <div class="area-graficos">
-          ${botoesEspectro}
-          ${conteudoEspectro}
-        </div>
-      </div>
-    `;
-
-    if (tinta.tecnica.sigla === "FRX") {
-
-      document.querySelectorAll(".tab-btn").forEach(btn => {
-        btn.addEventListener("click", function () {
-
-          document.querySelectorAll(".tab-btn")
-            .forEach(b => b.classList.remove("active"));
-
-          document.querySelectorAll(".conteudo-grafico")
-            .forEach(c => c.classList.remove("active"));
-
-          this.classList.add("active");
-
-          const alvo = document.getElementById(this.dataset.tab);
-          if (alvo) {
-            alvo.classList.add("active");
-          }
-
-          const titulo = document.getElementById("titulo-grafico");
-          titulo.textContent =
-            `${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - ${this.dataset.tipo}`;
-
-        });
       });
 
-    }
+    });
 
   });
 </script>
+</section>
 
 
 

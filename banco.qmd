@@ -14,26 +14,41 @@ Acesse o banco completo e realize buscas por:
 
 - Nome da tinta  
 - Pigmento  
-- Fabricante  
-- Tipo de ligante
+- Fabricante
+- Técnica 
+- Tipo de medium
 
----
+<div class="linha-indice-banco">
+  <span>Ou consulte o </span>
+  <a href="indice-banco.html" class="btn-indice-banco">
+    Índice Geral
+  </a>
+</div>
 
-<div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
-  <input type="text" id="nome" placeholder="Nome da tinta">
-  <input type="text" id="pigmento" placeholder="Pigmento">
-  <input type="text" id="fabricante" placeholder="Fabricante">
+<div class="barra-busca">
+  <input type="text" id="busca" placeholder="Pesquise">
+  
+  <select id="tecnica">
+    <option value="">Técnica</option>
+    <option value="FRX">FRX</option>
+    <option value="AAN">AAN</option>
+    <option value="RAMAN">RAMAN</option>
+    <option value="FTIR">FTIR</option>
+  </select>
 
-  <select id="ligante">
-    <option value="">Ligante</option>
+  <select id="medium">
+    <option value="">Medium</option>
     <option value="Óleo">Óleo</option>
     <option value="Acrílica">Acrílica</option>
   </select>
 
-  <button id="botaoBusca">Pesquisar</button>
+  <button id="botaoBusca" class="btn-pesquisa">Pesquisar</button>
 </div>
 
-<br>
+<div id="tituloResultados" class="titulo-resultados" style="display:none;">
+  <h2>Resultados</h2>
+</div>
+
 <div id="resultados"></div>
 
 <script>
@@ -45,13 +60,17 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       const response = await fetch("dados/tintas.json");
       dadosTintas = await response.json();
-      renderizarResultados(dadosTintas);
+
+      // NÃO renderiza nada ao carregar
+      document.getElementById("resultados").innerHTML = "";
+      
     } catch (erro) {
       console.error("Erro ao carregar JSON:", erro);
     }
   }
 
   function renderizarResultados(lista) {
+
     const container = document.getElementById("resultados");
     container.innerHTML = "";
 
@@ -60,46 +79,97 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    lista.forEach(item => {
-      const bloco = document.createElement("div");
+    // 🔹 Ordem desejada
+    const ordemTecnicas = ["FRX", "RAMAN", "FTIR", "AAN"];
 
-      bloco.innerHTML = `
-        <div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;">
-          
-          <img src="${item.imagem}" 
-              style="width:100px; height:100px; object-fit:cover; border-radius:6px;">
+    ordemTecnicas.forEach(sigla => {
 
-          <div>
-            <a href="tinta.html?id=${item.id}">
-              <strong style="font-size:1.1em;">${item.nome}</strong>
-            </a>
-            <div style="font-size:0.9em; color:#555;">
-              Pigmento: ${item.pigmento} <br>
-              Fabricante: ${item.fabricante} <br>
-              Ligante: ${item.ligante}
+      // Filtra apenas da técnica atual
+      const grupo = lista.filter(item => item.tecnica.sigla === sigla);
+
+      if (grupo.length === 0) return;
+
+      // 🔹 Título da técnica
+      const titulo = document.createElement("h3");
+      titulo.className = "titulo-tecnica";
+      titulo.textContent = sigla;
+      container.appendChild(titulo);
+
+      // 🔹 Lista das tintas daquela técnica
+      grupo.forEach(item => {
+
+        const bloco = document.createElement("a");
+        bloco.className = "card-tinta";
+        bloco.href = `tinta.html?id=${item.id}`;
+
+        bloco.innerHTML = `
+          <div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;">
+            <img src="${item.imagem}" class="thumb">
+
+            <div class="info-tinta">
+              <div class="titulo-tinta">
+                ${item.id} — ${item.nome}
+              </div>
+              <div class="meta">
+                Técnica: ${item.tecnica.sigla} - ${item.tecnica.nome}<br>
+                Pigmento: ${item.pigmento}<br>
+                Fabricante: ${item.fabricante}<br>
+                Medium: ${item.medium}
+              </div>
             </div>
           </div>
+        `;
 
-        </div>
-        <hr>
-      `;
+        container.appendChild(bloco);
 
-      container.appendChild(bloco);
+      });
+
     });
   }
 
   function aplicarFiltro() {
-    const nome = document.getElementById("nome").value.toLowerCase();
-    const pigmento = document.getElementById("pigmento").value.toLowerCase();
-    const fabricante = document.getElementById("fabricante").value.toLowerCase();
-    const ligante = document.getElementById("ligante").value;
 
-    const filtrados = dadosTintas.filter(item =>
-      item.nome.toLowerCase().includes(nome) &&
-      item.pigmento.toLowerCase().includes(pigmento) &&
-      item.fabricante.toLowerCase().includes(fabricante) &&
-      (ligante === "" || item.ligante === ligante)
-    );
+    const termo = document.getElementById("busca").value.toLowerCase();
+    const tecnicaSelecionada = document.getElementById("tecnica").value;
+    const mediumSelecionado = document.getElementById("medium").value;
+
+    if (
+      termo === "" &&
+      tecnicaSelecionada === "" &&
+      mediumSelecionado === ""
+    ) {
+      document.getElementById("resultados").innerHTML = "";
+      document.getElementById("tituloResultados").style.display = "none";
+      return;
+    }
+
+    const filtrados = dadosTintas.filter(item => {
+
+      const correspondeTexto =
+        item.nome.toLowerCase().includes(termo) ||
+        item.pigmento.toLowerCase().includes(termo) ||
+        item.fabricante.toLowerCase().includes(termo) ||
+        item.tecnica.nome.toLowerCase().includes(termo) ||
+        item.tecnica.sigla.toLowerCase().includes(termo);
+
+      const correspondeTecnica =
+        tecnicaSelecionada === "" ||
+        item.tecnica.sigla === tecnicaSelecionada;
+
+      const correspondeMedium =
+        mediumSelecionado === "" ||
+        item.medium === mediumSelecionado;
+
+      return correspondeTexto && correspondeTecnica && correspondeMedium;
+    });
+
+    const titulo = document.getElementById("tituloResultados");
+
+    if (filtrados.length > 0) {
+      titulo.style.display = "block";
+    } else {
+      titulo.style.display = "block"; // continua mostrando mesmo sem resultado
+    }
 
     renderizarResultados(filtrados);
   }
@@ -107,18 +177,19 @@ document.addEventListener("DOMContentLoaded", function () {
   // BOTÃO
   const botao = document.getElementById("botaoBusca");
   botao.addEventListener("click", aplicarFiltro);
+  document.getElementById("tecnica").addEventListener("change", aplicarFiltro);
+  document.getElementById("medium").addEventListener("change", aplicarFiltro);
 
   // ENTER nos inputs
-  document.querySelectorAll("input").forEach(input => {
-    input.addEventListener("keypress", function(e) {
-      if (e.key === "Enter") {
-        aplicarFiltro();
-      }
-    });
+  document.getElementById("busca").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      aplicarFiltro();
+    }
   });
 
   carregarDados();
 });
+
 </script>
 
 :::
