@@ -194,21 +194,21 @@ ul.task-list li input[type="checkbox"] {
             <div class="titulo-print">
               ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - AgV
             </div>
-            <img src="${tinta.espectros.AgV}" class="imagem-tinta">
+            <img src="${tinta.espectros[Object.keys(tinta.espectros)[0]]}" class="imagem-tinta">
           </div>
 
           <div class="conteudo-grafico" id="graf2">
             <div class="titulo-print">
               ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - RhV
             </div>
-            <img src="${tinta.espectros.RhV}" class="imagem-tinta">
+            <img src="${tinta.espectros[Object.keys(tinta.espectros)[1]]}" class="imagem-tinta">
           </div>
 
           <div class="conteudo-grafico" id="graf3">
             <div class="titulo-print">
               ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - AuV
             </div>
-            <img src="${tinta.espectros.AuV}" class="imagem-tinta">
+            <img src="${tinta.espectros[Object.keys(tinta.espectros)[2]]}" class="imagem-tinta">
           </div>
 
         </div>
