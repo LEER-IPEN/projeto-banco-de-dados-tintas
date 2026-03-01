@@ -14,9 +14,9 @@
     "toxicidade": "Baixa",
     "imagem": "dados/imagem-tinta/verde-ftalo.jpg",
     "espectros": {
-      "AgV": "dados/espectros/FRX/AGV/verde-ftalo-agv.jpg",
-      "AuV": "dados/espectros/FRX/AUV/verde-ftalo-auv.jpg",
-      "RhV": "dados/espectros/FRX/RHV/verde-ftalo-rhv.jpg"
+      "AgV": "dados/espectros/FRX/verde-ftalo-agv.jpg",
+      "AuV": "dados/espectros/FRX/verde-ftalo-auv.jpg",
+      "RhV": "dados/espectros/FRX/verde-ftalo-rhv.jpg"
     }
   },
   {
