@@ -151,11 +151,10 @@ ul.task-list li input[type="checkbox"] {
 <h1>Explore a Base de Dados</h1>
 <p>Acesse o banco completo e realize buscas por:</p>
 <ul>
-<li>Nome da tinta<br>
+<li>Nome da tinta</li>
+<li>Cor</li>
+<li>Década<br>
 </li>
-<li>Pigmento<br>
-</li>
-<li>Fabricante</li>
 <li>Técnica</li>
 <li>Tipo de medium</li>
 </ul>
@@ -237,8 +236,7 @@ document.addEventListener("DOMContentLoaded", function () {
               </div>
               <div class="meta">
                 Técnica: ${item.tecnica.sigla} - ${item.tecnica.nome}<br>
-                Pigmento: ${item.pigmento}<br>
-                Fabricante: ${item.fabricante}<br>
+                Década: ${item.decada}<br>
                 Medium: ${item.medium}
               </div>
             </div>
@@ -272,8 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const correspondeTexto =
         item.nome.toLowerCase().includes(termo) ||
-        item.pigmento.toLowerCase().includes(termo) ||
-        item.fabricante.toLowerCase().includes(termo) ||
+        item.decada.toLowerCase().includes(termo) ||
         item.tecnica.nome.toLowerCase().includes(termo) ||
         item.tecnica.sigla.toLowerCase().includes(termo);
 

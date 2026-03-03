@@ -103,8 +103,8 @@ execute:
       <table class="tabela-dados">
         <tr><th>ID</th><td>${tinta.id}</td></tr>
         <tr><th>Nome do Arquivo</th><td>${tinta.filename}</td></tr>
-        <tr><th>Fabricante</th><td>${tinta.fabricante}</td></tr>
-        <tr><th>Pigmento</th><td>${tinta.pigmento}</td></tr>
+        <tr><th>Hexadecimal</th><td>${tinta.hexadecimal}</td></tr>
+        <tr><th>Década</th><td>${tinta.decada}</td></tr>
         <tr><th>Medium</th><td>${tinta.medium}</td></tr>
       </table>
 
@@ -112,7 +112,7 @@ execute:
       <table class="tabela-dados">
         <tr><th>Técnica</th><td>${tinta.tecnica.sigla} - ${tinta.tecnica.nome}</td></tr>
         <tr><th>Elementos majoritários</th><td>${tinta.elementos_majoritarios}</td></tr>
-        <tr><th>Elementos traço</th><td>${tinta.elementos_traco}</td></tr>
+        <tr><th>Elementos traço</th><td>${tinta.elementos_tracos}</td></tr>
       </table>
 
       <h3 class="titulo-secao">Espectros</h3>
