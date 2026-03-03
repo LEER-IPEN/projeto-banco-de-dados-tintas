@@ -188,21 +188,34 @@ ul.task-list li input[type="checkbox"] {
         bloco.href = `tinta.html?id=${item.id}`;
 
         bloco.innerHTML = `
-          <div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;">
+          <div class="card-conteudo">
+            <div class="titulo-tinta">
+              ${item.nome}
+            </div>
 
-              <img src="${item.imagem}" class="thumb">
-
-              <div class="info-tinta">
-                <div class="titulo-tinta">
-                  ${item.id} - ${item.nome}
-                </div>
-                <div class="meta">
-                  Técnica: ${item.tecnica.sigla} - ${item.tecnica.nome}<br>
-                  Pigmento: ${item.pigmento}<br>
-                  Fabricante: ${item.fabricante}<br>
-                  Medium: ${item.medium}
-                </div>
-              </div>
+            
+<table class="tabela-horizontal caption-top" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">ID</th>
+<th data-quarto-table-cell-role="th">Hex</th>
+<th data-quarto-table-cell-role="th">Medium</th>
+<th data-quarto-table-cell-role="th">Década</th>
+<th data-quarto-table-cell-role="th">Elementos Majoritários</th>
+<th data-quarto-table-cell-role="th">Elementos Traço</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>${item.id}</td>
+<td>${item.hexadecimal || "-"}</td>
+<td>${item.medium}</td>
+<td>${item.decada}</td>
+<td>${item.elementos_majoritarios || "-"}</td>
+<td>${item.elementos_tracos || "-"}</td>
+</tr>
+</tbody>
+</table>
 
           </div>
         `;

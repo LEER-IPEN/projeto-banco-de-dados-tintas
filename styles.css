@@ -399,3 +399,27 @@
 .conteudo-grafico.active {
   display: block;
 }
+
+.tabela-horizontal {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.tabela-horizontal th {
+  text-align: left;
+  padding: 6px;
+  background-color: #f4f4f4;
+  border-bottom: 2px solid #ccc;
+  font-weight: 600;
+}
+
+.tabela-horizontal td {
+  padding: 6px;
+  border-bottom: 1px solid #eee;
+}
+
+.tabela-horizontal tbody tr:hover {
+  background-color: #fafafa;
+}

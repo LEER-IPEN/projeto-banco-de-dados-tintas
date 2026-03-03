@@ -12,10 +12,10 @@ toc: false
 
 Acesse o banco completo e realize buscas por:
 
-- Nome da tinta  
-- Pigmento  
-- Fabricante
-- Técnica 
+- Nome da tinta 
+- Cor 
+- Década  
+- Técnica
 - Tipo de medium
 
 <div class="linha-indice-banco">
@@ -112,8 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
               </div>
               <div class="meta">
                 Técnica: ${item.tecnica.sigla} - ${item.tecnica.nome}<br>
-                Pigmento: ${item.pigmento}<br>
-                Fabricante: ${item.fabricante}<br>
+                Década: ${item.decada}<br>
                 Medium: ${item.medium}
               </div>
             </div>
@@ -147,8 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const correspondeTexto =
         item.nome.toLowerCase().includes(termo) ||
-        item.pigmento.toLowerCase().includes(termo) ||
-        item.fabricante.toLowerCase().includes(termo) ||
+        item.decada.toLowerCase().includes(termo) ||
         item.tecnica.nome.toLowerCase().includes(termo) ||
         item.tecnica.sigla.toLowerCase().includes(termo);
 

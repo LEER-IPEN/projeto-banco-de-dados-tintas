@@ -1,94 +1,22 @@
 [
   {
     "id": "FRX0000",
-    "filename": "010101aa",
+    "filename": "150725ab - 220725ab",
     "tecnica": {
       "sigla": "FRX",
       "nome": "Espectroscopia de Fluorescência de Raios X"
     },
-    "nome": "Tinta Verde Ftalo",
-    "pigmento": "PG7",
-    "fabricante": "Winsor & Newton",
+    "nome": "Tinta Fluorescente Rosa Rosado 1012",
+    "decada": "2000",
     "medium": "Acrílica",
-    "ci": "74260",
-    "toxicidade": "Baixa",
-    "imagem": "dados/imagem-tinta/verde-ftalo.jpg",
+    "hexadecimal": "#FFB6C1",
+    "elementos_majoritarios": "S; Ti; Ba",
+    "elementos_tracos": "Fe; Ni; Sr; Ca; Cl; Zn",
+    "imagem": "dados/imagem-tinta/220725ab_agv.png",
     "espectros": {
-      "AgV": "dados/espectros/frx/agv/verde-ftalo-agv.jpg",
-      "RhV": "dados/espectros/frx/rhv/verde-ftalo-rhv.jpg",
-      "AuV": "dados/espectros/frx/auv/verde-ftalo-auv.jpg"
-    }
-  },
-  {
-    "id": "RMN0001",
-    "filename": "020101aa",
-    "tecnica": {
-      "sigla": "RAMAN",
-      "nome": "Espectroscopia Raman"
-    },
-    "nome": "Tinta Verde Ftalo",
-    "pigmento": "PG7",
-    "fabricante": "Winsor & Newton",
-    "medium": "Acrílica",
-    "ci": "74260",
-    "toxicidade": "Baixa",
-    "imagem": "dados/imagem-tinta/verde-ftalo.jpg",
-    "espectros": {
-      "RAMAN": "dados/espectros/RAMAN/verde-ftalo-RAMAN.jpg"
-    }
-  },
-  {
-    "id": "AAN0000",
-    "filename": "030101aa",
-    "tecnica": {
-      "sigla": "AAN",
-      "nome": "Análise por Ativação Neutrônica"
-    },
-    "nome": "Tinta Verde Ftalo",
-    "pigmento": "PG7",
-    "fabricante": "Winsor & Newton",
-    "medium": "Acrílica",
-    "ci": "74260",
-    "toxicidade": "Baixa",
-    "imagem": "dados/imagem-tinta/verde-ftalo.jpg",
-    "espectros": {
-      "AAN": "dados/espectros/AAN/verde-ftalo-AAN.jpg"
-    }
-  },
-  {
-    "id": "RMN0000",
-    "filename": "010101aa",
-    "tecnica": {
-      "sigla": "RAMAN",
-      "nome": "Espectroscopia Raman"
-    },
-    "nome": "Tinta Ocre Amarelo",
-    "pigmento": "PY43",
-    "fabricante": "Gamblin",
-    "medium": "Óleo",
-    "ci": "77492",
-    "toxicidade": "Baixa",
-    "imagem": "dados/imagem-tinta/verde-ftalo.jpg",
-    "espectros": {
-      "RAMAN": "dados/espectros/RAMAN/verde-ftalo-RAMAN.jpg"
-    }
-  },
-  {
-    "id": "FTIR0000",
-    "filename": "010101aa",
-    "tecnica": {
-      "sigla": "FTIR",
-      "nome": "Espectroscopia no Infravermelho por Transformada de Fourier"
-    },
-    "nome": "Tinta Azul",
-    "pigmento": "PY43",
-    "fabricante": "Gamblin",
-    "medium": "Óleo",
-    "ci": "77492",
-    "toxicidade": "Baixa",
-    "imagem": "dados/imagem-tinta/verde-ftalo.jpg",
-    "espectros": {
-      "FTIR": "dados/espectros/FTIR/verde-ftalo-FTIR.jpg"
+      "AgV": "dados/espectros/frx/agv/220725ab_agv.png",
+      "RhV": "dados/espectros/frx/rhv/150725ab_rhv.png",
+      "AuV": "dados/espectros/frx/auv/220725ab_auv.png"
     }
   }
 ]
