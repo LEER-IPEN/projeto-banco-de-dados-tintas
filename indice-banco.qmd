@@ -6,7 +6,7 @@ execute:
   enebled: false
 toc: false
 ---
-:::: {.container-texto}
+:::: {.container-texto-indice}
 
 # Índice Geral do Banco de Tintas
 
@@ -48,16 +48,18 @@ toc: false
         bloco.href = `tinta.html?id=${item.id}`;
 
         bloco.innerHTML = `
-          <div class="card-conteudo">
+          <div class="info-tinta">
             <div class="titulo-tinta">
               ${item.nome}
             </div>
-
+          </div>
+          <div class="card-conteudo">
+            <img src="${item.imagem}" class="thumb">
             <table class="tabela-horizontal">
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Hex</th>
+                  <th>Cor</th>
                   <th>Medium</th>
                   <th>Década</th>
                   <th>Elementos Majoritários</th>
@@ -67,7 +69,20 @@ toc: false
               <tbody>
                 <tr>
                   <td>${item.id}</td>
-                  <td>${item.hexadecimal || "-"}</td>
+
+                  <td>
+                    ${
+                      item.hex
+                      ? `
+                        <div class="cor-box">
+                          <span class="amostra-cor" style="background-color: ${item.hex};"></span>
+                          <span class="codigo-cor">${item.hex}</span>
+                        </div>
+                      `
+                      : "-"
+                    }
+                  </td>
+
                   <td>${item.medium}</td>
                   <td>${item.decada}</td>
                   <td>${item.elementos_majoritarios || "-"}</td>

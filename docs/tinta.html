@@ -247,6 +247,10 @@ ul.task-list li input[type="checkbox"] {
       <h3 class="titulo-secao">Informações Gerais</h3>
       
 <table class="tabela-dados caption-top" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">ID</td>
@@ -257,8 +261,10 @@ ul.task-list li input[type="checkbox"] {
 <td>${tinta.filename}</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">Hexadecimal</td>
-<td>${tinta.hexadecimal}</td>
+<td data-quarto-table-cell-role="th">Cor</td>
+<td><div class="cor-box">
+<span class="amostra-cor" style="background-color: ${tinta.hex};"></span> <span>${tinta.hex}</span>
+</div></td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Década</td>

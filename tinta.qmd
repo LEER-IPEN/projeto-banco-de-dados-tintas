@@ -103,7 +103,15 @@ execute:
       <table class="tabela-dados">
         <tr><th>ID</th><td>${tinta.id}</td></tr>
         <tr><th>Nome do Arquivo</th><td>${tinta.filename}</td></tr>
-        <tr><th>Hexadecimal</th><td>${tinta.hexadecimal}</td></tr>
+        <tr>
+          <th>Cor</th>
+            <td>
+              <div class="cor-box">
+                <span class="amostra-cor" style="background-color: ${tinta.hex};"></span>
+                <span>${tinta.hex}</span>
+              </div>
+            </td>
+        </tr>
         <tr><th>Década</th><td>${tinta.decada}</td></tr>
         <tr><th>Medium</th><td>${tinta.medium}</td></tr>
       </table>
