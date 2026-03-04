@@ -147,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="explore-a-base-de-dados" class="level1 container-texto">
+<section id="explore-a-base-de-dados" class="level1 container-texto-indice">
 <h1>Explore a Base de Dados</h1>
 <p>Acesse o banco completo e realize buscas por:</p>
 <ul>
@@ -227,19 +227,49 @@ document.addEventListener("DOMContentLoaded", function () {
         bloco.href = `tinta.html?id=${item.id}`;
 
         bloco.innerHTML = `
-          <div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;">
-            <img src="${item.imagem}" class="thumb">
-
-            <div class="info-tinta">
-              <div class="titulo-tinta">
-                ${item.id} — ${item.nome}
-              </div>
-              <div class="meta">
-                Técnica: ${item.tecnica.sigla} - ${item.tecnica.nome}<br>
-                Década: ${item.decada}<br>
-                Medium: ${item.medium}
-              </div>
+          <div class="info-tinta">
+            <div class="titulo-tinta">
+              ${item.nome}
             </div>
+          </div>
+          <div class="card-conteudo">
+            <img src="${item.imagem}" class="thumb">
+            
+<table class="tabela-horizontal caption-top" style="width:100%;" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">ID</th>
+<th data-quarto-table-cell-role="th">Cor</th>
+<th data-quarto-table-cell-role="th">Medium</th>
+<th data-quarto-table-cell-role="th">Década</th>
+<th data-quarto-table-cell-role="th">Elementos Majoritários</th>
+<th data-quarto-table-cell-role="th">Elementos Traço</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>${item.id}</td>
+<td>${ item.hex ? `
+<div class="cor-box">
+<span class="amostra-cor" style="background-color: ${item.hex};"></span> <span class="codigo-cor">${item.hex}</span>
+</div>
+` : "-" }</td>
+<td>${item.medium}</td>
+<td>${item.decada}</td>
+<td>${item.elementos_majoritarios || "-"}</td>
+<td>${item.elementos_tracos || "-"}</td>
+</tr>
+</tbody>
+</table>
+
           </div>
         `;
 
