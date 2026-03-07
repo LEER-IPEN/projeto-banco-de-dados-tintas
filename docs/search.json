@@ -60,6 +60,6 @@
     "href": "tinta.html",
     "title": "",
     "section": "",
-    "text": "Dados Analíticos\n      \n\n\n\nTécnica\n${tinta.tecnica.sigla} - ${tinta.tecnica.nome}\n\n\nElementos majoritários\n${tinta.elementos_majoritarios}\n\n\nElementos traço\n${tinta.elementos_tracos}\n\n\n\n\n\n      Espectros\n\n      \n        \n          ${botoesEspectro}\n          ${conteudoEspectro}\n        \n      \n    `;\n\n    if (tinta.tecnica.sigla === \"FRX\") {\n\n      document.querySelectorAll(\".tab-btn\").forEach(btn =&gt; {\n        btn.addEventListener(\"click\", function () {\n\n          document.querySelectorAll(\".tab-btn\")\n            .forEach(b =&gt; b.classList.remove(\"active\"));\n\n          document.querySelectorAll(\".conteudo-grafico\")\n            .forEach(c =&gt; c.classList.remove(\"active\"));\n\n          this.classList.add(\"active\");\n\n          const alvo = document.getElementById(this.dataset.tab);\n          if (alvo) {\n            alvo.classList.add(\"active\");\n          }\n\n          const titulo = document.getElementById(\"titulo-grafico\");\n          titulo.textContent =\n            `${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - ${this.dataset.tipo}`;\n\n        });\n      });\n\n    }\n\n  });"
+    "text": "×"
   }
 ]
