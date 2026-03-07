@@ -6,8 +6,8 @@
       "sigla": "FRX",
       "nome": "Espectroscopia de Fluorescência de Raios X"
     },
-    "nome": "Tinta Fluorescente Rosa Rosado 1012",
-    "decada": "2000",
+    "nome": "Tinta Fluorescente Rosa Rosado",
+    "decada": "2010",
     "medium": "Acrílica",
     "hex": "#FFB6C1",
     "elementos_majoritarios": "S; Ti; Ba",
@@ -17,21 +17,23 @@
       "AgV": "dados/espectros/frx/agv/220725ab_agv.png",
       "RhV": "dados/espectros/frx/rhv/150725ab_rhv.png",
       "AuV": "dados/espectros/frx/auv/220725ab_auv.png"
-    }
+    },
+    "grafico_elementos_maj": "dados/graficos/frx/majoritarios/majoritarios_teste.png",
+    "grafico_elementos_tracos": "dados/graficos/frx/tracos/tracos_teste.png"
   },
   {
-    "id": "FRX0000",
-    "filename": "150725ab - 220725ab",
+    "id": "FRX0001",
+    "filename": "-",
     "tecnica": {
       "sigla": "FRX",
       "nome": "Espectroscopia de Fluorescência de Raios X"
     },
-    "nome": "Tinta Fluorescente Rosa Rosado 1012",
-    "decada": "2000",
+    "nome": "Tinta Fluorescente Laranja Fogo",
+    "decada": "2010",
     "medium": "Acrílica",
-    "hex": "#FFB6C1",
-    "elementos_majoritarios": "S; Ti; Ba",
-    "elementos_tracos": "Fe; Ni; Sr; Ca; Cl; Zn",
+    "hex": "#",
+    "elementos_majoritarios": "S; Ti; Fe; Ba",
+    "elementos_tracos": "Ni; Sr; Ca; Cl; Sc; Co",
     "imagem": "dados/imagem-tinta/220725ab_agv.png",
     "espectros": {
       "AgV": "dados/espectros/frx/agv/220725ab_agv.png",
@@ -40,18 +42,58 @@
     }
   },
   {
-    "id": "FRX0000",
-    "filename": "150725ab - 220725ab",
+    "id": "FRX0002",
+    "filename": "",
     "tecnica": {
       "sigla": "FRX",
       "nome": "Espectroscopia de Fluorescência de Raios X"
     },
-    "nome": "Tinta Fluorescente Rosa Rosado 1012",
-    "decada": "2000",
+    "nome": "Tinta Fluorescente Laranja",
+    "decada": "2010",
     "medium": "Acrílica",
-    "hex": "#FFB6C1",
-    "elementos_majoritarios": "S; Ti; Ba",
-    "elementos_tracos": "Fe; Ni; Sr; Ca; Cl; Zn",
+    "hex": "#",
+    "elementos_majoritarios": "S; Sc; Ti; Ba; Ca; Fe",
+    "elementos_tracos": "",
+    "imagem": "dados/imagem-tinta/220725ab_agv.png",
+    "espectros": {
+      "AgV": "dados/espectros/frx/agv/220725ab_agv.png",
+      "RhV": "dados/espectros/frx/rhv/150725ab_rhv.png",
+      "AuV": "dados/espectros/frx/auv/220725ab_auv.png"
+    }
+  },
+  {
+    "id": "FRX0003",
+    "filename": "",
+    "tecnica": {
+      "sigla": "FRX",
+      "nome": "Espectroscopia de Fluorescência de Raios X"
+    },
+    "nome": "Tinta Fluorescente Laranja Fogo",
+    "decada": "2010",
+    "medium": "Óleo",
+    "hex": "#",
+    "elementos_majoritarios": "S; Cr; Fe; Co; Ca; Ti; Mn",
+    "elementos_tracos": "",
+    "imagem": "dados/imagem-tinta/220725ab_agv.png",
+    "espectros": {
+      "AgV": "dados/espectros/frx/agv/220725ab_agv.png",
+      "RhV": "dados/espectros/frx/rhv/150725ab_rhv.png",
+      "AuV": "dados/espectros/frx/auv/220725ab_auv.png"
+    }
+  },
+  {
+    "id": "FRX0004",
+    "filename": "",
+    "tecnica": {
+      "sigla": "FRX",
+      "nome": "Espectroscopia de Fluorescência de Raios X"
+    },
+    "nome": "Tinta Fluorescente Laranja",
+    "decada": "2010",
+    "medium": "Óleo",
+    "hex": "#",
+    "elementos_majoritarios": "Si; P; S; Fe; Zn; Ti; Cr",
+    "elementos_tracos": "",
     "imagem": "dados/imagem-tinta/220725ab_agv.png",
     "espectros": {
       "AgV": "dados/espectros/frx/agv/220725ab_agv.png",

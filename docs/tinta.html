@@ -152,6 +152,9 @@ ul.task-list li input[type="checkbox"] {
 <div id="conteudo">
 
 </div>
+<div id="modal-img" class="modal">
+<p><span class="fechar">×</span> <img id="img-modal" class="img-modal"></p>
+</div>
 <script>
   document.addEventListener("DOMContentLoaded", async function () {
 
@@ -194,21 +197,27 @@ ul.task-list li input[type="checkbox"] {
             <div class="titulo-print">
               ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - AgV
             </div>
-            <img src="${tinta.espectros[Object.keys(tinta.espectros)[0]]}" class="imagem-tinta">
+            <div class="zoom-container">
+              <img src="${tinta.espectros[Object.keys(tinta.espectros)[0]]}" class="imagem-tinta">
+            </div>
           </div>
 
           <div class="conteudo-grafico" id="graf2">
             <div class="titulo-print">
               ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - RhV
             </div>
-            <img src="${tinta.espectros[Object.keys(tinta.espectros)[1]]}" class="imagem-tinta">
+            <div class="zoom-container">
+              <img src="${tinta.espectros[Object.keys(tinta.espectros)[1]]}" class="imagem-tinta">
+            </div>
           </div>
 
           <div class="conteudo-grafico" id="graf3">
             <div class="titulo-print">
               ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - AuV
             </div>
-            <img src="${tinta.espectros[Object.keys(tinta.espectros)[2]]}" class="imagem-tinta">
+            <div class="zoom-container">
+              <img src="${tinta.espectros[Object.keys(tinta.espectros)[2]]}" class="imagem-tinta">
+            </div>
           </div>
 
         </div>
@@ -281,6 +290,10 @@ ul.task-list li input[type="checkbox"] {
       <h3 class="titulo-secao">Dados Analíticos</h3>
       
 <table class="tabela-dados caption-top" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">Técnica</td>
@@ -288,11 +301,21 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Elementos majoritários</td>
-<td>${tinta.elementos_majoritarios}</td>
+<td><div class="elementos">
+<div class="elementos-txt">
+${tinta.elementos_majoritarios}
+</div>
+<a href="#" class="btn-detalhes" data-img="${tinta.grafico_elementos_maj}">Detalhes</a>
+</div></td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">Elementos traço</td>
-<td>${tinta.elementos_tracos}</td>
+<td><div class="elementos">
+<div class="elementos-txt">
+${tinta.elementos_tracos}
+</div>
+<a href="#" class="btn-detalhes" data-img="${tinta.grafico_elementos_tracos}">Detalhes</a>
+</div></td>
 </tr>
 </tbody>
 </table>
@@ -332,10 +355,70 @@ ul.task-list li input[type="checkbox"] {
 
         });
       });
-
     }
-
   });
+
+  document.addEventListener("mousemove", function(e){
+
+    const img = e.target
+
+    if(img.classList.contains("imagem-tinta")){
+      const rect = img.getBoundingClientRect()
+      const x = (e.clientX - rect.left) / rect.width * 100
+      const y = (e.clientY - rect.top) / rect.height * 100
+
+      img.style.transformOrigin = x + "% " + y + "%"
+      img.style.transform = "scale(2.5)"
+    }
+  })
+
+  document.addEventListener("mouseleave", function(e){
+    const img = e.target
+
+    if(img.classList.contains("imagem-tinta")){
+      img.style.transform = "scale(1)"
+    }
+  }, true) 
+
+  // abrir imagem ao clicar em "Detalhes"
+  document.addEventListener("click", function(e){
+
+    if(e.target.classList.contains("btn-detalhes")){
+
+      e.preventDefault()
+
+      const src = e.target.dataset.img
+      const modal = document.getElementById("modal-img")
+      const img = document.getElementById("img-modal")
+
+      img.src = src
+      modal.style.display = "flex"
+    }
+  })
+
+  // fechar modal
+  document.querySelector(".fechar").onclick = function(){
+    document.getElementById("modal-img").style.display = "none"
+  }
+
+  // fechar clicando fora
+  window.onclick = function(e){
+    const modal = document.getElementById("modal-img")
+    if(e.target === modal){
+      modal.style.display = "none"
+    }
+  }
+
+  // fechar modal com tecla ESC
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){
+      const modal = document.getElementById("modal-img")
+      if(modal.style.display === "flex"){
+        modal.style.display = "none"
+      }
+    }
+  })
+
 </script>
 
 
