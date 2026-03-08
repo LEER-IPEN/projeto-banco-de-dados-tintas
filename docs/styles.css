@@ -117,7 +117,70 @@
   display: none;
 }
 
+.only-print{
+  display:none !important;
+}
+
+.watermark{
+  display:none;
+}
+
+.watermark-img{
+  display:none;
+}
+
 @media print {
+  
+  .watermark{
+    display:block;
+    position:fixed;
+    text-align: center;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%) rotate(-30deg);
+
+    font-size:80px;
+    color:rgba(0,0,0,0.1);
+
+    pointer-events:none;
+    z-index:9999;
+  }
+
+  .watermark-img{
+    display:block !important;
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:9998;
+    pointer-events:none;
+  }
+
+  .watermark-img img{
+    width:250px;
+    opacity:0.12;
+  }
+
+  .only-print{
+    display:block !important;
+  }
+
+  @page {
+      margin-top: 0;
+    }
+
+  .navbar,
+  .nav-page,
+  .quarto-navbar{
+    display:none !important;
+  }
+
+  header,
+  footer,
+  nav,
+  .sidebar{
+    display:none !important;
+  }
   
   h1 {
     margin-top: 0;
@@ -138,12 +201,33 @@
     margin-bottom: 8px;
   }
 
+  .titulo-graf{
+    display:block;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-bottom: 2px solid #222;
+    padding-bottom: 5px;
+  }
+
   .btn {
     display: none;
   }
 
   .tabela-dados {
     font-size: 10pt;
+  }
+
+  .img-graf-pdf{
+    display:block;
+    max-width: 100%;
+    margin-top:10px;
+    margin:20px auto;
+  }
+
+  .btn-detalhes{
+    display:none;
   }
 
   /* Esconder os botões de abas */

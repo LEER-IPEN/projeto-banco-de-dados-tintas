@@ -246,6 +246,12 @@ ul.task-list li input[type="checkbox"] {
 
     // 
     container.innerHTML = `
+      <div class="watermark">LEER - IPEN</div>
+      
+      <div class="watermark-img">
+        <img src="assets/imgs/logo_preto.jpg">
+      </div>
+
       <div class="top-bar">
         <h1>${tinta.nome} - ${tinta.id}</h1>
         <button onclick="window.print()" class="btn btn-success">
@@ -321,8 +327,17 @@ ${tinta.elementos_tracos}
 </table>
 
 
-      <h3 class="titulo-secao">Espectros</h3>
+      <h3 class="titulo-graf only-print">Gráficos</h3>
+      <div class="card-grafico only-print">
+        <div class="area-graficos">
+          <div class="area-graficos">
+            <img src="${tinta.grafico_elementos_maj}" class="img-graf-pdf only-print">
+            <img src="${tinta.grafico_elementos_tracos}" class="img-graf-pdf only-print">
+          </div>
+        </div>
+      </div>
 
+      <h3 class="titulo-secao">Espectros</h3>
       <div class="area-graficos">
         <div class="area-graficos">
           ${botoesEspectro}
