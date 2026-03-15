@@ -196,19 +196,10 @@ ul.task-list li input[type="checkbox"] {
           <div class="card-conteudo">
             <img src="${item.imagem}" class="thumb">
             
-<table class="tabela-horizontal caption-top" style="width:100%;" data-quarto-postprocess="true">
-<colgroup>
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-</colgroup>
+<table class="tabela-horizontal caption-top" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th">ID</th>
-<th data-quarto-table-cell-role="th">Cor</th>
 <th data-quarto-table-cell-role="th">Medium</th>
 <th data-quarto-table-cell-role="th">Década</th>
 <th data-quarto-table-cell-role="th">Elementos Majoritários</th>
@@ -218,15 +209,10 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>${item.id}</td>
-<td>${ item.hex ? `
-<div class="cor-box">
-<span class="amostra-cor" style="background-color: ${item.hex};"></span> <span class="codigo-cor">${item.hex}</span>
-</div>
-` : "-" }</td>
 <td>${item.medium}</td>
 <td>${item.decada}</td>
-<td>${item.elementos_majoritarios || "-"}</td>
-<td>${item.elementos_tracos || "-"}</td>
+<td>${ [...new Set([ ...Object.keys(item.elementos.Ag?.majoritarios || {}), ...Object.keys(item.elementos.Rh?.majoritarios || {}), ...Object.keys(item.elementos.Au?.majoritarios || {}) ])].join(", ") || "-" }</td>
+<td>${ [...new Set([ ...Object.keys(item.elementos.Ag?.tracos || {}), ...Object.keys(item.elementos.Rh?.tracos || {}), ...Object.keys(item.elementos.Au?.tracos || {}) ])].join(", ") || "-" }</td>
 </tr>
 </tbody>
 </table>

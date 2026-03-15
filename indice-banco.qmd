@@ -59,7 +59,6 @@ toc: false
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Cor</th>
                   <th>Medium</th>
                   <th>Década</th>
                   <th>Elementos Majoritários</th>
@@ -69,24 +68,26 @@ toc: false
               <tbody>
                 <tr>
                   <td>${item.id}</td>
-
-                  <td>
-                    ${
-                      item.hex
-                      ? `
-                        <div class="cor-box">
-                          <span class="amostra-cor" style="background-color: ${item.hex};"></span>
-                          <span class="codigo-cor">${item.hex}</span>
-                        </div>
-                      `
-                      : "-"
-                    }
-                  </td>
-
                   <td>${item.medium}</td>
                   <td>${item.decada}</td>
-                  <td>${item.elementos_majoritarios || "-"}</td>
-                  <td>${item.elementos_tracos || "-"}</td>
+                  <td>
+                    ${
+                      [...new Set([
+                        ...Object.keys(item.elementos.Ag?.majoritarios || {}),
+                        ...Object.keys(item.elementos.Rh?.majoritarios || {}),
+                        ...Object.keys(item.elementos.Au?.majoritarios || {})
+                      ])].join(", ") || "-"
+                    }
+                  </td>
+                  <td>
+                    ${
+                      [...new Set([
+                        ...Object.keys(item.elementos.Ag?.tracos || {}),
+                        ...Object.keys(item.elementos.Rh?.tracos || {}),
+                        ...Object.keys(item.elementos.Au?.tracos || {})
+                      ])].join(", ") || "-"
+                    }
+                  </td>
                 </tr>
               </tbody>
             </table>

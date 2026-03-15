@@ -7,9 +7,11 @@ execute:
 
 <div id="conteudo"></div>
 
-<div id="modal-img" class="modal">
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+
+<div id="modal-grafico" class="modal">
   <span class="fechar">&times;</span>
-  <img id="img-modal" class="img-modal">
+  <div id="grafico-pie"></div>
 </div>
 
 <script>
@@ -20,6 +22,9 @@ execute:
 
     const response = await fetch("dados/tintas.json");
     const tintas = await response.json();
+
+    const coresResp = await fetch("dados/cores_elementos.json");
+    const coresElementos = await coresResp.json();
 
     const tinta = tintas.find(t => t.id === id);
     const container = document.getElementById("conteudo");
@@ -37,9 +42,9 @@ execute:
       botoesEspectro = `
         <div class="tabs">
           <span class="label-tabs">Escolha o tipo:</span>
-          <button class="tab-btn active" data-tab="graf1" data-tipo="AgV">AgV</button>
-          <button class="tab-btn" data-tab="graf2" data-tipo="RhV">RhV</button>
-          <button class="tab-btn" data-tab="graf3" data-tipo="AuV">AuV</button>
+          <button class="tab-btn active" data-tab="graf1" data-tipo="Ag">Ag</button>
+          <button class="tab-btn" data-tab="graf2" data-tipo="Rh">Rh</button>
+          <button class="tab-btn" data-tab="graf3" data-tipo="Au">Au</button>
         </div>
       `;
 
@@ -47,12 +52,12 @@ execute:
         <div class="card-grafico">
 
           <div class="cabecalho-grafico" id="titulo-grafico">
-            ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - AgV
+            ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - Ag
           </div>
 
           <div class="conteudo-grafico active" id="graf1">
             <div class="titulo-print">
-              ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - AgV
+              ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - Ag
             </div>
             <div class="zoom-container">
               <img src="${tinta.espectros[Object.keys(tinta.espectros)[0]]}" class="imagem-tinta">
@@ -61,7 +66,7 @@ execute:
 
           <div class="conteudo-grafico" id="graf2">
             <div class="titulo-print">
-              ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - RhV
+              ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - Rh
             </div>
             <div class="zoom-container">
               <img src="${tinta.espectros[Object.keys(tinta.espectros)[1]]}" class="imagem-tinta">
@@ -70,7 +75,7 @@ execute:
 
           <div class="conteudo-grafico" id="graf3">
             <div class="titulo-print">
-              ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - AuV
+              ${tinta.tecnica.nome} (${tinta.tecnica.sigla}) - Au
             </div>
             <div class="zoom-container">
               <img src="${tinta.espectros[Object.keys(tinta.espectros)[2]]}" class="imagem-tinta">
@@ -117,55 +122,63 @@ execute:
       </div>
 
       <h3 class="titulo-secao">Informações Gerais</h3>
-      <table class="tabela-dados">
-        <tr><th>ID</th><td>${tinta.id}</td></tr>
-        <tr><th>Nome do Arquivo</th><td>${tinta.filename}</td></tr>
-        <tr>
-          <th>Cor</th>
+      <div class="tabela-container">
+        <table class="tabela-dados">
+          <tr><th>ID</th><td>${tinta.id}</td></tr>
+          <tr><th>Nome do Arquivo</th><td>${tinta.filename}</td></tr>
+          <tr>
+            <th>Nome no Rótulo</th>
+              <td>
+                ${tinta.rotulo}
+              </td>
+          </tr>
+          <tr><th>Década</th><td>${tinta.decada}</td></tr>
+          <tr><th>Medium</th><td>${tinta.medium}</td></tr>
+        </table>
+
+        <h3 class="titulo-secao">Dados Analíticos</h3>
+        <table class="tabela-dados">
+          <tr><th>Técnica</th><td>${tinta.tecnica.sigla} - ${tinta.tecnica.nome}</td></tr>
+
+          <tr>
+            <th>Elementos majoritários</th>
             <td>
-              <div class="cor-box">
-                <span class="amostra-cor" style="background-color: ${tinta.hex};"></span>
-                <span>${tinta.hex}</span>
+              <div class="elementos">
+                <div class="elementos-txt">
+                  ${
+                    [...new Set([
+                      ...Object.keys(tinta.elementos.Ag?.majoritarios || {}),
+                      ...Object.keys(tinta.elementos.Rh?.majoritarios || {}),
+                      ...Object.keys(tinta.elementos.Au?.majoritarios || {})
+                    ])].join(", ") || "-"
+                  }
+                </div>
               </div>
             </td>
-        </tr>
-        <tr><th>Década</th><td>${tinta.decada}</td></tr>
-        <tr><th>Medium</th><td>${tinta.medium}</td></tr>
-      </table>
+          </tr>
 
-      <h3 class="titulo-secao">Dados Analíticos</h3>
-      <table class="tabela-dados">
-        <tr><th>Técnica</th><td>${tinta.tecnica.sigla} - ${tinta.tecnica.nome}</td></tr>
-
-        <tr>
-          <th>Elementos majoritários</th>
-          <td>
-            <div class="elementos">
-              <div class="elementos-txt">
-                ${tinta.elementos_majoritarios}
+          <tr>
+            <th>Elementos traço</th>
+            <td>
+              <div class="elementos">
+                <div class="elementos-txt">
+                  ${
+                    [...new Set([
+                      ...Object.keys(tinta.elementos.Ag?.tracos || {}),
+                      ...Object.keys(tinta.elementos.Rh?.tracos || {}),
+                      ...Object.keys(tinta.elementos.Au?.tracos || {})
+                    ])].join(", ") || "-"
+                  }
+                </div>
               </div>
-              <a href="#" class="btn-detalhes" data-img="${tinta.grafico_elementos_maj}">
-                Detalhes
-              </a>
-            </div>
-          </td>
-        </tr>
+            </td>
+          </tr>
+        </table>
 
-        <tr>
-          <th>Elementos traço</th>
-          <td>
-            <div class="elementos">
-              <div class="elementos-txt">
-                ${tinta.elementos_tracos}
-              </div>
-              <a href="#" class="btn-detalhes" data-img="${tinta.grafico_elementos_tracos}">
-                Detalhes
-              </a>
-            </div>
-          </td>
-        </tr>
-
-      </table>
+        <a href="#" class="btn-detalhes">
+          Detalhes
+        </a>
+      </div>
 
       <h3 class="titulo-graf only-print">Gráficos</h3>
       <div class="card-grafico only-print">
@@ -211,10 +224,98 @@ execute:
         });
       });
     }
+    
+    document.addEventListener("click", function(e){
+
+      if(e.target.classList.contains("btn-detalhes")){
+        e.preventDefault()
+
+        const modal = document.getElementById("modal-grafico")
+        const grafico = document.getElementById("grafico-pie")
+
+        const maj = tinta.elementos.Au.majoritarios
+        const tr = tinta.elementos.Au.tracos
+
+        const trPercent = tinta.elementos.Au.percentual_tracos
+        const majPercent = 100 - trPercent
+
+        const majTotal = Object.values(maj).reduce((a,b)=>a+b,0)
+        const majScaled = Object.values(maj).map(v => (v/majTotal)*majPercent)
+
+        const majLabels = [
+          ...Object.keys(maj),
+          "Traço"
+        ]
+
+        const majValues = [
+          ...majScaled,
+          trPercent
+        ]
+
+        // gerar cores para os majoritários
+        const majColors = [
+          ...Object.keys(maj).map(el => coresElementos[el] || "#cccccc"),
+          "#82BBD8" // cor da fatia "Traço"
+        ]
+
+        // gerar cores para traços
+        const trColors =
+          Object.keys(tr).map(el => coresElementos[el] || "#cccccc")
+
+        const data = [
+
+          {
+            type:"pie",
+            labels:majLabels,
+            values:majValues,
+            domain:{x:[0,0.45]},
+            textinfo:"label+percent",
+            name:"Majoritários",
+            marker:{
+              colors:majColors
+            },
+            pull:majLabels.map(l => l === "Traço" ? 0.12 : 0)
+          },
+
+          {
+            type:"pie",
+            labels:Object.keys(tr),
+            values:Object.values(tr),
+            domain:{x:[0.70,1]},
+            textinfo:"label+percent",
+            name:"Traços",
+            marker:{
+              colors:trColors
+            }
+          }
+
+        ]
+
+        const layout = {
+          title:`Distribuição Elementar - ${tinta.nome}`,
+
+          annotations:[
+            {text:"Elementos Majoritários",x:0.09,y:1.0,showarrow:false},
+            {text:"Elementos Traço",x:0.95,y:1.0,showarrow:false}
+          ],
+
+          showlegend:false
+        }
+
+        modal.style.display="flex"
+        grafico.innerHTML=""
+
+        Plotly.newPlot(grafico,data,layout)
+      }
+
+    })
+
+    document.querySelector(".fechar").onclick = function(){
+      document.getElementById("modal-grafico").style.display = "none"
+    }
   });
 
   document.addEventListener("mousemove", function(e){
-
     const img = e.target
 
     if(img.classList.contains("imagem-tinta")){
@@ -234,44 +335,5 @@ execute:
       img.style.transform = "scale(1)"
     }
   }, true) 
-
-  // abrir imagem ao clicar em "Detalhes"
-  document.addEventListener("click", function(e){
-
-    if(e.target.classList.contains("btn-detalhes")){
-
-      e.preventDefault()
-
-      const src = e.target.dataset.img
-      const modal = document.getElementById("modal-img")
-      const img = document.getElementById("img-modal")
-
-      img.src = src
-      modal.style.display = "flex"
-    }
-  })
-
-  // fechar modal
-  document.querySelector(".fechar").onclick = function(){
-    document.getElementById("modal-img").style.display = "none"
-  }
-
-  // fechar clicando fora
-  window.onclick = function(e){
-    const modal = document.getElementById("modal-img")
-    if(e.target === modal){
-      modal.style.display = "none"
-    }
-  }
-
-  // fechar modal com tecla ESC
-  document.addEventListener("keydown", function(e){
-    if(e.key === "Escape"){
-      const modal = document.getElementById("modal-img")
-      if(modal.style.display === "flex"){
-        modal.style.display = "none"
-      }
-    }
-  })
 
 </script>
