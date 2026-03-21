@@ -119,6 +119,15 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
+.tabela-dados .center {
+  text-align: center;
+}
+
+.tabela-dados .center-bottom {
+  text-align: center;
+  border-bottom: 1px solid #222;
+}
+
 .titulo-print {
   display: none;
 }
@@ -233,6 +242,10 @@
   }
 
   .btn-detalhes{
+    display:none;
+  }
+
+  .btn-detalhes-2{
     display:none;
   }
 
@@ -527,7 +540,7 @@
 }
 
 .tabela-horizontal th {
-  text-align: left;
+  text-align: center;
   padding: 6px;
   background-color: #f4f4f4;
   border-bottom: 2px solid #ccc;
@@ -535,6 +548,7 @@
 }
 
 .tabela-horizontal td {
+  text-align: center;
   padding: 6px;
 }
 
@@ -570,13 +584,44 @@
   text-decoration:none;
   font-size:14px;
   margin-left: auto;
-  position:absolute;
-  right:50px;
-  top:81%;
   transform:translateY(20px); /* ajusta para ficar entre as linhas */
 }
 
 .btn-detalhes:hover {
+  background: #000000;
+  color: white;
+}
+
+.btn-detalhes-2 {
+  padding:6px 14px;
+  background: #ffffff;
+  border: 1px solid #444;
+  color: #444;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:14px;
+  margin-left: auto;
+  transform:translateY(20px); /* ajusta para ficar entre as linhas */
+}
+
+.btn-detalhes-2:hover {
+  background: #000000;
+  color: white;
+}
+
+.btn-detalhes-3 {
+  padding:6px 14px;
+  background: #ffffff;
+  border: 1px solid #444;
+  color: #444;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:14px;
+  margin-left: auto;
+  transform:translateY(20px); /* ajusta para ficar entre as linhas */
+}
+
+.btn-detalhes-3:hover {
   background: #000000;
   color: white;
 }
@@ -603,8 +648,8 @@
 
 .fechar{
   position:absolute;
-  top:20%;
-  right:575px;
+  top:18%;
+  right:555px;
   color:white;
   font-size:40px;
   cursor:pointer;
