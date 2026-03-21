@@ -155,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 <div id="modal-grafico" class="modal">
 <span class="fechar">×</span>
-<div id="grafico-pie">
+<div id="grafico">
 
 </div>
 </div>
@@ -173,6 +173,23 @@ ul.task-list li input[type="checkbox"] {
 
     const tinta = tintas.find(t => t.id === id);
     const container = document.getElementById("conteudo");
+
+    const numeroAtomico = {
+      H:1, He:2, Li:3, Be:4, B:5, C:6, N:7, O:8, F:9, Ne:10, Na:11, Mg:12, Al:13, Si:14, P:15, S:16, Cl:17, 
+      Ar:18, K:19, Ca:20, Sc:21, Ti:22, V:23, Cr:24, Mn:25, Fe:26, Co:27, Ni:28, Cu:29, Zn:30, Ga:31, Ge:32, 
+      As:33, Se:34, Br:35, Kr:36, Rb:37, Sr:38, Y:39, Zr:40, Nb:41, Mo:42, Tc:43, Ru:44, Rh:45, Pd:46, Ag:47, 
+      Cd:48, In:49, Sn:50, Sb:51, Te:52, I:53, Xe:54, Cs:55, Ba:56, La:57, Ce:58, Pr:59, Nd:60, Pm:61, Sm:62, 
+      Eu:63, Gd:64, Tb:65, Dy:66, Ho:67, Er:68, Tm:69, Yb:70, Lu:71, Hf:72, Ta:73, W:74, Re:75, Os:76, Ir:77, 
+      Pt:78, Au:79, Hg:80, Tl:81, Pb:82, Bi:83, Po:84, At:85, Rn:86, Fr:87, Ra:88, Ac:89, Th:90, Pa:91, U:92, 
+      Np:93, Pu:94, Am:95, Cm:96, Bk:97, Cf:98, Es:99, Fm:100, Md:101, No:102, Lr:103, Rf:104, Db:105, Sg:106,
+      Bh:107, Hs:108, Mt:109, Ds:110, Rg:111, Cn:112, Nh:113, Fl:114, Mc:115, Lv:116, Ts:117, Og:118
+    }
+
+    function ordenarElementos(lista){
+      return lista.sort((a,b) => {
+        return (numeroAtomico[a] || 999) - (numeroAtomico[b] || 999)
+      })
+    }
 
     let botoesEspectro = "";
     let conteudoEspectro = "";
@@ -291,6 +308,10 @@ ul.task-list li input[type="checkbox"] {
 <td data-quarto-table-cell-role="th">Medium</td>
 <td>${tinta.medium}</td>
 </tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Técnica</td>
+<td>${tinta.tecnica.sigla} - ${tinta.tecnica.nome}</td>
+</tr>
 </tbody>
 </table>
 
@@ -298,38 +319,64 @@ ul.task-list li input[type="checkbox"] {
         <h3 class="titulo-secao">Dados Analíticos</h3>
         
 <table class="tabela-dados caption-top" data-quarto-postprocess="true">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">Técnica</td>
-<td>${tinta.tecnica.sigla} - ${tinta.tecnica.nome}</td>
+<tr class="center odd">
+<td rowspan="2" data-quarto-table-cell-role="th">Ag</td>
+<td>Elementos Majoritários</td>
+<td>${ordenarElementos(Object.keys(tinta.elementos.Ag?.majoritarios || {})).join(", ") || "-"}</td>
+<td rowspan="2"><a href="#" class="btn-detalhes" data-tipo="Ag">Detalhes</a></td>
 </tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">Elementos majoritários</td>
-<td><div class="elementos">
-<div class="elementos-txt">
-${ [...new Set([ ...Object.keys(tinta.elementos.Ag?.majoritarios || {}), ...Object.keys(tinta.elementos.Rh?.majoritarios || {}), ...Object.keys(tinta.elementos.Au?.majoritarios || {}) ])].join(", ") || "-" }
-</div>
-</div></td>
+<tr class="center-bottom even">
+<td>Elementos Traço</td>
+<td>${ordenarElementos(Object.keys(tinta.elementos.Ag?.tracos || {})).join(", ") || "-"}</td>
 </tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">Elementos traço</td>
-<td><div class="elementos">
-<div class="elementos-txt">
-${ [...new Set([ ...Object.keys(tinta.elementos.Ag?.tracos || {}), ...Object.keys(tinta.elementos.Rh?.tracos || {}), ...Object.keys(tinta.elementos.Au?.tracos || {}) ])].join(", ") || "-" }
-</div>
-</div></td>
+<tr class="center odd">
+<td rowspan="2" data-quarto-table-cell-role="th">Rh</td>
+<td>Elementos Majoritários</td>
+<td>${ordenarElementos(Object.keys(tinta.elementos.Rh?.majoritarios || {})).join(", ") || "-"}</td>
+<td rowspan="2"><a href="#" class="btn-detalhes" data-tipo="Rh">Detalhes</a></td>
+</tr>
+<tr class="center-bottom even">
+<td>Elementos Traço</td>
+<td>${ordenarElementos(Object.keys(tinta.elementos.Rh?.tracos || {})).join(", ") || "-"}</td>
+</tr>
+<tr class="center odd">
+<td rowspan="2" data-quarto-table-cell-role="th">Au</td>
+<td>Elementos Majoritários</td>
+<td>${ordenarElementos(Object.keys(tinta.elementos.Au?.majoritarios || {})).join(", ") || "-"}</td>
+<td rowspan="2"><a href="#" class="btn-detalhes" data-tipo="Au">Detalhes</a></td>
+</tr>
+<tr class="center-bottom even">
+<td>Elementos Traço</td>
+<td>${ordenarElementos(Object.keys(tinta.elementos.Au?.tracos || {})).join(", ") || "-"}</td>
 </tr>
 </tbody>
 </table>
 
 
-        <a href="#" class="btn-detalhes">
-          Detalhes
-        </a>
+        <h3 class="titulo-secao">Dados Sintetizados</h3>
+        
+<table class="tabela-dados caption-top" data-quarto-postprocess="true">
+<tbody>
+<tr class="center odd">
+<td>Elementos Majoritarios</td>
+<td>${ordenarElementos( [...new Set([ ...Object.keys(tinta.elementos.Ag?.majoritarios || {}), ...Object.keys(tinta.elementos.Rh?.majoritarios || {}), ...Object.keys(tinta.elementos.Au?.majoritarios || {}) ])]).join(", ") || "-" }</td>
+<td><a href="#" class="btn-detalhes-2" data-tipo="majoritarios">Detalhes</a></td>
+</tr>
+<tr class="center even">
+<td>Elementos Traço</td>
+<td>${ordenarElementos( [...new Set([ ...Object.keys(tinta.elementos.Ag?.tracos || {}), ...Object.keys(tinta.elementos.Rh?.tracos || {}), ...Object.keys(tinta.elementos.Au?.tracos || {}) ])]).join(", ") || "-" }</td>
+<td><a href="#" class="btn-detalhes-2" data-tipo="tracos">Detalhes</a></td>
+</tr>
+<tr class="center odd">
+<td>Grafico Radar</td>
+<td><a href="#" class="btn-detalhes-3" data-tipo="majoritarios">Detalhes</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
       </div>
 
       <h3 class="titulo-graf only-print">Gráficos</h3>
@@ -382,13 +429,15 @@ ${ [...new Set([ ...Object.keys(tinta.elementos.Ag?.tracos || {}), ...Object.key
       if(e.target.classList.contains("btn-detalhes")){
         e.preventDefault()
 
+        const tipo = e.target.dataset.tipo
+
         const modal = document.getElementById("modal-grafico")
-        const grafico = document.getElementById("grafico-pie")
+        const grafico = document.getElementById("grafico")
 
-        const maj = tinta.elementos.Au.majoritarios
-        const tr = tinta.elementos.Au.tracos
+        const maj = tinta.elementos[tipo].majoritarios
+        const tr = tinta.elementos[tipo].tracos
 
-        const trPercent = tinta.elementos.Au.percentual_tracos
+        const trPercent = tinta.elementos[tipo].percentual_tracos
         const majPercent = 100 - trPercent
 
         const majTotal = Object.values(maj).reduce((a,b)=>a+b,0)
@@ -444,7 +493,7 @@ ${ [...new Set([ ...Object.keys(tinta.elementos.Ag?.tracos || {}), ...Object.key
         ]
 
         const layout = {
-          title:`Distribuição Elementar - ${tinta.nome}`,
+          title:`Distribuição Elementar em ${[tipo]} - ${tinta.nome}`,
 
           annotations:[
             {text:"Elementos Majoritários",x:0.09,y:1.0,showarrow:false},
@@ -462,9 +511,149 @@ ${ [...new Set([ ...Object.keys(tinta.elementos.Ag?.tracos || {}), ...Object.key
 
     })
 
+    document.addEventListener("click", function(e){
+
+      if(e.target.classList.contains("btn-detalhes-2")){
+        e.preventDefault()
+
+        const tipo = e.target.dataset.tipo
+
+        const modal = document.getElementById("modal-grafico")
+        const grafico = document.getElementById("grafico")
+
+        const Ag = tinta.elementos.Ag?.[tipo] || {}
+        const Rh = tinta.elementos.Rh?.[tipo] || {}
+        const Au = tinta.elementos.Au?.[tipo] || {}
+
+        const elementos = [...new Set([
+          ...Object.keys(Ag),
+          ...Object.keys(Rh),
+          ...Object.keys(Au)
+        ])]
+
+        const elementosOrdenados = ordenarElementos(elementos)
+
+        const valoresAg = elementosOrdenados.map(el => Ag[el] || 0)
+        const valoresRh = elementosOrdenados.map(el => Rh[el] || 0)
+        const valoresAu = elementosOrdenados.map(el => Au[el] || 0)
+
+        const data = [
+          {
+            type:"bar",
+            name:"Ag",
+            x:elementosOrdenados,
+            y:valoresAg
+          },
+          {
+            type:"bar",
+            name:"Rh",
+            x:elementosOrdenados,
+            y:valoresRh
+          },
+          {
+            type:"bar",
+            name:"Au",
+            x:elementosOrdenados,
+            y:valoresAu
+          }
+        ]
+
+        modal.style.display="flex"
+        grafico.innerHTML=""
+
+        Plotly.newPlot(grafico, data, {
+          barmode:"group", 
+          title:`Comparação de Elementos ${[tipo]}`,
+          xaxis:{ title:"Elemento" },
+          yaxis:{ title:"%" }
+        })
+      }
+    })
+
+    document.addEventListener("click", function(e){
+
+      if(e.target.classList.contains("btn-detalhes-3")){
+        e.preventDefault()
+
+        const tipo = e.target.dataset.tipo
+
+        const modal = document.getElementById("modal-grafico")
+        const grafico = document.getElementById("grafico")
+
+        const Ag = tinta.elementos.Ag?.[tipo] || {}
+        const Rh = tinta.elementos.Rh?.[tipo] || {}
+        const Au = tinta.elementos.Au?.[tipo] || {}
+
+        const elementos = [...new Set([
+          ...Object.keys(Ag),
+          ...Object.keys(Rh),
+          ...Object.keys(Au)
+        ])]
+
+        const elementosOrdenados = ordenarElementos(elementos)
+
+        const valoresAg = elementosOrdenados.map(el => Ag[el] || 0)
+        const valoresRh = elementosOrdenados.map(el => Rh[el] || 0)
+        const valoresAu = elementosOrdenados.map(el => Au[el] || 0)
+
+        const data = [
+          {
+            type: "scatterpolar",
+            r: valoresAg,
+            theta: elementosOrdenados,
+            fill: "toself",
+            name: "Ag"
+          },
+          {
+            type: "scatterpolar",
+            r: valoresRh,
+            theta: elementosOrdenados,
+            fill: "toself",
+            name: "Rh"
+          },
+          {
+            type: "scatterpolar",
+            r: valoresAu,
+            theta: elementosOrdenados,
+            fill: "toself",
+            name: "Au"
+          }
+        ]
+
+        const layout = {
+          title: `Perfil Elementar ${[tipo]} - ${tinta.nome}`,
+          polar: {
+            radialaxis: {
+              visible: true,
+              range: [0, 100] // ajuste se necessário
+            }
+          },
+          showlegend: true
+        }
+
+        modal.style.display = "flex"
+        grafico.innerHTML = ""
+
+        Plotly.newPlot(grafico, data, layout)
+      }
+    })
+
+
     document.querySelector(".fechar").onclick = function(){
       document.getElementById("modal-grafico").style.display = "none"
     }
+
+    document.addEventListener("keydown", function(e){
+      if(e.key === "Escape"){
+        document.getElementById("modal-grafico").style.display = "none"
+      }
+    })
+
+    document.getElementById("modal-grafico").addEventListener("click", function(e){
+      if(e.target.id === "modal-grafico"){
+        this.style.display = "none"
+      }
+    })
   });
 
   document.addEventListener("mousemove", function(e){
