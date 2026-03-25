@@ -316,6 +316,29 @@ ul.task-list li input[type="checkbox"] {
 </table>
 
 
+        <h3 class="titulo-secao">Dados Sintetizados</h3>
+        
+<table class="tabela-dados caption-top" data-quarto-postprocess="true">
+<tbody>
+<tr class="center odd">
+<td>Elementos Majoritarios</td>
+<td>${ordenarElementos( [...new Set([ ...Object.keys(tinta.elementos.Ag?.majoritarios || {}), ...Object.keys(tinta.elementos.Rh?.majoritarios || {}), ...Object.keys(tinta.elementos.Au?.majoritarios || {}) ])]).join(", ") || "-" }</td>
+<td><a href="#" class="btn-detalhes-2" data-tipo="majoritarios">Detalhes</a></td>
+</tr>
+<tr class="center even">
+<td>Elementos Traço</td>
+<td>${ordenarElementos( [...new Set([ ...Object.keys(tinta.elementos.Ag?.tracos || {}), ...Object.keys(tinta.elementos.Rh?.tracos || {}), ...Object.keys(tinta.elementos.Au?.tracos || {}) ])]).join(", ") || "-" }</td>
+<td><a href="#" class="btn-detalhes-2" data-tipo="tracos">Detalhes</a></td>
+</tr>
+<tr class="center odd">
+<td>Grafico Radar</td>
+<td><a href="#" class="btn-detalhes-3" data-tipo="majoritarios">Detalhes</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
         <h3 class="titulo-secao">Dados Analíticos</h3>
         
 <table class="tabela-dados caption-top" data-quarto-postprocess="true">
@@ -352,30 +375,6 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-
-
-        <h3 class="titulo-secao">Dados Sintetizados</h3>
-        
-<table class="tabela-dados caption-top" data-quarto-postprocess="true">
-<tbody>
-<tr class="center odd">
-<td>Elementos Majoritarios</td>
-<td>${ordenarElementos( [...new Set([ ...Object.keys(tinta.elementos.Ag?.majoritarios || {}), ...Object.keys(tinta.elementos.Rh?.majoritarios || {}), ...Object.keys(tinta.elementos.Au?.majoritarios || {}) ])]).join(", ") || "-" }</td>
-<td><a href="#" class="btn-detalhes-2" data-tipo="majoritarios">Detalhes</a></td>
-</tr>
-<tr class="center even">
-<td>Elementos Traço</td>
-<td>${ordenarElementos( [...new Set([ ...Object.keys(tinta.elementos.Ag?.tracos || {}), ...Object.keys(tinta.elementos.Rh?.tracos || {}), ...Object.keys(tinta.elementos.Au?.tracos || {}) ])]).join(", ") || "-" }</td>
-<td><a href="#" class="btn-detalhes-2" data-tipo="tracos">Detalhes</a></td>
-</tr>
-<tr class="center odd">
-<td>Grafico Radar</td>
-<td><a href="#" class="btn-detalhes-3" data-tipo="majoritarios">Detalhes</a></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
 
       </div>
 

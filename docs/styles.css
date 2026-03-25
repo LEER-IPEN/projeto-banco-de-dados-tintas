@@ -153,10 +153,8 @@
     top:50%;
     left:50%;
     transform:translate(-50%, -50%) rotate(-30deg);
-
     font-size:80px;
     color:rgba(0,0,0,0.1);
-
     pointer-events:none;
     z-index:9999;
   }
@@ -246,6 +244,10 @@
   }
 
   .btn-detalhes-2{
+    display:none;
+  }
+
+  .btn-detalhes-3 {
     display:none;
   }
 

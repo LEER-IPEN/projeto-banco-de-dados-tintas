@@ -32,9 +32,7 @@
       "Ag": "dados/espectros/frx/agv/220725ab_agv.png",
       "Rh": "dados/espectros/frx/rhv/150725ab_rhv.png",
       "Au": "dados/espectros/frx/auv/220725ab_auv.png"
-    },
-    "grafico_elementos_maj": "dados/graficos/frx/majoritarios/majoritarios_teste.png",
-    "grafico_elementos_tracos": "dados/graficos/frx/tracos/tracos_teste.png"
+    }
   },
   {
     "id": "FRX0001",

@@ -154,9 +154,48 @@ execute:
           <tr><th>Técnica</th><td>${tinta.tecnica.sigla} - ${tinta.tecnica.nome}</td></tr>
         </table>
 
+        <h3 class="titulo-secao">Dados Sintetizados</h3>
+        <table class="tabela-dados">
+          <tr class="center">
+            <td>Elementos Majoritarios</td>
+            <td>
+              ${ordenarElementos(
+                [...new Set([
+                  ...Object.keys(tinta.elementos.Ag?.majoritarios || {}),
+                  ...Object.keys(tinta.elementos.Rh?.majoritarios || {}),
+                  ...Object.keys(tinta.elementos.Au?.majoritarios || {})
+                ])]).join(", ") || "-"
+              }
+            </td>
+            <td>
+              <a href="#" class="btn-detalhes-2" data-tipo="majoritarios">Detalhes</a>
+            </td>
+          </tr>
+          <tr class="center">
+            <td>Elementos Traço</td>
+            <td>
+              ${ordenarElementos(
+                [...new Set([
+                  ...Object.keys(tinta.elementos.Ag?.tracos || {}),
+                  ...Object.keys(tinta.elementos.Rh?.tracos || {}),
+                  ...Object.keys(tinta.elementos.Au?.tracos || {})
+                ])]).join(", ") || "-"
+              }
+            </td>
+            <td>
+              <a href="#" class="btn-detalhes-2" data-tipo="tracos">Detalhes</a>
+            </td>
+          </tr>
+          <tr class="center">
+            <td>Grafico Radar</td>
+            <td>
+              <a href="#" class="btn-detalhes-3" data-tipo="majoritarios">Detalhes</a>
+            </td>
+          </tr>
+        </table>
+
         <h3 class="titulo-secao">Dados Analíticos</h3>
         <table class="tabela-dados">
-          
           <!-- AG -->
           <tr class="center">
             <th rowspan="2">Ag</th>
@@ -210,49 +249,7 @@ execute:
               ${ordenarElementos(Object.keys(tinta.elementos.Au?.tracos || {})).join(", ") || "-"}
             </td>
           </tr>
-
         </table>
-
-        <h3 class="titulo-secao">Dados Sintetizados</h3>
-        <table class="tabela-dados">
-          <tr class="center">
-            <td>Elementos Majoritarios</td>
-            <td>
-              ${ordenarElementos(
-                [...new Set([
-                  ...Object.keys(tinta.elementos.Ag?.majoritarios || {}),
-                  ...Object.keys(tinta.elementos.Rh?.majoritarios || {}),
-                  ...Object.keys(tinta.elementos.Au?.majoritarios || {})
-                ])]).join(", ") || "-"
-              }
-            </td>
-            <td>
-              <a href="#" class="btn-detalhes-2" data-tipo="majoritarios">Detalhes</a>
-            </td>
-          </tr>
-          <tr class="center">
-            <td>Elementos Traço</td>
-            <td>
-              ${ordenarElementos(
-                [...new Set([
-                  ...Object.keys(tinta.elementos.Ag?.tracos || {}),
-                  ...Object.keys(tinta.elementos.Rh?.tracos || {}),
-                  ...Object.keys(tinta.elementos.Au?.tracos || {})
-                ])]).join(", ") || "-"
-              }
-            </td>
-            <td>
-              <a href="#" class="btn-detalhes-2" data-tipo="tracos">Detalhes</a>
-            </td>
-          </tr>
-          <tr class="center">
-            <td>Grafico Radar</td>
-            <td>
-              <a href="#" class="btn-detalhes-3" data-tipo="majoritarios">Detalhes</a>
-            </td>
-          </tr>
-        </table>
-
       </div>
 
       <h3 class="titulo-graf only-print">Gráficos</h3>
