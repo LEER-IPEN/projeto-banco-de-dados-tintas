@@ -142,7 +142,6 @@ execute:
       <div class="tabela-container">
         <table class="tabela-dados">
           <tr><th>ID</th><td>${tinta.id}</td></tr>
-          <tr><th>Nome do Arquivo</th><td>${tinta.filename}</td></tr>
           <tr>
             <th>Nome no Rótulo</th>
               <td>
