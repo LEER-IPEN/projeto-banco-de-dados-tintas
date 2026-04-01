@@ -267,8 +267,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <td>${item.id}</td>
 <td>${item.medium}</td>
 <td>${item.decada}</td>
-<td>${ordenarElementos( [...new Set([ ...Object.keys(item.elementos.Ag?.majoritarios || {}), ...Object.keys(item.elementos.Rh?.majoritarios || {}), ...Object.keys(item.elementos.Au?.majoritarios || {}) ])]).join(", ") || "-" }</td>
-<td>${ordenarElementos( [...new Set([ ...Object.keys(item.elementos.Ag?.tracos || {}), ...Object.keys(item.elementos.Rh?.tracos || {}), ...Object.keys(item.elementos.Au?.tracos || {}) ])]).join(", ") || "-" }</td>
+<td>${ordenarElementos( [...new Set([ ...Object.keys(item.elementos.Ag?.Majoritarios || {}), ...Object.keys(item.elementos.Rh?.Majoritarios || {}), ...Object.keys(item.elementos.Au?.Majoritarios || {}) ])]).join(", ") || "-" }</td>
+<td>${ordenarElementos( [...new Set([ ...Object.keys(item.elementos.Ag?.Traco || {}), ...Object.keys(item.elementos.Rh?.Traco || {}), ...Object.keys(item.elementos.Au?.Traco || {}) ])]).join(", ") || "-" }</td>
 </tr>
 </tbody>
 </table>
