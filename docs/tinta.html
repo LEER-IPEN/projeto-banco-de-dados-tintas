@@ -318,17 +318,17 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="center odd">
 <td>Elementos Majoritarios</td>
-<td>${ordenarElementos( [...new Set([ ...Object.keys(tinta.elementos.Ag?.majoritarios || {}), ...Object.keys(tinta.elementos.Rh?.majoritarios || {}), ...Object.keys(tinta.elementos.Au?.majoritarios || {}) ])]).join(", ") || "-" }</td>
-<td><a href="#" class="btn-detalhes-2" data-tipo="majoritarios">Detalhes</a></td>
+<td>${ordenarElementos( [...new Set([ ...Object.keys(tinta.elementos.Ag?.Majoritarios || {}), ...Object.keys(tinta.elementos.Rh?.Majoritarios || {}), ...Object.keys(tinta.elementos.Au?.Majoritarios || {}) ])]).join(", ") || "-" }</td>
+<td><a href="#" class="btn-detalhes-2" data-tipo="Majoritarios">Detalhes</a></td>
 </tr>
 <tr class="center even">
 <td>Elementos Traço</td>
-<td>${ordenarElementos( [...new Set([ ...Object.keys(tinta.elementos.Ag?.tracos || {}), ...Object.keys(tinta.elementos.Rh?.tracos || {}), ...Object.keys(tinta.elementos.Au?.tracos || {}) ])]).join(", ") || "-" }</td>
-<td><a href="#" class="btn-detalhes-2" data-tipo="tracos">Detalhes</a></td>
+<td>${ordenarElementos( [...new Set([ ...Object.keys(tinta.elementos.Ag?.Traco || {}), ...Object.keys(tinta.elementos.Rh?.Traco || {}), ...Object.keys(tinta.elementos.Au?.Traco || {}) ])]).join(", ") || "-" }</td>
+<td><a href="#" class="btn-detalhes-2" data-tipo="Traco">Detalhes</a></td>
 </tr>
 <tr class="center odd">
 <td>Grafico Radar</td>
-<td><a href="#" class="btn-detalhes-3" data-tipo="majoritarios">Detalhes</a></td>
+<td><a href="#" class="btn-detalhes-3" data-tipo="Majoritarios">Detalhes</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -342,32 +342,32 @@ ul.task-list li input[type="checkbox"] {
 <tr class="center odd">
 <td rowspan="2" data-quarto-table-cell-role="th">Ag</td>
 <td>Elementos Majoritários</td>
-<td>${ordenarElementos(Object.keys(tinta.elementos.Ag?.majoritarios || {})).join(", ") || "-"}</td>
+<td>${ordenarElementos(Object.keys(tinta.elementos.Ag?.Majoritarios || {})).join(", ") || "-"}</td>
 <td rowspan="2"><a href="#" class="btn-detalhes" data-tipo="Ag">Detalhes</a></td>
 </tr>
 <tr class="center-bottom even">
 <td>Elementos Traço</td>
-<td>${ordenarElementos(Object.keys(tinta.elementos.Ag?.tracos || {})).join(", ") || "-"}</td>
+<td>${ordenarElementos(Object.keys(tinta.elementos.Ag?.Traco || {})).join(", ") || "-"}</td>
 </tr>
 <tr class="center odd">
 <td rowspan="2" data-quarto-table-cell-role="th">Rh</td>
 <td>Elementos Majoritários</td>
-<td>${ordenarElementos(Object.keys(tinta.elementos.Rh?.majoritarios || {})).join(", ") || "-"}</td>
+<td>${ordenarElementos(Object.keys(tinta.elementos.Rh?.Majoritarios || {})).join(", ") || "-"}</td>
 <td rowspan="2"><a href="#" class="btn-detalhes" data-tipo="Rh">Detalhes</a></td>
 </tr>
 <tr class="center-bottom even">
 <td>Elementos Traço</td>
-<td>${ordenarElementos(Object.keys(tinta.elementos.Rh?.tracos || {})).join(", ") || "-"}</td>
+<td>${ordenarElementos(Object.keys(tinta.elementos.Rh?.Traco || {})).join(", ") || "-"}</td>
 </tr>
 <tr class="center odd">
 <td rowspan="2" data-quarto-table-cell-role="th">Au</td>
 <td>Elementos Majoritários</td>
-<td>${ordenarElementos(Object.keys(tinta.elementos.Au?.majoritarios || {})).join(", ") || "-"}</td>
+<td>${ordenarElementos(Object.keys(tinta.elementos.Au?.Majoritarios || {})).join(", ") || "-"}</td>
 <td rowspan="2"><a href="#" class="btn-detalhes" data-tipo="Au">Detalhes</a></td>
 </tr>
 <tr class="center-bottom even">
 <td>Elementos Traço</td>
-<td>${ordenarElementos(Object.keys(tinta.elementos.Au?.tracos || {})).join(", ") || "-"}</td>
+<td>${ordenarElementos(Object.keys(tinta.elementos.Au?.Traco || {})).join(", ") || "-"}</td>
 </tr>
 </tbody>
 </table>
@@ -429,10 +429,10 @@ ul.task-list li input[type="checkbox"] {
         const modal = document.getElementById("modal-grafico")
         const grafico = document.getElementById("grafico")
 
-        const maj = tinta.elementos[tipo].majoritarios
-        const tr = tinta.elementos[tipo].tracos
+        const maj = tinta.elementos[tipo].Majoritarios
+        const tr = tinta.elementos[tipo].Traco
 
-        const trPercent = tinta.elementos[tipo].percentual_tracos
+        const trPercent = tinta.elementos[tipo].percentual_traco
         const majPercent = 100 - trPercent
 
         const majTotal = Object.values(maj).reduce((a,b)=>a+b,0)

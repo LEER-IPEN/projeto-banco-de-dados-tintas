@@ -12,19 +12,19 @@
     "medium": "Acrílica",
     "elementos": {
       "Ag": {
-        "percentual_tracos": 1,
-        "majoritarios": {"S":20,"Ti":38,"Ba":41},
-        "tracos": {"Fe":40,"Ni":32,"Sr":28}
+        "percentual_traco": 1,
+        "Majoritarios": {"S":20,"Ti":38,"Ba":41},
+        "Traco": {"Fe":40,"Ni":32,"Sr":28}
       },
       "Rh": {
-        "percentual_tracos": 2,
-        "majoritarios": {"Ti":39,"Ba":40,"S":19},
-        "tracos": {"Fe":45,"Ca":38,"Sr":17}
+        "percentual_traco": 2,
+        "Majoritarios": {"Ti":39,"Ba":40,"S":19},
+        "Traco": {"Fe":45,"Ca":38,"Sr":17}
       },
       "Au": {
-        "percentual_tracos": 2,
-        "majoritarios": {"Ba":53,"Ti":43,"S":2},
-        "tracos": {"Fe":23,"Ni":17,"Sr":13,"Zn":20,"Cl":13,"Ca":14}
+        "percentual_traco": 2,
+        "Majoritarios": {"Ba":53,"Ti":43,"S":2},
+        "Traco": {"Fe":23,"Ni":17,"Sr":13,"Zn":20,"Cl":13,"Ca":14}
       }
     },
     "imagem": "dados/imagem-tinta/220725ab_agv.png",

@@ -160,14 +160,14 @@ execute:
             <td>
               ${ordenarElementos(
                 [...new Set([
-                  ...Object.keys(tinta.elementos.Ag?.majoritarios || {}),
-                  ...Object.keys(tinta.elementos.Rh?.majoritarios || {}),
-                  ...Object.keys(tinta.elementos.Au?.majoritarios || {})
+                  ...Object.keys(tinta.elementos.Ag?.Majoritarios || {}),
+                  ...Object.keys(tinta.elementos.Rh?.Majoritarios || {}),
+                  ...Object.keys(tinta.elementos.Au?.Majoritarios || {})
                 ])]).join(", ") || "-"
               }
             </td>
             <td>
-              <a href="#" class="btn-detalhes-2" data-tipo="majoritarios">Detalhes</a>
+              <a href="#" class="btn-detalhes-2" data-tipo="Majoritarios">Detalhes</a>
             </td>
           </tr>
           <tr class="center">
@@ -175,20 +175,20 @@ execute:
             <td>
               ${ordenarElementos(
                 [...new Set([
-                  ...Object.keys(tinta.elementos.Ag?.tracos || {}),
-                  ...Object.keys(tinta.elementos.Rh?.tracos || {}),
-                  ...Object.keys(tinta.elementos.Au?.tracos || {})
+                  ...Object.keys(tinta.elementos.Ag?.Traco || {}),
+                  ...Object.keys(tinta.elementos.Rh?.Traco || {}),
+                  ...Object.keys(tinta.elementos.Au?.Traco || {})
                 ])]).join(", ") || "-"
               }
             </td>
             <td>
-              <a href="#" class="btn-detalhes-2" data-tipo="tracos">Detalhes</a>
+              <a href="#" class="btn-detalhes-2" data-tipo="Traco">Detalhes</a>
             </td>
           </tr>
           <tr class="center">
             <td>Grafico Radar</td>
             <td>
-              <a href="#" class="btn-detalhes-3" data-tipo="majoritarios">Detalhes</a>
+              <a href="#" class="btn-detalhes-3" data-tipo="Majoritarios">Detalhes</a>
             </td>
           </tr>
         </table>
@@ -200,7 +200,7 @@ execute:
             <th rowspan="2">Ag</th>
             <td>Elementos Majoritários</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Ag?.majoritarios || {})).join(", ") || "-"}
+              ${ordenarElementos(Object.keys(tinta.elementos.Ag?.Majoritarios || {})).join(", ") || "-"}
             </td>
             <td rowspan="2">
               <a href="#" class="btn-detalhes" data-tipo="Ag">Detalhes</a>
@@ -209,7 +209,7 @@ execute:
           <tr class="center-bottom">
             <td>Elementos Traço</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Ag?.tracos || {})).join(", ") || "-"}
+              ${ordenarElementos(Object.keys(tinta.elementos.Ag?.Traco || {})).join(", ") || "-"}
             </td>
           </tr>
 
@@ -218,7 +218,7 @@ execute:
             <th rowspan="2">Rh</th>
             <td>Elementos Majoritários</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Rh?.majoritarios || {})).join(", ") || "-"}
+              ${ordenarElementos(Object.keys(tinta.elementos.Rh?.Majoritarios || {})).join(", ") || "-"}
             </td>
             <td rowspan="2">
               <a href="#" class="btn-detalhes" data-tipo="Rh">Detalhes</a>
@@ -227,7 +227,7 @@ execute:
           <tr class="center-bottom">
             <td>Elementos Traço</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Rh?.tracos || {})).join(", ") || "-"}
+              ${ordenarElementos(Object.keys(tinta.elementos.Rh?.Traco || {})).join(", ") || "-"}
             </td>
           </tr>
 
@@ -236,7 +236,7 @@ execute:
             <th rowspan="2">Au</th>
             <td>Elementos Majoritários</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Au?.majoritarios || {})).join(", ") || "-"}
+              ${ordenarElementos(Object.keys(tinta.elementos.Au?.Majoritarios || {})).join(", ") || "-"}
             </td>
             <td rowspan="2">
               <a href="#" class="btn-detalhes" data-tipo="Au">Detalhes</a>
@@ -245,7 +245,7 @@ execute:
           <tr class="center-bottom">
             <td>Elementos Traço</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Au?.tracos || {})).join(", ") || "-"}
+              ${ordenarElementos(Object.keys(tinta.elementos.Au?.Traco || {})).join(", ") || "-"}
             </td>
           </tr>
         </table>
@@ -306,10 +306,10 @@ execute:
         const modal = document.getElementById("modal-grafico")
         const grafico = document.getElementById("grafico")
 
-        const maj = tinta.elementos[tipo].majoritarios
-        const tr = tinta.elementos[tipo].tracos
+        const maj = tinta.elementos[tipo].Majoritarios
+        const tr = tinta.elementos[tipo].Traco
 
-        const trPercent = tinta.elementos[tipo].percentual_tracos
+        const trPercent = tinta.elementos[tipo].percentual_traco
         const majPercent = 100 - trPercent
 
         const majTotal = Object.values(maj).reduce((a,b)=>a+b,0)
