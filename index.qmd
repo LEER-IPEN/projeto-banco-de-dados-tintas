@@ -17,13 +17,13 @@ body-classes: homepage
 :::: {.carousel-item image="assets/imgs/image3.jpeg" caption="Jacu"}
 :::
 
-:::: {.carousel-item image="assets/imgs/image4.jpeg" caption="Quero-quero"}
+:::: {.carousel-item image="assets/imgs/image4.jpeg" caption="Quero-Quero"}
 :::
 
-:::: {.carousel-item image="assets/imgs/image5.jpeg" caption="Pica-pau"}
+:::: {.carousel-item image="assets/imgs/image5.jpeg" caption="Pica-Pau"}
 :::
 
-:::: {.carousel-item image="assets/imgs/image6.jpeg" caption="Gavião-branco"}
+:::: {.carousel-item image="assets/imgs/image6.jpeg" caption="Gavião-Branco"}
 :::
 
 :::: {.carousel-item image="assets/imgs/image7.jpeg" caption="Tucano"}
@@ -34,57 +34,42 @@ body-classes: homepage
 
 :::
 
-# Banco de Dados de Tintas Artísticas
+## Banco de Dados de Tintas Artísticas
 
----
+#### O Projeto
 
-### O Projeto
-
-O **Projeto Banco de Dados Tintas Artísticas** tem como objetivo estruturar, armazenar e analisar informações técnicas, químicas e cromáticas de tintas utilizadas em arte, conservação e pesquisa científica.
-
----
-
-### Funcionalidades
-
----
+Localizado no Instituto de Pesquisas Energéticas e Nucleares - IPEN, o Laboratório de Espectroscopia e Espectrometria das Radiações - LEER há alguns anos realiza pesquisas de caracterização elementar de materiais pertencentes ao patrimônio Artístico e Cultural. Desta forma, o **Projeto Banco de Dados Tintas Artísticas** tem como objetivo estruturar, armazenar e analisar informações técnicas, químicas e cromáticas de tintas utilizadas em arte, possuindo fins de conservação e pesquisa científica. 
 
 #### Dados Técnicos
 
-Registro de:
+O banco de dados possui estudos de caracterização elementar utilizando diferentes técnicas, como a Fluorescência de Raios - X (FRX) e a Análise por Ativação Neutrônica (AAN). Como também, possui registro dos respectivos espectros e resultados das distribuições dos elementos em gráficos.
 
-- Espectros analíticos  
-- Resultados laboratoriais  
-- Estudos de caracterização  
+#### Público-Alvo
 
----
-
-#### Catálogo de Pigmentos
-
-Consulta detalhada de pigmentos com:
-
-- Nome comercial  
-- Nome químico  
-- Fórmula  
-- Índice de Cor (CI)  
-- Toxicidade  
-- Estabilidade  
+O público-alvo são pesquisadores em conservação e restauro; artistas; estudantes de artes e química e todos que buscam um local centralizado para encontrar dados detalhados de caracterização elemental de tintas artísticas.
 
 ---
 
-#### Análises e Comparações
+## Funcionalidades
 
-- Comparação entre diferentes tintas  
-- Visualização gráfica de propriedades  
-- Organização por fabricante ou composição  
+#### De Busca
 
----
+Realize uma consulta detalhada de tintas artísticas por meio de:
 
-### Público-Alvo
+- Nome;
+- Rótulo na embalagem;
+- Cor;
+- Década;
+- Técnica de análise utilizada;
+- Tipo de Medium.
 
-- Pesquisadores em conservação e restauro  
-- Artistas  
-- Estudantes de artes e química  
-- Laboratórios de análise de materiais  
+#### De Análise
+
+Ainda faça uma:
+
+- Descoberta dos elementos presentes em cada tinta;
+- Visualização gráfica de distribuição dos elementos;
+- Comparação entre diferentes técnicas.  
 
 ---
 
