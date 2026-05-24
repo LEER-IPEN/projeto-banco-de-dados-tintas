@@ -10,20 +10,19 @@ toc: false
 
 # Explore a Base de Dados
 
-Acesse o banco completo e realize buscas por:
+<div class="linha-indice-banco">
+  <span>Acesse o banco completo por meio do </span>
+  <a href="indice-banco.html" class="btn-indice-banco">Índice Geral</a><span>.</span>
+  <br>
+  <span>Ou realize buscas por:</span>
+</div>
 
-- Nome da tinta 
+- Nome da tinta
+- Rótulo na embalagem
 - Cor 
 - Década  
-- Técnica
+- Técnica de análise utilizada
 - Tipo de medium
-
-<div class="linha-indice-banco">
-  <span>Ou consulte o </span>
-  <a href="indice-banco.html" class="btn-indice-banco">
-    Índice Geral
-  </a>
-</div>
 
 <div class="barra-busca">
   <input type="text" id="busca" placeholder="Pesquise">
@@ -175,12 +174,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function aplicarFiltro() {
 
-    const termo = document.getElementById("busca").value.toLowerCase();
+    const termoCompleto = document.getElementById("busca").value.toLowerCase().trim();
     const tecnicaSelecionada = document.getElementById("tecnica").value;
     const mediumSelecionado = document.getElementById("medium").value;
 
     if (
-      termo === "" &&
+      termoCompleto === "" &&
       tecnicaSelecionada === "" &&
       mediumSelecionado === ""
     ) {
@@ -189,13 +188,22 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    //Divide a busca por espaços para identificar palavras isoladas (ex: ["rosa", "2010"])
+    const termosIndividuais = termoCompleto.split(/\s+/).filter(t => t.length > 0);
     const filtrados = dadosTintas.filter(item => {
 
-      const correspondeTexto =
-        item.nome.toLowerCase().includes(termo) ||
-        item.decada.toLowerCase().includes(termo) ||
-        item.tecnica.nome.toLowerCase().includes(termo) ||
-        item.tecnica.sigla.toLowerCase().includes(termo);
+      //Para a tinta ser válida, TODAS as palavras buscadas precisam retornar verdadeiro
+      const correspondeTexto = termosIndividuais.every(termo => {
+        return (
+          item.nome?.toLowerCase().includes(termo) ||
+          item.rotulo?.toLowerCase().includes(termo) ||
+          item.filename?.toLowerCase().includes(termo) ||
+          String(item.decada)?.toLowerCase().includes(termo) || // String() previne erros caso década venha como número
+          item.tecnica?.nome?.toLowerCase().includes(termo) ||
+          item.tecnica?.sigla?.toLowerCase().includes(termo) ||
+          item.medium?.toLowerCase().includes(termo) // Incluído o medium no texto caso digitem "Acrílica" na barra
+        );
+      });
 
       const correspondeTecnica =
         tecnicaSelecionada === "" ||

@@ -10,6 +10,5 @@ toc: false
 
 Para colaborar ou obter mais informações:
 
-- email@exemplo.com  
-- Em breve: portal interativo
+- joseviniciusgoncalves@usp.br
 :::
