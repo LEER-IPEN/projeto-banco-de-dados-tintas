@@ -40,13 +40,37 @@ body-classes: homepage
 
 Localizado no Instituto de Pesquisas Energéticas e Nucleares - IPEN, o Laboratório de Espectroscopia e Espectrometria das Radiações - LEER há alguns anos realiza pesquisas de caracterização elementar de materiais pertencentes ao patrimônio Artístico e Cultural. Desta forma, o **Projeto Banco de Dados Tintas Artísticas** tem como objetivo estruturar, armazenar e analisar informações técnicas, químicas e cromáticas de tintas utilizadas em arte, possuindo fins de conservação e pesquisa científica. 
 
+<div class="bloco-imagem">
+  <img src="assets/imgs/image5.jpeg" class="conteudo-imagem" alt="Pica-Pau">
+  <p class="creditos-imagem">
+    Fonte: do autor
+  </p>
+</div>
+
 #### Dados Técnicos
 
 O banco de dados possui estudos de caracterização elementar utilizando diferentes técnicas, como a Fluorescência de Raios - X (FRX) e a Análise por Ativação Neutrônica (AAN). Como também, possui registro dos respectivos espectros e resultados das distribuições dos elementos em gráficos.
 
+<div class="bloco-imagem">
+  <p class="titulo-imagem">
+    Espectro de Fluorescência de Raios - X
+  </p>
+  <img src="dados/espectros/frx/agv/220725ab_agv.png" alt="Espectro de Fluorescência de Raios - X">
+  <p class="creditos-imagem">
+    Fonte: do autor
+  </p>
+</div>
+
 #### Público-Alvo
 
 O público-alvo são pesquisadores em conservação e restauro; artistas; estudantes de artes e química e todos que buscam um local centralizado para encontrar dados detalhados de caracterização elemental de tintas artísticas.
+
+<div class="bloco-imagem">
+  <img src="assets/imgs/jennie-razumnaya-unsplash.jpg" alt="Pincéis em paleta">
+  <p class="creditos-imagem">
+    Foto de <a href="https://unsplash.com/pt-br/@jennie_ra?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jennie Razumnaya</a> na <a href="https://unsplash.com/pt-br/fotografias/uma-bolsa-com-um-design-de-flores-rixN0q0IamQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  </p>
+</div>
 
 ---
 

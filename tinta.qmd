@@ -185,12 +185,6 @@ execute:
               <a href="#" class="btn-detalhes-2" data-tipo="Traco">Detalhes</a>
             </td>
           </tr>
-          <tr class="center">
-            <td>Grafico Radar</td>
-            <td>
-              <a href="#" class="btn-detalhes-3" data-tipo="Majoritarios">Detalhes</a>
-            </td>
-          </tr>
         </table>
 
         <h3 class="titulo-secao">Dados Analíticos</h3>
@@ -442,6 +436,7 @@ execute:
       }
     })
 
+    /*
     document.addEventListener("click", function(e){
 
       if(e.target.classList.contains("btn-detalhes-3")){
@@ -509,6 +504,7 @@ execute:
         Plotly.newPlot(grafico, data, layout)
       }
     })
+    */
 
 
     document.querySelector(".fechar").onclick = function(){

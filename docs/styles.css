@@ -84,6 +84,34 @@
   margin-bottom: 30px;
 }
 
+.bloco-imagem {
+  display: block;
+  width: max-content; /* Faz com que a div tenha o tamanho exato da imagem */
+  max-width: 75%;     /* Define o limite de largura que você usava antes na imagem */
+  margin-left: auto;  /* Margens automáticas nas laterais */
+  margin-right: auto; /* garantem a centralização do bloco na página */
+  text-align: left;   /* Alinha o texto estritamente na borda esquerda da div (onde a foto começa) */
+}
+
+.bloco-imagem img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.creditos-imagem {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.titulo-imagem {
+  margin: 0;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
 .tabela-container{
   position:relative;
   display:inline-block;   /* faz o container ter o tamanho da tabela */
