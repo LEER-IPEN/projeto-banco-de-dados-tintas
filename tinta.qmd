@@ -1,4 +1,5 @@
 ---
+pagetitle: "Tinta"
 format: html
 page-layout: full
 execute: 

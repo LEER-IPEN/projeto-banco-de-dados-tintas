@@ -1,5 +1,6 @@
 ---
 title: ""
+pagetitle: "Banco de Dados de Tintas Artísticas"
 page-layout: full
 toc: false
 body-classes: homepage
