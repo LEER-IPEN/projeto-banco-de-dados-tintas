@@ -195,6 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
       //Para a tinta ser válida, TODAS as palavras buscadas precisam retornar verdadeiro
       const correspondeTexto = termosIndividuais.every(termo => {
         return (
+          item.id?.toLowerCase().includes(termo) ||
           item.nome?.toLowerCase().includes(termo) ||
           item.rotulo?.toLowerCase().includes(termo) ||
           item.filename?.toLowerCase().includes(termo) ||
