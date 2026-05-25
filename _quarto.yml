@@ -5,7 +5,7 @@ project:
     - dados/**
 
 website:
-  favicon: assets/imgs/favicon.jpg
+  favicon: assets/imgs/favicon.png
   search: 
     location: navbar
     type: overlay
