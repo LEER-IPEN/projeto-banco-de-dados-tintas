@@ -39,7 +39,7 @@ body-classes: homepage
 
 #### O Projeto
 
-Localizado no Instituto de Pesquisas Energéticas e Nucleares - IPEN, o Laboratório de Espectroscopia e Espectrometria das Radiações - LEER há alguns anos realiza pesquisas de caracterização elementar de materiais pertencentes ao patrimônio Artístico e Cultural. Desta forma, o **Projeto Banco de Dados Tintas Artísticas** tem como objetivo estruturar, armazenar e analisar informações técnicas, químicas e cromáticas de tintas utilizadas em arte, possuindo fins de conservação e pesquisa científica. 
+Localizado no Instituto de Pesquisas Energéticas e Nucleares - IPEN, o Laboratório de Espectroscopia e Espectrometria das Radiações - LEER há alguns anos realiza pesquisas de caracterização elementar de materiais pertencentes ao patrimônio Artístico e Cultural. Desta forma, o **Projeto Banco de Dados Tintas Artísticas** tem como objetivo armazenar informações técnicas de tintas utilizadas em arte, possuindo fins de conservação e pesquisa científica. 
 
 <div class="bloco-imagem">
   <img src="assets/imgs/image5.jpeg" class="conteudo-imagem" alt="Pica-Pau">
@@ -93,7 +93,7 @@ Realize uma consulta detalhada de tintas artísticas por meio de:
 Ainda faça uma:
 
 - Descoberta dos elementos presentes em cada tinta;
-- Visualização gráfica de distribuição dos elementos;
+- Visualização gráfica da distribuição dos elementos;
 - Comparação entre diferentes técnicas.  
 
 ---
