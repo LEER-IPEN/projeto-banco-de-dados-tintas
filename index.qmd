@@ -7,46 +7,29 @@ body-classes: homepage
 ---
 :::: {.container-texto}
 
-:::: {.carousel}
-
-:::: {.carousel-item image="assets/imgs/image.jpeg" caption="Tucano"}
-:::
-
-:::: {.carousel-item image="assets/imgs/image2.jpeg" caption="Carcará"}
-:::
-
-:::: {.carousel-item image="assets/imgs/image3.jpeg" caption="Jacu"}
-:::
-
-:::: {.carousel-item image="assets/imgs/image4.jpeg" caption="Quero-Quero"}
-:::
-
-:::: {.carousel-item image="assets/imgs/image5.jpeg" caption="Pica-Pau"}
-:::
-
-:::: {.carousel-item image="assets/imgs/image6.jpeg" caption="Gavião-Branco"}
-:::
-
-:::: {.carousel-item image="assets/imgs/image7.jpeg" caption="Tucano"}
-:::
-
-:::: {.carousel-item image="assets/imgs/image8.jpeg" caption="Thales !?"}
-:::
-
-:::
-
-## Banco de Dados de Tintas Artísticas
+<div class="banner-full">
+  <img src="assets/imgs/banner.jpg" alt="Pica-Pau">
+</div>
 
 #### O Projeto
 
 Localizado no Instituto de Pesquisas Energéticas e Nucleares - IPEN, o Laboratório de Espectroscopia e Espectrometria das Radiações - LEER há alguns anos realiza pesquisas de caracterização elementar de materiais pertencentes ao patrimônio Artístico e Cultural. Desta forma, o **Projeto Banco de Dados Tintas Artísticas** tem como objetivo armazenar informações técnicas de tintas utilizadas em arte, possuindo fins de conservação e pesquisa científica. 
 
-<div class="bloco-imagem">
-  <img src="assets/imgs/image5.jpeg" class="conteudo-imagem" alt="Pica-Pau">
-  <p class="creditos-imagem">
-    Fonte: do autor
-  </p>
-</div>
+:::: {.carousel}
+
+:::: {.carousel-item image="assets/imgs/image.jpeg" caption="Vilarejo, por Carlos Gomes"}
+:::
+
+:::: {.carousel-item image="assets/imgs/image2.jpeg" caption="Pachira insignis - mongubeira, por  Theodoro Braga"}
+:::
+
+:::: {.carousel-item image="assets/imgs/image3.jpeg" caption="Sacy Pererê - 1923, por Theodoro Braga"}
+:::
+
+:::: {.carousel-item image="assets/imgs/image4.jpeg" caption="Tintas de Carlos Gomes"}
+:::
+
+:::
 
 #### Dados Técnicos
 
@@ -56,7 +39,7 @@ O banco de dados possui estudos de caracterização elementar utilizando diferen
   <p class="titulo-imagem">
     Espectro de Fluorescência de Raios - X
   </p>
-  <img src="dados/espectros/frx/agv/220725ab_agv.png" alt="Espectro de Fluorescência de Raios - X">
+  <img src="assets/imgs/espectro.png" alt="Espectro de Fluorescência de Raios - X">
   <p class="creditos-imagem">
     Fonte: do autor
   </p>
