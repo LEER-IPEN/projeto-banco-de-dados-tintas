@@ -7,7 +7,7 @@ execute:
   enebled: false
 toc: false
 ---
-:::: {.container-texto-indice}
+:::: {.container-texto}
 
 # Explore a Base de Dados
 
@@ -24,6 +24,12 @@ toc: false
 - Década  
 - Técnica de análise utilizada
 - Tipo de medium
+
+#### Sobre a busca
+
+A Barra de Pesquisa pode ser utilizada para procurar diversas informações com relação a alguma tinta, como as evidenciadas acima. 
+As abas ao lado são filtros, como a aba Técnicas, onde são mostradas as técnicas de análise que estão cadastradas no banco. Por fim, 
+na aba Medium estão os principais aditivos na confecção de tintas, os quais também podem ser usados como filtragem.
 
 <div class="barra-busca">
   <input type="text" id="busca" placeholder="Pesquise">
@@ -47,6 +53,11 @@ toc: false
 
 <div id="tituloResultados" class="titulo-resultados" style="display:none;">
   <h2>Resultados</h2>
+
+  <h4>Sobre os Resultados</h4>
+
+  Nos Resultados são mostradas as tintas encontradas, que são separadas por meio da técnica utilizada. Assim, FRX diz respeito a Fluorescência de Raios - X.
+  Além disso, as tintas encontradas estão organizadas em cards e da seguinte maneira: no topo está seu nome; dentro são mostradas informações como seu ID, representando sua numeração dentro do Banco de Dados; o Medium utilizado em sua confecção; a sua década pertencente; e um resumo dos principais Elementos - Majoritários e Traços - encontrados.
 </div>
 
 <div id="resultados"></div>
