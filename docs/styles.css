@@ -290,6 +290,10 @@
     margin:20px auto;
   }
 
+  .btn-tecnica{
+    display:none;
+  }
+
   .btn-detalhes{
     display:none;
   }
@@ -626,6 +630,28 @@
 
 .elementos-txt {
   margin-right: 10px;
+}
+
+.icone-info {
+  margin-right: 4px; /* Dá um espacinho entre o (i) e o texto */
+  font-weight: bold;
+}
+
+.btn-tecnica {
+  padding:6px 14px;
+  background: #ffffff;
+  border: 1px solid #444;
+  color: #444;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:14px;
+  margin-left: auto;
+  transform:translateY(20px); /* ajusta para ficar entre as linhas */
+}
+
+.btn-tecnica:hover {
+  background: #000000;
+  color: white;
 }
 
 .btn-detalhes {

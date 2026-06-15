@@ -129,7 +129,7 @@ execute:
       <div class="watermark">LEER - IPEN</div>
       
       <div class="watermark-img">
-        <img src="assets/imgs/logo_preto.jpg">
+        <img src="assets/imgs/watermark.png">
       </div>
 
       <div class="top-bar">
@@ -140,6 +140,9 @@ execute:
       </div>
 
       <h3 class="titulo-secao">Informações Gerais</h3>
+      Aqui são mostradas as informações da tinta analisada. Desta forma, estão dados como seu ID, que representa sua numeração dentro do Banco de Dados; 
+      seu Nome no rótulo da embalagem; a sua década pertencente; o Medium utilizado em sua confecção; e a técnica utilizada para sua análise. 
+      Clique em "Sobre esta Técnica" e entenda mais como este processo de análise é feito.
       <div class="tabela-container">
         <table class="tabela-dados">
           <tr><th>ID</th><td>${tinta.id}</td></tr>
@@ -151,10 +154,19 @@ execute:
           </tr>
           <tr><th>Década</th><td>${tinta.decada}</td></tr>
           <tr><th>Medium</th><td>${tinta.medium}</td></tr>
-          <tr><th>Técnica</th><td>${tinta.tecnica.sigla} - ${tinta.tecnica.nome}</td></tr>
+          <tr>
+            <th>Técnica</th><td>${tinta.tecnica.sigla} - ${tinta.tecnica.nome}</td>
+            <td>
+              <a href="tecnicas/FRX/frx.html" class="btn-tecnica">
+                <span class="icone-info">&#9432;</span>Sobre esta Técnica
+              </a>
+            </td>
+          </tr>
         </table>
 
         <h3 class="titulo-secao">Dados Sintetizados</h3>
+        Aqui são mostrados os principais Elementos encontrados na tinta, separados em Majoritários e Traços. Ao clicar em "Detalhes", um gráfico de barras aparece
+        a fim de comparação, nele é mostrado a distribuição dos elementos encontrados com relação ao tipo de tubo de Raios - X utilizado: Ag - Prata, Rh - Ródio e Au - Ouro.
         <table class="tabela-dados">
           <tr class="center">
             <td>Elementos Majoritarios</td>
@@ -189,6 +201,7 @@ execute:
         </table>
 
         <h3 class="titulo-secao">Dados Analíticos</h3>
+        Aqui os principais Elementos encontrados na tinta para cada tipo de tubo de Raio - X utilizado (Ag - Prata, Rh - Ródio ou Au - Ouro) são mostrados, separados em Majoritários e Traços. Ao clicar em "Detalhes", um gráfico de pizza aparece com a distribuição dos elementos encontrados para Majoritários e para Traços.
         <table class="tabela-dados">
           <!-- AG -->
           <tr class="center">
@@ -257,6 +270,8 @@ execute:
       </div>
 
       <h3 class="titulo-secao">Espectros</h3>
+      Nesta área de espectros são mostrados os Espectros de Fluorescência de Raios - X analisados dos respectivos tipos de tubo utilizados: Ag - Prata, Rh - Ródio e Au - Ouro.
+      Clique e Escolha cada tipo abaixo.
       <div class="area-graficos">
         <div class="area-graficos">
           ${botoesEspectro}

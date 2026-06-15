@@ -11,6 +11,15 @@ toc: false
 
 # Índice Geral do Banco de Tintas
 
+#### Sobre os Resultados
+
+:::: {.container-texto}
+
+Nos Resultados são mostradas as tintas encontradas, que são separadas por meio da técnica utilizada. Assim, FRX diz respeito a Fluorescência de Raios - X.
+Além disso, as tintas encontradas estão organizadas em cards e da seguinte maneira: no topo está seu nome; dentro são mostradas informações como seu ID, representando sua numeração dentro do Banco de Dados; o Medium utilizado em sua confecção; a sua década pertencente; e um resumo dos principais Elementos - Majoritários e Traços - encontrados.
+
+::::
+
 <div id="lista-tintas"></div>
 
 <script>
