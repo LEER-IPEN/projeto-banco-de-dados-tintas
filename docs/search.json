@@ -18,14 +18,14 @@
     "href": "contato.html",
     "title": "Contato",
     "section": "",
-    "text": "Contato\nPara colaborar ou obter mais informações:\n\njoseviniciusgoncalves@usp.br"
+    "text": "Contato\nPara colaborar ou obter mais informações:\n\njoseviniciusgoncalves@usp.br\nczamboni@ipen.br"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Sobre",
     "section": "",
-    "text": "Sobre\nO Projeto Banco de Dados de Tintas Artísticas foi criado no Laboratório de Espectroscopia e Espectrometria das Radiações - LEER nas instalações do Instituto de Pesquisas Energéticas e Nucleares - IPEN. E busca criar uma base de dados de tintas artísticas contendo os dados de composição elementar, por meio da utilização da técnica de Fluorescência de Raios - X (FRX) e Análise por Ativação Neutrônica (AAN).\nA base de dados conta com buscas por nome de tintas; cores; décadas; tipos de técnicas e medium utilizados. E os resultados contêm informações gerais da respectiva tinta, como nome, década e medium, assim como, dados analíticos qualitativos que apresentam os elementos majoritários e traços encontrados, junto de gráficos com as respectivas distribuições elementais."
+    "text": "Sobre\nO Projeto Banco de Dados de Tintas Artísticas foi desenvolvido no Laboratório de Espectroscopia e Espectrometria das Radiações - LEER nas instalações do Instituto de Pesquisas Energéticas e Nucleares - IPEN. E busca criar uma base de dados de tintas artísticas contendo os dados de composição elementar, por meio da utilização da técnica de Fluorescência de Raios - X (FRX) e Análise por Ativação Neutrônica (AAN).\nA base de dados conta com buscas por nome de tintas; cores; décadas; tipos de técnicas e medium utilizados. E os resultados contêm informações gerais da respectiva tinta, como nome, década e medium, assim como, dados analíticos qualitativos que apresentam os elementos majoritários e traços encontrados, junto de gráficos com as respectivas distribuições elementais."
   },
   {
     "objectID": "banco.html",
@@ -39,14 +39,7 @@
     "href": "index.html",
     "title": "",
     "section": "",
-    "text": "Localizado no Instituto de Pesquisas Energéticas e Nucleares - IPEN, o Laboratório de Espectroscopia e Espectrometria das Radiações - LEER há alguns anos realiza pesquisas de caracterização elementar de materiais pertencentes ao patrimônio Artístico e Cultural. Desta forma, o Projeto Banco de Dados Tintas Artísticas tem como objetivo armazenar informações técnicas de tintas utilizadas em arte, possuindo fins de conservação e pesquisa científica.\n\n\n  \n  \n  \n  \n  \n  \n  \n  \n\n\n\n\n\nVilarejo, por Carlos Gomes\n\n\n\n\n\nPachira insignis - mongubeira, por  Theodoro Braga\n\n\n\n\n\nSacy Pererê - 1923, por Theodoro Braga\n\n\n\n\n\nTintas de Carlos Gomes\n\n\n\n      \n      \n      Previous\n      \n    \n      \n      \n      Next\n      \n    \n\n\n\n\nO banco de dados possui estudos de caracterização elementar utilizando diferentes técnicas, como a Fluorescência de Raios - X (FRX) e a Análise por Ativação Neutrônica (AAN). Como também, possui registro dos respectivos espectros e resultados das distribuições dos elementos em gráficos.\n\n\nEspectro de Fluorescência de Raios - X\n\n\n\nFonte: do autor\n\n\n\n\n\nO público-alvo são pesquisadores em conservação e restauro; artistas; estudantes de artes e química e todos que buscam um local centralizado para encontrar dados detalhados de caracterização elemental de tintas artísticas.\n\n\n\nFoto de Jennie Razumnaya na Unsplash\n\n\n\n\n\n\n\n\nRealize uma consulta detalhada de tintas artísticas por meio de:\n\nNome;\nRótulo na embalagem;\nCor;\nDécada;\nTécnica de análise utilizada;\nTipo de Medium.\n\n\n\n\nAinda faça uma:\n\nDescoberta dos elementos presentes em cada tinta;\nVisualização gráfica da distribuição dos elementos;\nComparação entre diferentes técnicas."
-  },
-  {
-    "objectID": "index.html#funcionalidades",
-    "href": "index.html#funcionalidades",
-    "title": "",
-    "section": "",
-    "text": "Realize uma consulta detalhada de tintas artísticas por meio de:\n\nNome;\nRótulo na embalagem;\nCor;\nDécada;\nTécnica de análise utilizada;\nTipo de Medium.\n\n\n\n\nAinda faça uma:\n\nDescoberta dos elementos presentes em cada tinta;\nVisualização gráfica da distribuição dos elementos;\nComparação entre diferentes técnicas."
+    "text": "O Projeto\nLocalizado no Instituto de Pesquisas Energéticas e Nucleares (IPEN), o Laboratório de Espectroscopia e Espectrometria das Radiações (LEER) realiza há alguns anos pesquisas de caracterização elementar de materiais pertencentes ao patrimônio Artístico e Cultural. Nesse sentido, o Projeto Banco de Dados Tintas Artísticas tem como objetivo armazenar informações técnicas de tintas utilizadas em arte, possuindo fins de conservação e pesquisa científica.\n\n\n  \n  \n  \n  \n  \n  \n\n\n\n\n\nVilarejo, por Carlos Gomes\n\n\n\n\n\nPrédios, por Carlos Gomes\n\n\n\n\n\nTintas de Carlos Gomes\n\n\n\n      \n      \n      Previous\n      \n    \n      \n      \n      Next\n      \n    \n\n\n\nDados Técnicos\nO banco de dados possui estudos de caracterização elementar utilizando diferentes técnicas, como a Fluorescência de Raios - X (FRX) e a Análise por Ativação Neutrônica (AAN). Além disso, possui registro dos respectivos espectros e resultados das distribuições dos elementos em gráficos.\n\n\nEspectro de Fluorescência de Raios - X\n\n\n\nFonte: do autor\n\n\n\n\nPúblico-Alvo\nO público-alvo são pesquisadores em conservação e restauro; artistas; estudantes de artes e química e todos que buscam um local centralizado para encontrar dados detalhados de caracterização elemental de tintas artísticas.\n\n\n\nFoto de Jennie Razumnaya na Unsplash"
   },
   {
     "objectID": "tecnicas/FRX/frx.html",

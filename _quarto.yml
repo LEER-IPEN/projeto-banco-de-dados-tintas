@@ -6,16 +6,14 @@ project:
 
 website:
   favicon: assets/imgs/favicon.png
-  search: 
-    location: navbar
-    type: overlay
+  search: false
   navbar:
     logo: assets/imgs/logo.png
     left:
       - href: index.qmd
         text: Início
       - href: banco.qmd
-        text: Banco De Dados
+        text: Pesquisar Tinta
       - href: about.qmd
         text: Sobre
       - href: contato.qmd

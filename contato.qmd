@@ -12,4 +12,6 @@ toc: false
 Para colaborar ou obter mais informações:
 
 - joseviniciusgoncalves@usp.br
+- czamboni@ipen.br
+
 :::
