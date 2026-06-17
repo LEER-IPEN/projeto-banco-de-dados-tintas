@@ -117,6 +117,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (grupo.length === 0) return;
 
+      // 🔹 Ordenar por ID (opcional mas recomendado)
+      grupo.sort((a, b) => a.id.localeCompare(b.id));
+
       // 🔹 Título da técnica
       const titulo = document.createElement("h3");
       titulo.className = "titulo-tecnica";

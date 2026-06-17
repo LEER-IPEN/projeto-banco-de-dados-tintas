@@ -59,7 +59,7 @@ execute:
 
       botoesEspectro = `
         <div class="tabs">
-          <span class="label-tabs">Escolha o tipo:</span>
+          <span class="label-tabs">Selecione o tipo de alvo:</span>
           <button class="tab-btn active" data-tab="graf1" data-tipo="Ag">Ag</button>
           <button class="tab-btn" data-tab="graf2" data-tipo="Rh">Rh</button>
           <button class="tab-btn" data-tab="graf3" data-tipo="Au">Au</button>
@@ -129,7 +129,7 @@ execute:
       <div class="watermark">LEER - IPEN</div>
       
       <div class="watermark-img">
-        <img src="assets/imgs/watermark.png">
+        <img src="assets/imgs/logo2.png">
       </div>
 
       <div class="top-bar">
@@ -138,11 +138,18 @@ execute:
           Download PDF
         </button>
       </div>
+      <p><strong>DOI para Citação:</strong> 
+        <a href="https://doi.org/" target="_blank" style="color: #0066cc; text-decoration: underline;">
+          https://doi.org/
+        </a>
+      </p>
 
       <h3 class="titulo-secao">Informações Gerais</h3>
-      Aqui são mostradas as informações da tinta analisada. Desta forma, estão dados como seu ID, que representa sua numeração dentro do Banco de Dados; 
-      seu Nome no rótulo da embalagem; a sua década pertencente; o Medium utilizado em sua confecção; e a técnica utilizada para sua análise. 
-      Clique em "Sobre esta Técnica" e entenda mais como este processo de análise é feito.
+      <p style="text-align: justify;">
+        Aqui são apresentadas as informações da tinta analisada. Desta forma, estão dados como seu ID, que representa sua numeração dentro do Banco de Dados; 
+        seu Nome no rótulo da embalagem; a sua década pertencente; o Medium utilizado em sua confecção; e a técnica utilizada para sua análise. 
+        Clique em "Sobre esta Técnica" e entenda mais como este processo de análise é feito.
+      </p>
       <div class="tabela-container">
         <table class="tabela-dados">
           <tr><th>ID</th><td>${tinta.id}</td></tr>
@@ -165,8 +172,10 @@ execute:
         </table>
 
         <h3 class="titulo-secao">Dados Sintetizados</h3>
-        Aqui são mostrados os principais Elementos encontrados na tinta, separados em Majoritários e Traços. Ao clicar em "Detalhes", um gráfico de barras aparece
-        a fim de comparação, nele é mostrado a distribuição dos elementos encontrados com relação ao tipo de tubo de Raios - X utilizado: Ag - Prata, Rh - Ródio e Au - Ouro.
+        <p style="text-align: justify;">
+          Aqui são apresentados os principais Elementos encontrados na tinta, separados em Majoritários e Traços. Ao clicar em "Detalhes", um gráfico de barras aparece
+          a fim de comparação, nele é mostrado a distribuição dos elementos encontrados com relação ao tipo de alvo de Raios - X utilizado: Ag - Prata, Rh - Ródio e Au - Ouro.
+        </p>
         <table class="tabela-dados">
           <tr class="center">
             <td>Elementos Majoritarios</td>
@@ -201,7 +210,9 @@ execute:
         </table>
 
         <h3 class="titulo-secao">Dados Analíticos</h3>
-        Aqui os principais Elementos encontrados na tinta para cada tipo de tubo de Raio - X utilizado (Ag - Prata, Rh - Ródio ou Au - Ouro) são mostrados, separados em Majoritários e Traços. Ao clicar em "Detalhes", um gráfico de pizza aparece com a distribuição dos elementos encontrados para Majoritários e para Traços.
+        <p style="text-align: justify;">
+          Aqui os principais Elementos encontrados na tinta para cada tipo de alvo de Raio - X utilizado (Ag - Prata, Rh - Ródio ou Au - Ouro) são mostrados, separados em Majoritários e Traços. Ao clicar em "Detalhes", um gráfico de pizza aparece com a distribuição dos elementos encontrados para Majoritários e para Traços.
+        </p>
         <table class="tabela-dados">
           <!-- AG -->
           <tr class="center">
@@ -259,19 +270,18 @@ execute:
         </table>
       </div>
 
-      <h3 class="titulo-graf only-print">Gráficos</h3>
-      <div class="card-grafico only-print">
-        <div class="area-graficos">
-          <div class="area-graficos">
-            <img src="${tinta.grafico_elementos_maj}" class="img-graf-pdf only-print">
-            <img src="${tinta.grafico_elementos_tracos}" class="img-graf-pdf only-print">
-          </div>
-        </div>
+      <h3 class="titulo-graf only-print">Análise Gráfica Elementar</h3>
+      <div id="graficos-auto-pdf" class="only-print">
+        <p style="text-align: center; color: #888;" id="carregando-graficos-pdf">
+          Gerando gráficos para o relatório...
+        </p>
       </div>
 
       <h3 class="titulo-secao">Espectros</h3>
-      Nesta área de espectros são mostrados os Espectros de Fluorescência de Raios - X analisados dos respectivos tipos de tubo utilizados: Ag - Prata, Rh - Ródio e Au - Ouro.
-      Clique e Escolha cada tipo abaixo.
+      <p style="text-align: justify;">
+        Nesta área de espectros são apresentados os Espectros de Fluorescência de Raios - X analisados dos respectivos tipos de alvo utilizados: Ag - Prata, Rh - Ródio e Au - Ouro.
+        Clique e Selecione cada tipo abaixo.
+      </p>
       <div class="area-graficos">
         <div class="area-graficos">
           ${botoesEspectro}
@@ -389,8 +399,20 @@ execute:
         grafico.innerHTML=""
 
         Plotly.newPlot(grafico,data,layout)
-      }
 
+        Plotly.toImage(grafico, {format: 'png', width: 700, height: 400})
+          .then(function(dataUrl) {
+            const containerPdf = document.getElementById("graficos-dinamicos-pdf");
+            
+            // Limpa a mensagem de aviso ou gráficos antigos e injeta o novo como imagem estática
+            containerPdf.innerHTML = `
+              <div style="text-align: center; margin-bottom: 20px; page-break-inside: avoid;">
+                <h4>${layout.title}</h4>
+                <img src="${dataUrl}" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+              </div>
+            `;
+          });
+      }
     })
 
     document.addEventListener("click", function(e){
@@ -452,77 +474,6 @@ execute:
       }
     })
 
-    /*
-    document.addEventListener("click", function(e){
-
-      if(e.target.classList.contains("btn-detalhes-3")){
-        e.preventDefault()
-
-        const tipo = e.target.dataset.tipo
-
-        const modal = document.getElementById("modal-grafico")
-        const grafico = document.getElementById("grafico")
-
-        const Ag = tinta.elementos.Ag?.[tipo] || {}
-        const Rh = tinta.elementos.Rh?.[tipo] || {}
-        const Au = tinta.elementos.Au?.[tipo] || {}
-
-        const elementos = [...new Set([
-          ...Object.keys(Ag),
-          ...Object.keys(Rh),
-          ...Object.keys(Au)
-        ])]
-
-        const elementosOrdenados = ordenarElementos(elementos)
-
-        const valoresAg = elementosOrdenados.map(el => Ag[el] || 0)
-        const valoresRh = elementosOrdenados.map(el => Rh[el] || 0)
-        const valoresAu = elementosOrdenados.map(el => Au[el] || 0)
-
-        const data = [
-          {
-            type: "scatterpolar",
-            r: valoresAg,
-            theta: elementosOrdenados,
-            fill: "toself",
-            name: "Ag"
-          },
-          {
-            type: "scatterpolar",
-            r: valoresRh,
-            theta: elementosOrdenados,
-            fill: "toself",
-            name: "Rh"
-          },
-          {
-            type: "scatterpolar",
-            r: valoresAu,
-            theta: elementosOrdenados,
-            fill: "toself",
-            name: "Au"
-          }
-        ]
-
-        const layout = {
-          title: `Perfil Elementar ${[tipo]} - ${tinta.nome}`,
-          polar: {
-            radialaxis: {
-              visible: true,
-              range: [0, 100] // ajuste se necessário
-            }
-          },
-          showlegend: true
-        }
-
-        modal.style.display = "flex"
-        grafico.innerHTML = ""
-
-        Plotly.newPlot(grafico, data, layout)
-      }
-    })
-    */
-
-
     document.querySelector(".fechar").onclick = function(){
       document.getElementById("modal-grafico").style.display = "none"
     }
@@ -538,6 +489,139 @@ execute:
         this.style.display = "none"
       }
     })
+
+    // ==========================================
+    // GERADOR AUTOMÁTICO DE GRÁFICOS PARA O PDF
+    // ==========================================
+    async function gerarGraficosParaPDF() {
+      // Cria uma div temporária invisível para o Plotly renderizar os gráficos em background
+      const tempDiv = document.createElement("div");
+      tempDiv.style.position = "absolute";
+      tempDiv.style.left = "-9999px";
+      tempDiv.style.width = "700px";
+      tempDiv.style.height = "400px";
+      document.body.appendChild(tempDiv);
+
+      const containerPdf = document.getElementById("graficos-auto-pdf");
+      let htmlImagens = "";
+
+      // 1. GERAR GRÁFICO DE BARRAS (Dados Sintetizados - Majoritários)
+      try {
+        const Ag = tinta.elementos.Ag?.Majoritarios || {};
+        const Rh = tinta.elementos.Rh?.Majoritarios || {};
+        const Au = tinta.elementos.Au?.Majoritarios || {};
+        const elementos = [...new Set([...Object.keys(Ag), ...Object.keys(Rh), ...Object.keys(Au)])];
+        const elementosOrdenados = ordenarElementos(elementos);
+
+        const dataBar = [
+          { type: "bar", name: "Ag", x: elementosOrdenados, y: elementosOrdenados.map(el => Ag[el] || 0) },
+          { type: "bar", name: "Rh", x: elementosOrdenados, y: elementosOrdenados.map(el => Rh[el] || 0) },
+          { type: "bar", name: "Au", x: elementosOrdenados, y: elementosOrdenados.map(el => Au[el] || 0) }
+        ];
+
+        await Plotly.newPlot(tempDiv, dataBar, {
+          barmode: "group",
+          title: `Comparação de Elementos Majoritários - ${tinta.nome}`,
+          xaxis: { title: "Elemento" },
+          yaxis: { title: "%" }
+        });
+
+        const imgBarUrl = await Plotly.toImage(tempDiv, { format: 'png', width: 750, height: 380 });
+        htmlImagens += `
+          <div style="text-align: center; margin-bottom: 30px; page-break-inside: avoid;">
+            <img src="${imgBarUrl}" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;">
+          </div>
+        `;
+      } catch (e) { console.error("Erro ao gerar gráfico de barras para o PDF", e); }
+
+
+      // 1. GERAR GRÁFICO DE BARRAS (Dados Sintetizados - Tracos)
+      try {
+        const Ag = tinta.elementos.Ag?.Traco || {};
+        const Rh = tinta.elementos.Rh?.Traco || {};
+        const Au = tinta.elementos.Au?.Traco || {};
+        const elementos = [...new Set([...Object.keys(Ag), ...Object.keys(Rh), ...Object.keys(Au)])];
+        const elementosOrdenados = ordenarElementos(elementos);
+
+        const dataBar = [
+          { type: "bar", name: "Ag", x: elementosOrdenados, y: elementosOrdenados.map(el => Ag[el] || 0) },
+          { type: "bar", name: "Rh", x: elementosOrdenados, y: elementosOrdenados.map(el => Rh[el] || 0) },
+          { type: "bar", name: "Au", x: elementosOrdenados, y: elementosOrdenados.map(el => Au[el] || 0) }
+        ];
+
+        await Plotly.newPlot(tempDiv, dataBar, {
+          barmode: "group",
+          title: `Comparação de Elementos Traços - ${tinta.nome}`,
+          xaxis: { title: "Elemento" },
+          yaxis: { title: "%" }
+        });
+
+        const imgBarUrl = await Plotly.toImage(tempDiv, { format: 'png', width: 750, height: 380 });
+        htmlImagens += `
+          <div style="text-align: center; margin-bottom: 30px; page-break-inside: avoid;">
+            <img src="${imgBarUrl}" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;">
+          </div>
+        `;
+      } catch (e) { console.error("Erro ao gerar gráfico de barras para o PDF", e); }
+
+
+      // 2. GERAR GRÁFICOS DE PIZZA (Dados Analíticos - Um para cada alvo ativo)
+      const alvosDisponiveis = ["Ag", "Rh", "Au"];
+      
+      for (const tipo of alvosDisponiveis) {
+        if (tinta.elementos[tipo]) {
+          try {
+            const maj = tinta.elementos[tipo].Majoritarios || {};
+            const tr = tinta.elementos[tipo].Traco || {};
+            const trPercent = tinta.elementos[tipo].percentual_traco || 0;
+            const majPercent = 100 - trPercent;
+
+            const majTotal = Object.values(maj).reduce((a, b) => a + b, 0) || 1;
+            const majScaled = Object.values(maj).map(v => (v / majTotal) * majPercent);
+
+            const majLabels = [...Object.keys(maj), "Traço"];
+            const majValues = [...majScaled, trPercent];
+            const majColors = [...Object.keys(maj).map(el => coresElementos[el] || "#cccccc"), "#82BBD8"];
+            const trColors = Object.keys(tr).map(el => coresElementos[el] || "#cccccc");
+
+            const dataPie = [
+              {
+                type: "pie", labels: majLabels, values: majValues, domain: { x: [0, 0.45] },
+                textinfo: "label+percent", name: "Majoritários", marker: { colors: majColors },
+                pull: majLabels.map(l => l === "Traço" ? 0.12 : 0)
+              },
+              {
+                type: "pie", labels: Object.keys(tr), values: Object.values(tr), domain: { x: [0.70, 1] },
+                textinfo: "label+percent", name: "Traços", marker: { colors: trColors }
+              }
+            ];
+
+            await Plotly.newPlot(tempDiv, dataPie, {
+              title: `Distribuição Elementar em ${tipo} - ${tinta.nome}`,
+              annotations: [
+                { text: "Elementos Majoritários", x: 0.05, y: 1.05, showarrow: false },
+                { text: "Elementos Traço", x: 0.95, y: 1.05, showarrow: false }
+              ],
+              showlegend: false
+            });
+
+            const imgPieUrl = await Plotly.toImage(tempDiv, { format: 'png', width: 750, height: 380 });
+            htmlImagens += `
+              <div style="text-align: center; margin-bottom: 30px; page-break-inside: avoid;">
+                <img src="${imgPieUrl}" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;">
+              </div>
+            `;
+          } catch (e) { console.error(`Erro ao gerar gráfico de pizza (${tipo}) para o PDF`, e); }
+        }
+      }
+
+      // Injeta todas as imagens geradas no container definitivo do PDF e remove a div temporária
+      containerPdf.innerHTML = htmlImagens;
+      document.body.removeChild(tempDiv);
+    }
+
+    // Executa a função automática logo após renderizar o HTML da página
+    gerarGraficosParaPDF();
   });
 
   document.addEventListener("mousemove", function(e){

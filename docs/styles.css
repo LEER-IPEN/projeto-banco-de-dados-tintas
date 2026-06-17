@@ -195,8 +195,21 @@
   display:none;
 }
 
+#graficos-auto-pdf {
+  display: none;
+}
+
 @media print {
-  
+  #graficos-auto-pdf {
+    display: block !important;
+    margin-top: 20px;
+  }
+
+  /* Evita que o modal interativo do Plotly vaze no fundo do PDF se estiver aberto na tela */
+  .modal, #modal-grafico {
+    display: none !important;
+  }
+
   .watermark{
     display:block;
     position:fixed;
@@ -281,6 +294,14 @@
 
   .tabela-dados {
     font-size: 10pt;
+  }
+
+  .tabela-container {
+    display: block !important;
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    page-break-inside: auto !important;
   }
 
   .img-graf-pdf{

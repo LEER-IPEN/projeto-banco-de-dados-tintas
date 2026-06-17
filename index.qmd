@@ -13,17 +13,14 @@ body-classes: homepage
 
 #### O Projeto
 
-Localizado no Instituto de Pesquisas Energéticas e Nucleares - IPEN, o Laboratório de Espectroscopia e Espectrometria das Radiações - LEER há alguns anos realiza pesquisas de caracterização elementar de materiais pertencentes ao patrimônio Artístico e Cultural. Desta forma, o **Projeto Banco de Dados Tintas Artísticas** tem como objetivo armazenar informações técnicas de tintas utilizadas em arte, possuindo fins de conservação e pesquisa científica. 
+Localizado no Instituto de Pesquisas Energéticas e Nucleares (IPEN), o Laboratório de Espectroscopia e Espectrometria das Radiações (LEER) realiza há alguns anos pesquisas de caracterização elementar de materiais pertencentes ao patrimônio Artístico e Cultural. Nesse sentido, o **Projeto Banco de Dados Tintas Artísticas** tem como objetivo armazenar informações técnicas de tintas utilizadas em arte, possuindo fins de conservação e pesquisa científica. 
 
 :::: {.carousel}
 
 :::: {.carousel-item image="assets/imgs/image.jpeg" caption="Vilarejo, por Carlos Gomes"}
 :::
 
-:::: {.carousel-item image="assets/imgs/image2.jpeg" caption="Pachira insignis - mongubeira, por  Theodoro Braga"}
-:::
-
-:::: {.carousel-item image="assets/imgs/image3.jpeg" caption="Sacy Pererê - 1923, por Theodoro Braga"}
+:::: {.carousel-item image="assets/imgs/image5.jpeg" caption="Prédios, por Carlos Gomes"}
 :::
 
 :::: {.carousel-item image="assets/imgs/image4.jpeg" caption="Tintas de Carlos Gomes"}
@@ -33,7 +30,7 @@ Localizado no Instituto de Pesquisas Energéticas e Nucleares - IPEN, o Laborat�
 
 #### Dados Técnicos
 
-O banco de dados possui estudos de caracterização elementar utilizando diferentes técnicas, como a Fluorescência de Raios - X (FRX) e a Análise por Ativação Neutrônica (AAN). Como também, possui registro dos respectivos espectros e resultados das distribuições dos elementos em gráficos.
+O banco de dados possui estudos de caracterização elementar utilizando diferentes técnicas, como a Fluorescência de Raios - X (FRX) e a Análise por Ativação Neutrônica (AAN). Além disso, possui registro dos respectivos espectros e resultados das distribuições dos elementos em gráficos.
 
 <div class="bloco-imagem">
   <p class="titulo-imagem">
@@ -55,30 +52,5 @@ O público-alvo são pesquisadores em conservação e restauro; artistas; estuda
     Foto de <a href="https://unsplash.com/pt-br/@jennie_ra?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jennie Razumnaya</a> na <a href="https://unsplash.com/pt-br/fotografias/uma-bolsa-com-um-design-de-flores-rixN0q0IamQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   </p>
 </div>
-
----
-
-## Funcionalidades
-
-#### De Busca
-
-Realize uma consulta detalhada de tintas artísticas por meio de:
-
-- Nome;
-- Rótulo na embalagem;
-- Cor;
-- Década;
-- Técnica de análise utilizada;
-- Tipo de Medium.
-
-#### De Análise
-
-Ainda faça uma:
-
-- Descoberta dos elementos presentes em cada tinta;
-- Visualização gráfica da distribuição dos elementos;
-- Comparação entre diferentes técnicas.  
-
----
 
 :::
