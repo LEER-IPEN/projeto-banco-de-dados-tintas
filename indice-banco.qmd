@@ -4,7 +4,7 @@ pagetitle: "Índice Banco de Dados"
 format: html
 page-layout: full
 execute: 
-  enebled: false
+  enabled: false
 toc: false
 ---
 :::: {.container-texto-indice}
@@ -74,11 +74,42 @@ Além disso, as tintas encontradas estão organizadas em cards e da seguinte man
         bloco.className = "card-tinta";
         bloco.href = `tinta.html?id=${item.id}`;
 
+        // Função interna simples para transformar "AL" em "Al", "FE" em "Fe", etc.
+        const formatarSimbolo = (txt) => {
+          if (!txt) return "";
+          return txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase();
+        };
+
+        // Processa os elementos Majoritários aplicando a formatação
+        const arrayMaj = ordenarElementos([
+          ...new Set([
+            ...Object.keys(item.elementos.Ag?.Majoritarios || item.elementos.Ag?.Majoritários || {}),
+            ...Object.keys(item.elementos.Rh?.Majoritarios || item.elementos.Rh?.Majoritários || {}),
+            ...Object.keys(item.elementos.Au?.Majoritarios || item.elementos.Au?.Majoritários || {})
+          ])
+        ]);
+        
+        const htmlMajoritarios = arrayMaj.length > 0 
+          ? arrayMaj.map(el => `<span class="badge badge-maj">${formatarSimbolo(el)}</span>`).join("") 
+          : "-";
+
+        // Processa os elementos Traço aplicando a formatação
+        const arrayTraco = ordenarElementos([
+          ...new Set([
+            ...Object.keys(item.elementos.Ag?.Traco || item.elementos.Ag?.Traço || {}),
+            ...Object.keys(item.elementos.Rh?.Traco || item.elementos.Rh?.Traço || {}),
+            ...Object.keys(item.elementos.Au?.Traco || item.elementos.Au?.Traço || {})
+          ])
+        ]);
+
+        const htmlTracos = arrayTraco.length > 0 
+          ? arrayTraco.map(el => `<span class="badge badge-traco">${formatarSimbolo(el)}</span>`).join("") 
+          : "-";
+
+        // O restante do bloco.innerHTML permanece igual...
         bloco.innerHTML = `
           <div class="info-tinta">
-            <div class="titulo-tinta">
-              ${item.nome}
-            </div>
+            <div class="titulo-tinta">${item.nome}</div>
           </div>
           <div class="card-conteudo">
             <img src="${item.imagem}" class="thumb">
@@ -97,24 +128,8 @@ Além disso, as tintas encontradas estão organizadas em cards e da seguinte man
                   <td>${item.id}</td>
                   <td>${item.medium}</td>
                   <td>${item.decada}</td>
-                  <td>
-                    ${ordenarElementos(
-                      [...new Set([
-                        ...Object.keys(item.elementos.Ag?.Majoritarios || {}),
-                        ...Object.keys(item.elementos.Rh?.Majoritarios || {}),
-                        ...Object.keys(item.elementos.Au?.Majoritarios || {})
-                      ])]).join(", ") || "-"
-                    }
-                  </td>
-                  <td>
-                    ${ordenarElementos(
-                      [...new Set([
-                        ...Object.keys(item.elementos.Ag?.Traco || {}),
-                        ...Object.keys(item.elementos.Rh?.Traco || {}),
-                        ...Object.keys(item.elementos.Au?.Traco || {})
-                      ])]).join(", ") || "-"
-                    }
-                  </td>
+                  <td><div class="container-badges">${htmlMajoritarios}</div></td>
+                  <td><div class="container-badges">${htmlTracos}</div></td>
                 </tr>
               </tbody>
             </table>
@@ -122,7 +137,6 @@ Além disso, as tintas encontradas estão organizadas em cards e da seguinte man
         `;
 
         container.appendChild(bloco);
-
       });
 
     });

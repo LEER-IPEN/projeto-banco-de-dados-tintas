@@ -3,7 +3,7 @@ pagetitle: "Tinta"
 format: html
 page-layout: full
 execute: 
-    enebled: false
+  enabled: false
 ---
 
 <div id="conteudo"></div>
@@ -124,7 +124,6 @@ execute:
         `;
     }
 
-    // 
     container.innerHTML = `
       <div class="watermark">LEER - IPEN</div>
       
@@ -138,11 +137,6 @@ execute:
           Download PDF
         </button>
       </div>
-      <p><strong>DOI para Citação:</strong> 
-        <a href="https://doi.org/" target="_blank" style="color: #0066cc; text-decoration: underline;">
-          https://doi.org/
-        </a>
-      </p>
 
       <h3 class="titulo-secao">Informações Gerais</h3>
       <p style="text-align: justify;">
@@ -178,18 +172,18 @@ execute:
         </p>
         <table class="tabela-dados">
           <tr class="center">
-            <td>Elementos Majoritarios</td>
+            <td>Elementos Majoritários</td>
             <td>
               ${ordenarElementos(
                 [...new Set([
-                  ...Object.keys(tinta.elementos.Ag?.Majoritarios || {}),
-                  ...Object.keys(tinta.elementos.Rh?.Majoritarios || {}),
-                  ...Object.keys(tinta.elementos.Au?.Majoritarios || {})
+                  ...Object.keys(tinta.elementos.Ag?.Majoritários || {}),
+                  ...Object.keys(tinta.elementos.Rh?.Majoritários || {}),
+                  ...Object.keys(tinta.elementos.Au?.Majoritários || {})
                 ])]).join(", ") || "-"
               }
             </td>
             <td>
-              <a href="#" class="btn-detalhes-2" data-tipo="Majoritarios">Detalhes</a>
+              <a href="#" class="btn-detalhes-2" data-tipo="Majoritários">Detalhes</a>
             </td>
           </tr>
           <tr class="center">
@@ -197,14 +191,14 @@ execute:
             <td>
               ${ordenarElementos(
                 [...new Set([
-                  ...Object.keys(tinta.elementos.Ag?.Traco || {}),
-                  ...Object.keys(tinta.elementos.Rh?.Traco || {}),
-                  ...Object.keys(tinta.elementos.Au?.Traco || {})
+                  ...Object.keys(tinta.elementos.Ag?.Traço || {}),
+                  ...Object.keys(tinta.elementos.Rh?.Traço || {}),
+                  ...Object.keys(tinta.elementos.Au?.Traço || {})
                 ])]).join(", ") || "-"
               }
             </td>
             <td>
-              <a href="#" class="btn-detalhes-2" data-tipo="Traco">Detalhes</a>
+              <a href="#" class="btn-detalhes-2" data-tipo="Traço">Detalhes</a>
             </td>
           </tr>
         </table>
@@ -214,12 +208,11 @@ execute:
           Aqui os principais Elementos encontrados na tinta para cada tipo de alvo de Raio - X utilizado (Ag - Prata, Rh - Ródio ou Au - Ouro) são mostrados, separados em Majoritários e Traços. Ao clicar em "Detalhes", um gráfico de pizza aparece com a distribuição dos elementos encontrados para Majoritários e para Traços.
         </p>
         <table class="tabela-dados">
-          <!-- AG -->
           <tr class="center">
             <th rowspan="2">Ag</th>
             <td>Elementos Majoritários</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Ag?.Majoritarios || {})).join(", ") || "-"}
+              ${ordenarElementos(Object.keys(tinta.elementos.Ag?.Majoritários || {})).join(", ") || "-"}
             </td>
             <td rowspan="2">
               <a href="#" class="btn-detalhes" data-tipo="Ag">Detalhes</a>
@@ -228,16 +221,15 @@ execute:
           <tr class="center-bottom">
             <td>Elementos Traço</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Ag?.Traco || {})).join(", ") || "-"}
+              ${ordenarElementos(Object.keys(tinta.elementos.Ag?.Traço || {})).join(", ") || "-"}
             </td>
           </tr>
 
-          <!-- RH -->
           <tr class="center">
             <th rowspan="2">Rh</th>
             <td>Elementos Majoritários</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Rh?.Majoritarios || {})).join(", ") || "-"}
+              ${ordenarElementos(Object.keys(tinta.elementos.Rh?.Majoritários || {})).join(", ") || "-"}
             </td>
             <td rowspan="2">
               <a href="#" class="btn-detalhes" data-tipo="Rh">Detalhes</a>
@@ -246,16 +238,15 @@ execute:
           <tr class="center-bottom">
             <td>Elementos Traço</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Rh?.Traco || {})).join(", ") || "-"}
+              ${ordenarElementos(Object.keys(tinta.elementos.Rh?.Traço || {})).join(", ") || "-"}
             </td>
           </tr>
 
-          <!-- AU -->
           <tr class="center">
             <th rowspan="2">Au</th>
             <td>Elementos Majoritários</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Au?.Majoritarios || {})).join(", ") || "-"}
+              ${ordenarElementos(Object.keys(tinta.elementos.Au?.Majoritários || {})).join(", ") || "-"}
             </td>
             <td rowspan="2">
               <a href="#" class="btn-detalhes" data-tipo="Au">Detalhes</a>
@@ -264,7 +255,7 @@ execute:
           <tr class="center-bottom">
             <td>Elementos Traço</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Au?.Traco || {})).join(", ") || "-"}
+              ${ordenarElementos(Object.keys(tinta.elementos.Au?.Traço || {})).join(", ") || "-"}
             </td>
           </tr>
         </table>
@@ -326,14 +317,20 @@ execute:
         const modal = document.getElementById("modal-grafico")
         const grafico = document.getElementById("grafico")
 
-        const maj = tinta.elementos[tipo].Majoritarios
-        const tr = tinta.elementos[tipo].Traco
+        const maj = tinta.elementos[tipo].Majoritários || {}
+        const tr = tinta.elementos[tipo].Traço || {}
 
-        const trPercent = tinta.elementos[tipo].percentual_traco
+        const somaMajBruta = Object.values(maj).reduce((a, b) => a + b, 0)
+        const somaTrBruta = Object.values(tr).reduce((a, b) => a + b, 0)
+        const totalGeralBruto = somaMajBruta + somaTrBruta 
+
+        const trPercent = totalGeralBruto > 0 ? (somaTrBruta / totalGeralBruto) * 100 : 0
         const majPercent = 100 - trPercent
 
-        const majTotal = Object.values(maj).reduce((a,b)=>a+b,0)
-        const majScaled = Object.values(maj).map(v => (v/majTotal)*majPercent)
+        const majTotal = Object.values(maj).reduce((a, b) => a + b, 0) || 1
+        const majScaled = Object.values(maj).map(v => (v / majTotal) * majPercent)
+
+        const trValues = Object.values(tr)
 
         const majLabels = [
           ...Object.keys(maj),
@@ -345,73 +342,56 @@ execute:
           trPercent
         ]
 
-        // gerar cores para os majoritários
         const majColors = [
           ...Object.keys(maj).map(el => coresElementos[el] || "#cccccc"),
-          "#82BBD8" // cor da fatia "Traço"
+          "#82BBD8" 
         ]
 
-        // gerar cores para traços
         const trColors =
           Object.keys(tr).map(el => coresElementos[el] || "#cccccc")
 
         const data = [
-
           {
-            type:"pie",
-            labels:majLabels,
-            values:majValues,
-            domain:{x:[0,0.45]},
-            textinfo:"label+percent",
-            name:"Majoritários",
-            marker:{
-              colors:majColors
+            type: "pie",
+            labels: majLabels,
+            values: majValues,
+            domain: { x: [0, 0.45] },
+            textinfo: "label+percent",
+            insidetextorientation: "horizontal",
+            name: "Majoritários",
+            marker: {
+              colors: majColors
             },
-            pull:majLabels.map(l => l === "Traço" ? 0.12 : 0)
+            pull: majLabels.map(l => l === "Traço" ? 0.12 : 0)
           },
-
           {
-            type:"pie",
-            labels:Object.keys(tr),
-            values:Object.values(tr),
-            domain:{x:[0.70,1]},
-            textinfo:"label+percent",
-            name:"Traços",
-            marker:{
-              colors:trColors
+            type: "pie",
+            labels: Object.keys(tr),
+            values: trValues, 
+            domain: { x: [0.70, 1] },
+            textinfo: "label+percent",
+            insidetextorientation: "horizontal",
+            name: "Traços",
+            marker: {
+              colors: trColors
             }
           }
-
         ]
 
         const layout = {
-          title:`Distribuição Elementar em ${[tipo]} - ${tinta.nome}`,
-
-          annotations:[
-            {text:"Elementos Majoritários",x:0.09,y:1.0,showarrow:false},
-            {text:"Elementos Traço",x:0.95,y:1.0,showarrow:false}
+          title: `Distribuição Elementar em ${[tipo]} - ${tinta.nome}`,
+          annotations: [
+            { text: "Elementos Majoritários", x: 0.09, y: 1.0, showarrow: false },
+            { text: "Elementos Traço", x: 0.95, y: 1.0, showarrow: false }
           ],
-
-          showlegend:false
+          showlegend: false
         }
 
-        modal.style.display="flex"
-        grafico.innerHTML=""
+        modal.style.display = "flex"
+        grafico.innerHTML = ""
 
-        Plotly.newPlot(grafico,data,layout)
-
-        Plotly.toImage(grafico, {format: 'png', width: 700, height: 400})
-          .then(function(dataUrl) {
-            const containerPdf = document.getElementById("graficos-dinamicos-pdf");
-            
-            // Limpa a mensagem de aviso ou gráficos antigos e injeta o novo como imagem estática
-            containerPdf.innerHTML = `
-              <div style="text-align: center; margin-bottom: 20px; page-break-inside: avoid;">
-                <h4>${layout.title}</h4>
-                <img src="${dataUrl}" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
-              </div>
-            `;
-          });
+        Plotly.newPlot(grafico, data, layout)
+        Plotly.toImage(grafico, { format: 'png', width: 700, height: 400 })
       }
     })
 
@@ -437,40 +417,58 @@ execute:
 
         const elementosOrdenados = ordenarElementos(elementos)
 
-        const valoresAg = elementosOrdenados.map(el => Ag[el] || 0)
-        const valoresRh = elementosOrdenados.map(el => Rh[el] || 0)
-        const valoresAu = elementosOrdenados.map(el => Au[el] || 0)
+        const totalAg = Object.values(Ag).reduce((a, b) => a + b, 0) || 1
+        const totalRh = Object.values(Rh).reduce((a, b) => a + b, 0) || 1
+        const totalAu = Object.values(Au).reduce((a, b) => a + b, 0) || 1
+
+        const valoresAg = elementosOrdenados.map(el => {
+          const valorBruto = Ag[el] || 0
+          return (valorBruto / totalAg) * 100 
+        })
+
+        const valoresRh = elementosOrdenados.map(el => {
+          const valorBruto = Rh[el] || 0
+          return (valorBruto / totalRh) * 100 
+        })
+
+        const valoresAu = elementosOrdenados.map(el => {
+          const valorBruto = Au[el] || 0
+          return (valorBruto / totalAu) * 100 
+        })
 
         const data = [
           {
-            type:"bar",
-            name:"Ag",
-            x:elementosOrdenados,
-            y:valoresAg
+            type: "bar",
+            name: "Ag",
+            x: elementosOrdenados,
+            y: valoresAg
           },
           {
-            type:"bar",
-            name:"Rh",
-            x:elementosOrdenados,
-            y:valoresRh
+            type: "bar",
+            name: "Rh",
+            x: elementosOrdenados,
+            y: valoresRh
           },
           {
-            type:"bar",
-            name:"Au",
-            x:elementosOrdenados,
-            y:valoresAu
+            type: "bar",
+            name: "Au",
+            x: elementosOrdenados,
+            y: valoresAu
           }
         ]
 
-        modal.style.display="flex"
-        grafico.innerHTML=""
+        const layout = {
+          barmode: "group", 
+          title: `Comparação de Elementos ${[tipo]} - ${tinta.nome}`,
+          xaxis: { title: "Elemento" },
+          yaxis: { title: "%", range: [0, 100] } 
+        }
 
-        Plotly.newPlot(grafico, data, {
-          barmode:"group", 
-          title:`Comparação de Elementos ${[tipo]}`,
-          xaxis:{ title:"Elemento" },
-          yaxis:{ title:"%" }
-        })
+        modal.style.display = "flex"
+        grafico.innerHTML = ""
+
+        Plotly.newPlot(grafico, data, layout)
+        Plotly.toImage(grafico, { format: 'png', width: 700, height: 400 })
       }
     })
 
@@ -494,7 +492,10 @@ execute:
     // GERADOR AUTOMÁTICO DE GRÁFICOS PARA O PDF
     // ==========================================
     async function gerarGraficosParaPDF() {
-      // Cria uma div temporária invisível para o Plotly renderizar os gráficos em background
+      const containerPdf = document.getElementById("graficos-auto-pdf");
+      if (!containerPdf) return; // Proteção caso o DOM não esteja montado
+
+      // Cria uma div temporária invisível para o Plotly renderizar em background
       const tempDiv = document.createElement("div");
       tempDiv.style.position = "absolute";
       tempDiv.style.left = "-9999px";
@@ -502,78 +503,87 @@ execute:
       tempDiv.style.height = "400px";
       document.body.appendChild(tempDiv);
 
-      const containerPdf = document.getElementById("graficos-auto-pdf");
       let htmlImagens = "";
 
-      // 1. GERAR GRÁFICO DE BARRAS (Dados Sintetizados - Majoritários)
+      // 1. GRÁFICO DE BARRAS (Majoritários)
       try {
-        const Ag = tinta.elementos.Ag?.Majoritarios || {};
-        const Rh = tinta.elementos.Rh?.Majoritarios || {};
-        const Au = tinta.elementos.Au?.Majoritarios || {};
+        const Ag = tinta.elementos.Ag?.Majoritários || {};
+        const Rh = tinta.elementos.Rh?.Majoritários || {};
+        const Au = tinta.elementos.Au?.Majoritários || {};
         const elementos = [...new Set([...Object.keys(Ag), ...Object.keys(Rh), ...Object.keys(Au)])];
         const elementosOrdenados = ordenarElementos(elementos);
 
-        const dataBar = [
-          { type: "bar", name: "Ag", x: elementosOrdenados, y: elementosOrdenados.map(el => Ag[el] || 0) },
-          { type: "bar", name: "Rh", x: elementosOrdenados, y: elementosOrdenados.map(el => Rh[el] || 0) },
-          { type: "bar", name: "Au", x: elementosOrdenados, y: elementosOrdenados.map(el => Au[el] || 0) }
+        const totalAg = Object.values(Ag).reduce((a, b) => a + b, 0) || 1;
+        const totalRh = Object.values(Rh).reduce((a, b) => a + b, 0) || 1;
+        const totalAu = Object.values(Au).reduce((a, b) => a + b, 0) || 1;
+
+        const dataBar1 = [
+          { type: "bar", name: "Ag", x: elementosOrdenados, y: elementosOrdenados.map(el => ((Ag[el] || 0) / totalAg) * 100) },
+          { type: "bar", name: "Rh", x: elementosOrdenados, y: elementosOrdenados.map(el => ((Rh[el] || 0) / totalRh) * 100) },
+          { type: "bar", name: "Au", x: elementosOrdenados, y: elementosOrdenados.map(el => ((Au[el] || 0) / totalAu) * 100) }
         ];
 
-        await Plotly.newPlot(tempDiv, dataBar, {
+        await Plotly.newPlot(tempDiv, dataBar1, {
           barmode: "group",
           title: `Comparação de Elementos Majoritários - ${tinta.nome}`,
           xaxis: { title: "Elemento" },
-          yaxis: { title: "%" }
+          yaxis: { title: "%", range: [0, 100] }
         });
 
-        const imgBarUrl = await Plotly.toImage(tempDiv, { format: 'png', width: 750, height: 380 });
+        const imgBarUrl1 = await Plotly.toImage(tempDiv, { format: 'png', width: 750, height: 380 });
         htmlImagens += `
           <div style="text-align: center; margin-bottom: 30px; page-break-inside: avoid;">
-            <img src="${imgBarUrl}" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;">
+            <img src="${imgBarUrl1}" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;">
           </div>
         `;
-      } catch (e) { console.error("Erro ao gerar gráfico de barras para o PDF", e); }
+      } catch (e) { console.error("Erro ao gerar gráfico de barras (Majoritários) para o PDF", e); }
 
-
-      // 1. GERAR GRÁFICO DE BARRAS (Dados Sintetizados - Tracos)
+      // 2. GRÁFICO DE BARRAS (Traços)
       try {
-        const Ag = tinta.elementos.Ag?.Traco || {};
-        const Rh = tinta.elementos.Rh?.Traco || {};
-        const Au = tinta.elementos.Au?.Traco || {};
+        const Ag = tinta.elementos.Ag?.Traço || {};
+        const Rh = tinta.elementos.Rh?.Traço || {};
+        const Au = tinta.elementos.Au?.Traço || {};
         const elementos = [...new Set([...Object.keys(Ag), ...Object.keys(Rh), ...Object.keys(Au)])];
         const elementosOrdenados = ordenarElementos(elementos);
 
-        const dataBar = [
-          { type: "bar", name: "Ag", x: elementosOrdenados, y: elementosOrdenados.map(el => Ag[el] || 0) },
-          { type: "bar", name: "Rh", x: elementosOrdenados, y: elementosOrdenados.map(el => Rh[el] || 0) },
-          { type: "bar", name: "Au", x: elementosOrdenados, y: elementosOrdenados.map(el => Au[el] || 0) }
+        const totalAg = Object.values(Ag).reduce((a, b) => a + b, 0) || 1;
+        const totalRh = Object.values(Rh).reduce((a, b) => a + b, 0) || 1;
+        const totalAu = Object.values(Au).reduce((a, b) => a + b, 0) || 1;
+
+        const dataBar2 = [
+          { type: "bar", name: "Ag", x: elementosOrdenados, y: elementosOrdenados.map(el => ((Ag[el] || 0) / totalAg) * 100) },
+          { type: "bar", name: "Rh", x: elementosOrdenados, y: elementosOrdenados.map(el => ((Rh[el] || 0) / totalRh) * 100) },
+          { type: "bar", name: "Au", x: elementosOrdenados, y: elementosOrdenados.map(el => ((Au[el] || 0) / totalAu) * 100) }
         ];
 
-        await Plotly.newPlot(tempDiv, dataBar, {
+        await Plotly.newPlot(tempDiv, dataBar2, {
           barmode: "group",
-          title: `Comparação de Elementos Traços - ${tinta.nome}`,
+          title: `Comparação de Elementos Traço - ${tinta.nome}`,
           xaxis: { title: "Elemento" },
-          yaxis: { title: "%" }
+          yaxis: { title: "%", range: [0, 100] }
         });
 
-        const imgBarUrl = await Plotly.toImage(tempDiv, { format: 'png', width: 750, height: 380 });
+        const imgBarUrl2 = await Plotly.toImage(tempDiv, { format: 'png', width: 750, height: 380 });
         htmlImagens += `
           <div style="text-align: center; margin-bottom: 30px; page-break-inside: avoid;">
-            <img src="${imgBarUrl}" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;">
+            <img src="${imgBarUrl2}" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;">
           </div>
         `;
-      } catch (e) { console.error("Erro ao gerar gráfico de barras para o PDF", e); }
+      } catch (e) { console.error("Erro ao gerar gráfico de barras (Traços) para o PDF", e); }
 
-
-      // 2. GERAR GRÁFICOS DE PIZZA (Dados Analíticos - Um para cada alvo ativo)
+      // 3. GRÁFICOS DE PIZZA (Um para cada alvo ativo)
       const alvosDisponiveis = ["Ag", "Rh", "Au"];
-      
       for (const tipo of alvosDisponiveis) {
         if (tinta.elementos[tipo]) {
           try {
-            const maj = tinta.elementos[tipo].Majoritarios || {};
-            const tr = tinta.elementos[tipo].Traco || {};
-            const trPercent = tinta.elementos[tipo].percentual_traco || 0;
+            const maj = tinta.elementos[tipo].Majoritários || {};
+            const tr = tinta.elementos[tipo].Traço || {};
+
+            const somaMajBruta = Object.values(maj).reduce((a, b) => a + b, 0);
+            const somaTrBruta = Object.values(tr).reduce((a, b) => a + b, 0);
+            const totalGeralBruto = somaMajBruta + somaTrBruta;
+
+            const trPercent = totalGeralBruto > 0 ? (somaTrBruta / totalGeralBruto) * 100 : 0;
             const majPercent = 100 - trPercent;
 
             const majTotal = Object.values(maj).reduce((a, b) => a + b, 0) || 1;
@@ -587,12 +597,12 @@ execute:
             const dataPie = [
               {
                 type: "pie", labels: majLabels, values: majValues, domain: { x: [0, 0.45] },
-                textinfo: "label+percent", name: "Majoritários", marker: { colors: majColors },
+                textinfo: "label+percent", insidetextorientation: "horizontal", name: "Majoritários", marker: { colors: majColors },
                 pull: majLabels.map(l => l === "Traço" ? 0.12 : 0)
               },
               {
                 type: "pie", labels: Object.keys(tr), values: Object.values(tr), domain: { x: [0.70, 1] },
-                textinfo: "label+percent", name: "Traços", marker: { colors: trColors }
+                textinfo: "label+percent", insidetextorientation: "horizontal", name: "Traços", marker: { colors: trColors }
               }
             ];
 
@@ -615,13 +625,12 @@ execute:
         }
       }
 
-      // Injeta todas as imagens geradas no container definitivo do PDF e remove a div temporária
       containerPdf.innerHTML = htmlImagens;
       document.body.removeChild(tempDiv);
     }
 
-    // Executa a função automática logo após renderizar o HTML da página
-    gerarGraficosParaPDF();
+    // O setTimeout garante que o innerHTML acima foi inteiramente computado pelo navegador antes do script buscar a div #graficos-auto-pdf
+    setTimeout(gerarGraficosParaPDF, 100);
   });
 
   document.addEventListener("mousemove", function(e){

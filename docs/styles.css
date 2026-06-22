@@ -409,11 +409,11 @@
 }
 
 .card-tinta:hover .tabela-horizontal th {
-  background-color: #4E545C;
+  background-color: #333738;
 }
 
 .card-tinta:hover .tabela-horizontal td {
-  background-color: #8D9797;
+  background-color: #3A434A;
 }
 
 .card-conteudo {
@@ -627,7 +627,43 @@
 
 .tabela-horizontal td {
   text-align: center;
-  padding: 6px;
+  vertical-align: top;
+  padding: 8px;
+}
+
+/* Container que abriga os elementos dentro da célula da tabela */
+.container-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;          /* Espaçamento uniforme entre as tags */
+  padding: 4px 0;
+  max-width: 220px;  /* Controla a largura máxima para forçar a quebra correta */
+}
+
+/* Estilo base comum para todas as etiquetas (Badges) */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid transparent;
+  text-transform: none;
+}
+
+/* Estilo específico para Elementos Majoritários (ex: tom azul escuro ou cinza sóbrio) */
+.badge-maj {
+  background-color: #e2e8f0;
+  color: #1e293b;
+  border-color: #cbd5e1;
+}
+
+/* Estilo específico para Elementos Traço (ex: tom azul claro para diferenciar) */
+.badge-traco {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border-color: #bae6fd;
 }
 
 .cor-box {
