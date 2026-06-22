@@ -21,44 +21,4 @@ toc: true
 </div>
 <br>
 
-Se você já tentou usar um martelo pneumático ou simplesmente bateu a cabeça sem querer em uma prateleira, sabe o quanto o impacto incomoda. Agora, imagine fazer isso **20 vezes por segundo, cerca de 12 mil vezes por dia**, e direto contra o tronco de uma árvore sólida. 
-
-Esse é o cotidiano do pica-pau. Mas afinal, como a ciência explica o fato deles não sofrerem traumatismo craniano ou, no mínimo, uma enxaqueca crônica? A resposta está em uma aula espetacular de bioengenharia e física!
-
----
-
-### Uma força de 1.200G
-
-Para colocar em perspectiva, quando um carro sofre uma batida severa, os ocupantes enfrentam uma desaceleração de aproximadamente **50G** (50 vezes a força da gravidade). Os pilotos de caça da Força Aérea começam a desmaiar por falta de oxigênio no cérebro por volta dos **9G**.
-
-O pica-pau, a cada bicada, atinge a árvore a uma velocidade de 25 km/h, gerando uma força de desaceleração que pode passar de **1.200G**! 
-
----
-
-### O "Capacete" Biológico
-
-O segredo para sobreviver a esse impacto destrutivo não está em um cérebro blindado, mas sim em um sistema integrado de amortecimento de choques que envolve quatro estruturas principais:
-
-1. **O Osso Hioide (A "Língua" Amortecedora):** A língua do pica-pau é incrivelmente comprida. Quando recolhida, ela não fica apenas na boca; ela dá a volta por trás de todo o crânio da ave, agindo como um verdadeiro cinto de segurança elástico que distribui a força do impacto antes que ela chegue ao cérebro.
-2. **Crânio Esponjoso:** Diferente do crânio humano, que é rígido, o osso do crânio do pica-pau é feito de uma estrutura esponjosa e flexível, concentrada principalmente na parte frontal, projetada especificamente para absorver as vibrações.
-3. **Bico Assimétrico:** A parte inferior do bico do pica-pau é ligeiramente mais curta que a superior. Isso faz com que, no milissegundo do impacto, a energia seja direcionada para a parte de baixo do corpo do pássaro, desviando a onda de choque para longe da caixa craniana.
-4. **Espaço Subaracnóideo Estreito:** Eles quase não têm líquido cefalorraquidiano livre ao redor do cérebro. Isso impede que o cérebro "chacoalhe" dentro da cabeça (o que causa as concussões em humanos). O cérebro deles fica firmemente ajustado e seguro.
-
----
-
-### Da Natureza para a Tecnologia Humana
-
-Estudos biomecânicos feitos com pica-paus não servem apenas para saciar a nossa curiosidade. Engenheiros utilizam a estrutura craniana e o formato do osso hioide dessas aves como inspiração (biomimética) para criar:
-
-* Capacetes de futebol americano e ciclismo muito mais eficientes.
-* Amortecedores para caixas-pretas de aviões resistirem a quedas.
-* Proteções para brocas industriais de alta perfuração.
-
-A natureza, através da evolução, resolveu um problema complexo de engenharia de impacto muito antes de nós criarmos as nossas primeiras ferramentas!
-
----
-
-#### O que você achou dessa curiosidade?
-Você já conseguiu flagrar um pica-pau trabalhando de perto? Se tiver alguma dúvida ou sugestão de tema, deixe seu comentário aqui embaixo usando sua conta do Google!
-
 ::::
