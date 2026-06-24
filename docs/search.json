@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "tinta.html",
+    "href": "tinta.html",
+    "title": "",
+    "section": "",
+    "text": "×"
+  },
+  {
+    "objectID": "indice-banco.html",
+    "href": "indice-banco.html",
+    "title": "Índice Geral do Banco de Tintas",
+    "section": "",
+    "text": "Índice Geral do Banco de Tintas\n\nSobre os Resultados\n\nNos Resultados são mostradas as tintas encontradas, que são separadas por meio da técnica utilizada. Assim, FRX diz respeito a Fluorescência de Raios - X. Além disso, as tintas encontradas estão organizadas em cards e da seguinte maneira: no topo está seu nome; dentro são mostradas informações como seu ID, representando sua numeração dentro do Banco de Dados; o Medium utilizado em sua confecção; a sua década pertencente; e um resumo dos principais Elementos - Majoritários e Traços - encontrados."
+  },
+  {
+    "objectID": "contato.html",
+    "href": "contato.html",
+    "title": "Contato",
+    "section": "",
+    "text": "Contato\nPara colaborar ou obter mais informações:\n\njoseviniciusgoncalves@usp.br\nczamboni@ipen.br"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Sobre",
+    "section": "",
+    "text": "Sobre\nO Projeto Banco de Dados de Tintas Artísticas foi desenvolvido no Laboratório de Espectroscopia e Espectrometria das Radiações - LEER nas instalações do Instituto de Pesquisas Energéticas e Nucleares - IPEN. E busca criar uma base de dados de tintas artísticas contendo os dados de composição elementar, por meio da utilização da técnica de Fluorescência de Raios - X (FRX) e Análise por Ativação Neutrônica (AAN).\nA base de dados conta com buscas por nome de tintas; cores; décadas; tipos de técnicas e medium utilizados. E os resultados contêm informações gerais da respectiva tinta, como nome, década e medium, assim como, dados analíticos qualitativos que apresentam os elementos majoritários e traços encontrados, junto de gráficos com as respectivas distribuições elementais."
+  },
+  {
+    "objectID": "banco.html",
+    "href": "banco.html",
+    "title": "Explore a Base de Dados",
+    "section": "",
+    "text": "Explore a Base de Dados\n\nAcesse o banco completo por meio do  Índice Geral.  Ou realize buscas por:\n\n\nNome da tinta\nRótulo na embalagem\nCor\nDécada\n\nTécnica de análise utilizada\nTipo de medium\n\n\nSobre a busca\nA Barra de Pesquisa pode ser utilizada para procurar diversas informações com relação a alguma tinta, como as evidenciadas acima. As abas ao lado são filtros, como a aba Técnicas, onde são mostradas as técnicas de análise que estão cadastradas no banco. Por fim, na aba Medium estão os principais aditivos na confecção de tintas, os quais também podem ser usados como filtragem.\n\n\n Técnica FRX AAN RAMAN FTIR \n Medium Óleo Acrílica \nPesquisar\n\n\n\nResultados\n\n\nSobre os Resultados\n\nNos Resultados são mostradas as tintas encontradas, que são separadas por meio da técnica utilizada. Assim, FRX diz respeito a Fluorescência de Raios - X. Além disso, as tintas encontradas estão organizadas em cards e da seguinte maneira: no topo está seu nome; dentro são mostradas informações como seu ID, representando sua numeração dentro do Banco de Dados; o Medium utilizado em sua confecção; a sua década pertencente; e um resumo dos principais Elementos - Majoritários e Traços - encontrados."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "O Projeto\nLocalizado no Instituto de Pesquisas Energéticas e Nucleares (IPEN), o Laboratório de Espectroscopia e Espectrometria das Radiações (LEER) realiza há alguns anos pesquisas de caracterização elementar de materiais pertencentes ao patrimônio Artístico e Cultural. Nesse sentido, o Projeto Banco de Dados Tintas Artísticas tem como objetivo armazenar informações técnicas de tintas utilizadas em arte, possuindo fins de conservação e pesquisa científica.\n\n\n  \n  \n  \n  \n  \n  \n\n\n\n\n\nVilarejo, por Carlos Gomes\n\n\n\n\n\nPrédios, por Carlos Gomes\n\n\n\n\n\nTintas de Carlos Gomes\n\n\n\n      \n      \n      Previous\n      \n    \n      \n      \n      Next\n      \n    \n\n\n\nDados Técnicos\nO banco de dados possui estudos de caracterização elementar utilizando diferentes técnicas, como a Fluorescência de Raios - X (FRX) e a Análise por Ativação Neutrônica (AAN). Além disso, possui registro dos respectivos espectros e resultados das distribuições dos elementos em gráficos.\n\n\nEspectro de Fluorescência de Raios - X\n\n\n\nFonte: do autor\n\n\n\n\nPúblico-Alvo\nO público-alvo são pesquisadores em conservação e restauro; artistas; estudantes de artes e química e todos que buscam um local centralizado para encontrar dados detalhados de caracterização elemental de tintas artísticas.\n\n\n\nFoto de Jennie Razumnaya na Unsplash"
+  },
+  {
+    "objectID": "tecnicas/FRX/frx.html",
+    "href": "tecnicas/FRX/frx.html",
+    "title": "Sobre a Fluorescência de Raios - X",
+    "section": "",
+    "text": "Sobre a Fluorescência de Raios - X\n\n\n\n\nFonte: do autor"
+  }
+]

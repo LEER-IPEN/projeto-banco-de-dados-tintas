@@ -1,0 +1,1040 @@
+[
+    {
+        "id": "FRXA-0000",
+        "filename": "150725ab - 220725ab",
+        "tecnica": {
+            "sigla": "FRX",
+            "nome": "Espectroscopia de Fluorescência de Raios X"
+        },
+        "nome": "Tinta Fluorescente Rosa Rosado",
+        "rotulo": "Tinta Fluorescente Rosa Rosado 1012 Corfix Acrílica",
+        "decada": "2010",
+        "medium": "Acrílica",
+        "elementos": {
+            "Ag": {
+                "Majoritários": {
+                    "S": 43859,
+                    "Ti": 85445,
+                    "Ba": 93230
+                },
+                "Traço": {
+                    "Fe": 1059,
+                    "Ni": 829,
+                    "Sr": 731
+                }
+            },
+            "Rh": {
+                "Majoritários": {
+                    "S": 74631,
+                    "Ti": 154015,
+                    "Ba": 156938
+                },
+                "Traço": {
+                    "Ca": 2533,
+                    "Fe": 2969,
+                    "Sr": 1136
+                }
+            },
+            "Au": {
+                "Majoritários": {
+                    "S": 9112,
+                    "Ti": 159366,
+                    "Ba": 199223
+                },
+                "Traço": {
+                    "Cl": 788,
+                    "Ca": 910,
+                    "Fe": 1450,
+                    "Ni": 1092,
+                    "Zn": 1233,
+                    "Sr": 835
+                }
+            }
+        },
+        "imagem": "dados/imagem-tinta/220725ab_agv.png",
+        "espectros": {
+            "Ag": "dados/espectros/frx/agv/220725ab_agv.png",
+            "Rh": "dados/espectros/frx/rhv/150725ab_rhv.png",
+            "Au": "dados/espectros/frx/auv/220725ab_auv.png"
+        }
+    },
+    {
+        "id": "FRXA-0001",
+        "filename": "220725ac - 150725ac",
+        "tecnica": {
+            "sigla": "FRX",
+            "nome": "Espectroscopia de Fluorescência de Raios X"
+        },
+        "nome": "Tinta Fluorescente Laranja Fogo",
+        "rotulo": "Tinta Fluorescente Laranja Fogo 1010 Corfix Acrílica",
+        "decada": "2010",
+        "medium": "Acrílica",
+        "elementos": {
+            "Ag": {
+                "Majoritários": {
+                    "S": 39784,
+                    "Ti": 83073,
+                    "Ba": 91672
+                },
+                "Traço": {
+                    "Fe": 1104,
+                    "Ni": 761,
+                    "Sr": 752
+                }
+            },
+            "Rh": {
+                "Majoritários": {
+                    "S": 72577,
+                    "Ti": 164214,
+                    "Ba": 169075
+                },
+                "Traço": {
+                    "Ca": 2290,
+                    "Fe": 3130,
+                    "Sr": 1413
+                }
+            },
+            "Au": {
+                "Majoritários": {
+                    "S": 7269,
+                    "Ti": 128816,
+                    "Ba": 161447
+                },
+                "Traço": {
+                    "Cl": 651,
+                    "Ca": 791,
+                    "Sc": 1135,
+                    "Fe": 1461,
+                    "Co": 415,
+                    "Ni": 983,
+                    "Sr": 847
+                }
+            }
+        },
+        "imagem": "dados/imagem-tinta/220725ac_agv.png",
+        "espectros": {
+            "Ag": "dados/espectros/frx/agv/220725ac_agv.png",
+            "Rh": "dados/espectros/frx/rhv/150725ac_rhv.png",
+            "Au": "dados/espectros/frx/auv/220725ac_auv.png"
+        }
+    },
+    {
+        "id": "FRXA-0002",
+        "filename": "220725ad - 150725ad",
+        "tecnica": {
+            "sigla": "FRX",
+            "nome": "Espectroscopia de Fluorescência de Raios X"
+        },
+        "nome": "Tinta Fluorescente Laranja",
+        "rotulo": "Tinta Fluorescente Laranja 1009 Corfix Acrílica",
+        "decada": "2010",
+        "medium": "Acrílica",
+        "elementos": {
+            "Ag": {
+                "Majoritários": {
+                    "S": 46850,
+                    "Ti": 86721,
+                    "Ba": 96704
+                },
+                "Traço": {
+                    "Sc": 1568,
+                    "Fe": 1059,
+                    "Ni": 895,
+                    "Sr": 856
+                }
+            },
+            "Rh": {
+                "Majoritários": {
+                    "S": 85446,
+                    "Ti": 171070,
+                    "Ba": 180040
+                },
+                "Traço": {
+                    "Cl": 2139,
+                    "Ca": 2633,
+                    "Fe": 3563,
+                    "Ni": 1277,
+                    "Sr": 1708
+                }
+            },
+            "Au": {
+                "Majoritários": {
+                    "S": 12406,
+                    "Ti": 200050,
+                    "Ba": 246124
+                },
+                "Traço": {
+                    "Cl": 982,
+                    "Ca": 847,
+                    "Sc": 2719,
+                    "Fe": 1945,
+                    "Ni": 1484,
+                    "Sr": 1211
+                }
+            }
+        },
+        "imagem": "dados/imagem-tinta/220725ad_agv.png",
+        "espectros": {
+            "Ag": "dados/espectros/frx/agv/220725ad_agv.png",
+            "Rh": "dados/espectros/frx/rhv/150725ad_rhv.png",
+            "Au": "dados/espectros/frx/auv/220725ad_auv.png"
+        }
+    },
+    {
+        "id": "FRXO-0000",
+        "filename": "220725ae - 150725ae - 220725af",
+        "tecnica": {
+            "sigla": "FRX",
+            "nome": "Espectroscopia de Fluorescência de Raios X"
+        },
+        "nome": "Tinta Fluorescente Laranja Fogo",
+        "rotulo": "Tinta Fluorescente Laranja Fogo 1010 Corfix Óleo",
+        "decada": "2010",
+        "medium": "Óleo",
+        "elementos": {
+            "Ag": {
+                "Majoritários": {
+                    "S": 57731,
+                    "Fe": 3394,
+                    "Co": 1065
+                },
+                "Traço": {
+                    "Cr": 981,
+                    "Ni": 810,
+                    "Zn": 802
+                }
+            },
+            "Rh": {
+                "Majoritários": {
+                    "S": 108882,
+                    "Ca": 2179,
+                    "Ti": 6467,
+                    "Cr": 2543,
+                    "Mn": 2645,
+                    "Fe": 8950,
+                    "Co": 2195
+                },
+                "Traço": {
+                    "Al": 995,
+                    "Si": 1728,
+                    "Sc": 1413,
+                    "V": 931,
+                    "Ni": 1422,
+                    "Zn": 1053
+                }
+            },
+            "Au": {
+                "Majoritários": {
+                    "Si": 799,
+                    "S": 12537,
+                    "Ca": 923,
+                    "Ti": 902,
+                    "Cr": 672,
+                    "Mn": 811,
+                    "Fe": 4134,
+                    "Co": 1287,
+                    "Ni": 1150,
+                    "Zn": 2038
+                },
+                "Traço": {
+                    "Al": 408,
+                    "P": 336,
+                    "Cl": 269,
+                    "Sc": 303
+                }
+            }
+        },
+        "imagem": "dados/imagem-tinta/220725ae_agv.png",
+        "espectros": {
+            "Ag": "dados/espectros/frx/agv/220725ae_agv.png",
+            "Rh": "dados/espectros/frx/rhv/150725ae_rhv.png",
+            "Au": "dados/espectros/frx/auv/220725af_auv.png"
+        }
+    },
+    {
+        "id": "FRXO-0001",
+        "filename": "220725af - 150725af - 220725ae",
+        "tecnica": {
+            "sigla": "FRX",
+            "nome": "Espectroscopia de Fluorescência de Raios X"
+        },
+        "nome": "Tinta Fluorescente Laranja",
+        "rotulo": "Tinta Fluorescente Laranja 1009 Corfix Óleo",
+        "decada": "2010",
+        "medium": "Óleo",
+        "elementos": {
+            "Ag": {
+                "Majoritários": {
+                    "S": 68517,
+                    "Fe": 2764,
+                    "Zn": 94134
+                },
+                "Traço": {
+                    "Si": 2227,
+                    "P": 1732,
+                    "Sc": 560,
+                    "Ti": 602,
+                    "Cr": 860,
+                    "Co": 635,
+                    "Ni": 855
+                }
+            },
+            "Rh": {
+                "Majoritários": {
+                    "S": 115596,
+                    "Ti": 6796,
+                    "Fe": 6540,
+                    "Zn": 145082
+                },
+                "Traço": {
+                    "Si": 3091,
+                    "Ca": 1515,
+                    "Sc": 1446,
+                    "V": 733,
+                    "Cr": 2076,
+                    "Mn": 1302,
+                    "Co": 1423,
+                    "Ni": 1386
+                }
+            },
+            "Au": {
+                "Majoritários": {
+                    "S": 11491,
+                    "Fe": 2708,
+                    "Zn": 316055
+                },
+                "Traço": {
+                    "Si": 717,
+                    "P": 432,
+                    "Cl": 391,
+                    "Ca": 959,
+                    "Sc": 263,
+                    "Ti": 892,
+                    "Cr": 636,
+                    "Mn": 375,
+                    "Co": 859,
+                    "Ni": 1074
+                }
+            }
+        },
+        "imagem": "dados/imagem-tinta/220725af_agv.png",
+        "espectros": {
+            "Ag": "dados/espectros/frx/agv/220725af_agv.png",
+            "Rh": "dados/espectros/frx/rhv/150725af_rhv.png",
+            "Au": "dados/espectros/frx/auv/220725ae_auv.png"
+        }
+    },
+    {
+        "id": "FRXO-0002",
+        "filename": "220725ag - 150725ag",
+        "tecnica": {
+            "sigla": "FRX",
+            "nome": "Espectroscopia de Fluorescência de Raios X"
+        },
+        "nome": "Tinta Fluorescente Rosa Rosa",
+        "rotulo": "Tinta Fluorescente Rosa Rosa 1012 Corfix Óleo",
+        "decada": "2010",
+        "medium": "Óleo",
+        "elementos": {
+            "Ag": {
+                "Majoritários": {
+                    "Al": 3111,
+                    "Si": 2863,
+                    "S": 63270,
+                    "Cl": 1138,
+                    "Cr": 1254,
+                    "Fe": 4303,
+                    "Zn": 2213
+                },
+                "Traço": {
+                    "P": 799,
+                    "Ti": 804,
+                    "Co": 1082,
+                    "Ni": 1008
+                }
+            },
+            "Rh": {
+                "Majoritários": {
+                    "Al": 4062,
+                    "Si": 3198,
+                    "S": 75078,
+                    "Ca": 2405,
+                    "Ti": 7111,
+                    "Cr": 2880,
+                    "Mn": 2384,
+                    "Fe": 9401,
+                    "Co": 2357
+                },
+                "Traço": {
+                    "Sc": 1148,
+                    "V": 903,
+                    "Zn": 2274
+                }
+            },
+            "Au": {
+                "Majoritários": {
+                    "Al": 869,
+                    "Si": 804,
+                    "S": 10842,
+                    "Ca": 1777,
+                    "Ti": 1509,
+                    "Mn": 906,
+                    "Fe": 5140,
+                    "Co": 1484,
+                    "Ni": 1279,
+                    "Zn": 5999
+                },
+                "Traço": {
+                    "P": 225,
+                    "Cl": 498,
+                    "Cr": 705
+                }
+            }
+        },
+        "imagem": "dados/imagem-tinta/220725ag_agv.png",
+        "espectros": {
+            "Ag": "dados/espectros/frx/agv/220725ag_agv.png",
+            "Rh": "dados/espectros/frx/rhv/150725ag_rhv.png",
+            "Au": "dados/espectros/frx/auv/220725ag_auv.png"
+        }
+    },
+    {
+        "id": "FRXO-0003",
+        "filename": "220725ah - 150725ah",
+        "tecnica": {
+            "sigla": "FRX",
+            "nome": "Espectroscopia de Fluorescência de Raios X"
+        },
+        "nome": "Tinta Fluorescente Amarelo Limão",
+        "rotulo": "Tinta Fluorescente Amarelo Limão 1002 Corfix Óleo",
+        "decada": "2010",
+        "medium": "Óleo",
+        "elementos": {
+            "Ag": {
+                "Majoritários": {
+                    "S": 133434,
+                    "Zn": 208847
+                },
+                "Traço": {
+                    "Si": 3883,
+                    "P": 3741,
+                    "Cl": 617,
+                    "Ti": 653,
+                    "Cr": 987,
+                    "Fe": 3061,
+                    "Co": 679,
+                    "Ni": 1046
+                }
+            },
+            "Rh": {
+                "Majoritários": {
+                    "S": 190097,
+                    "Zn": 336872
+                },
+                "Traço": {
+                    "Al": 1738,
+                    "Si": 5861,
+                    "Ca": 918,
+                    "Sc": 964,
+                    "Ti": 4696,
+                    "V": 870,
+                    "Cr": 2254,
+                    "Mn": 1648,
+                    "Fe": 6290,
+                    "Co": 1696,
+                    "Ni": 1965
+                }
+            },
+            "Au": {
+                "Majoritários": {
+                    "S": 20256,
+                    "Zn": 597503
+                },
+                "Traço": {
+                    "Si": 1037,
+                    "P": 591,
+                    "Cl": 414,
+                    "Ca": 400,
+                    "Sc": 182,
+                    "Ti": 526,
+                    "Cr": 513,
+                    "Mn": 686,
+                    "Fe": 2536,
+                    "Co": 691,
+                    "Ni": 1473
+                }
+            }
+        },
+        "imagem": "dados/imagem-tinta/220725ah_agv.png",
+        "espectros": {
+            "Ag": "dados/espectros/frx/agv/220725ah_agv.png",
+            "Rh": "dados/espectros/frx/rhv/150725ah_rhv.png",
+            "Au": "dados/espectros/frx/auv/220725ah_auv.png"
+        }
+    },
+    {
+        "id": "FRXO-0004",
+        "filename": "220725ai - 150725ai",
+        "tecnica": {
+            "sigla": "FRX",
+            "nome": "Espectroscopia de Fluorescência de Raios X"
+        },
+        "nome": "Tinta Fluorescente Magenta",
+        "rotulo": "Tinta Fluorescente Magenta 1015 Corfix Óleo",
+        "decada": "2010",
+        "medium": "Óleo",
+        "elementos": {
+            "Ag": {
+                "Majoritários": {
+                    "P": 3612,
+                    "S": 152220,
+                    "Fe": 4389,
+                    "Zn": 6468
+                },
+                "Traço": {
+                    "Si": 3221,
+                    "Ti": 844,
+                    "Cr": 1201,
+                    "Co": 1371,
+                    "Ni": 1357
+                }
+            },
+            "Rh": {
+                "Majoritários": {
+                    "Si": 7682,
+                    "S": 397525,
+                    "Ti": 12012,
+                    "Fe": 20370,
+                    "Co": 5074,
+                    "Zn": 13676
+                },
+                "Traço": {
+                    "Al": 1634,
+                    "Ca": 2191,
+                    "Sc": 2308,
+                    "V": 2138,
+                    "Cr": 4320,
+                    "Mn": 4373,
+                    "Ni": 4603
+                }
+            },
+            "Au": {
+                "Majoritários": {
+                    "Si": 1042,
+                    "S": 27185,
+                    "Cl": 918,
+                    "Ti": 1198,
+                    "Fe": 6754,
+                    "Co": 1467,
+                    "Ni": 1372,
+                    "Zn": 16594
+                },
+                "Traço": {
+                    "P": 645,
+                    "Ca": 712,
+                    "Cr": 722,
+                    "Mn": 544
+                }
+            }
+        },
+        "imagem": "dados/imagem-tinta/220725ai_agv.png",
+        "espectros": {
+            "Ag": "dados/espectros/frx/agv/220725ai_agv.png",
+            "Rh": "dados/espectros/frx/rhv/150725ai_rhv.png",
+            "Au": "dados/espectros/frx/auv/220725ai_auv.png"
+        }
+    },
+    {
+        "id": "FRXO-0005",
+        "filename": "220725aj - 150725aj",
+        "tecnica": {
+            "sigla": "FRX",
+            "nome": "Espectroscopia de Fluorescência de Raios X"
+        },
+        "nome": "Tinta Fluorescente Azul",
+        "rotulo": "Tinta Fluorescente Azul 1023 Corfix Óleo",
+        "decada": "2010",
+        "medium": "Óleo",
+        "elementos": {
+            "Ag": {
+                "Majoritários": {
+                    "S": 77617,
+                    "Fe": 4013,
+                    "Cu": 7273,
+                    "Zn": 114579
+                },
+                "Traço": {
+                    "Al": 2923,
+                    "Si": 3412,
+                    "P": 1574,
+                    "Cr": 917,
+                    "Co": 1260
+                }
+            },
+            "Rh": {
+                "Majoritários": {
+                    "Si": 4181,
+                    "S": 88836,
+                    "Ti": 6034,
+                    "Fe": 7030,
+                    "Cu": 7297,
+                    "Zn": 114733
+                },
+                "Traço": {
+                    "Al": 3370,
+                    "Ca": 1889,
+                    "Sc": 546,
+                    "V": 404,
+                    "Cr": 2334,
+                    "Mn": 1549,
+                    "Co": 1316,
+                    "Ni": 1014
+                }
+            },
+            "Au": {
+                "Majoritários": {
+                    "S": 11682,
+                    "Cu": 14490,
+                    "Zn": 283330
+                },
+                "Traço": {
+                    "Al": 901,
+                    "Si": 905,
+                    "P": 187,
+                    "Cl": 381,
+                    "Ca": 1205,
+                    "Ti": 611,
+                    "V": 488,
+                    "Mn": 812,
+                    "Fe": 4369,
+                    "Co": 1186,
+                    "Ni": 1286
+                }
+            }
+        },
+        "imagem": "dados/imagem-tinta/220725aj_agv.png",
+        "espectros": {
+            "Ag": "dados/espectros/frx/agv/220725aj_agv.png",
+            "Rh": "dados/espectros/frx/rhv/150725aj_rhv.png",
+            "Au": "dados/espectros/frx/auv/220725aj_auv.png"
+        }
+    },
+    {
+        "id": "FRXO-0006",
+        "filename": "220725ak - 150725ak",
+        "tecnica": {
+            "sigla": "FRX",
+            "nome": "Espectroscopia de Fluorescência de Raios X"
+        },
+        "nome": "Tinta Fluorescente Verde",
+        "rotulo": "Tinta Fluorescente Verde 1025 Corfix Óleo",
+        "decada": "2010",
+        "medium": "Óleo",
+        "elementos": {
+            "Ag": {
+                "Majoritários": {
+                    "Si": 2209,
+                    "S": 60468,
+                    "Cl": 7411,
+                    "Fe": 2906,
+                    "Zn": 45504
+                },
+                "Traço": {
+                    "Al": 1346,
+                    "P": 855,
+                    "Cr": 589,
+                    "Mn": 684,
+                    "Co": 565,
+                    "Ni": 738,
+                    "Cu": 1602
+                }
+            },
+            "Rh": {
+                "Majoritários": {
+                    "Al": 4076,
+                    "Si": 4432,
+                    "S": 93012,
+                    "Ti": 6334,
+                    "Fe": 6985,
+                    "Cu": 2478,
+                    "Zn": 75452
+                },
+                "Traço": {
+                    "P": 670,
+                    "Ca": 1607,
+                    "Sc": 1007,
+                    "V": 606,
+                    "Mn": 1610,
+                    "Co": 1727,
+                    "Ni": 1175
+                }
+            },
+            "Au": {
+                "Majoritários": {
+                    "S": 9354,
+                    "Fe": 2868,
+                    "Cu": 3249,
+                    "Zn": 139178,
+                    "Se": 3930
+                },
+                "Traço": {
+                    "Al": 518,
+                    "Si": 624,
+                    "P": 196,
+                    "Cl": 1564,
+                    "Ca": 696,
+                    "Ti": 676,
+                    "Cr": 561,
+                    "Mn": 614,
+                    "Co": 781,
+                    "Ni": 654
+                }
+            }
+        },
+        "imagem": "dados/imagem-tinta/220725ak_agv.png",
+        "espectros": {
+            "Ag": "dados/espectros/frx/agv/220725ak_agv.png",
+            "Rh": "dados/espectros/frx/rhv/150725ak_rhv.png",
+            "Au": "dados/espectros/frx/auv/220725ak_auv.png"
+        }
+    },
+    {
+        "id": "FRXO-0007",
+        "filename": "220725al - 150725al",
+        "tecnica": {
+            "sigla": "FRX",
+            "nome": "Espectroscopia de Fluorescência de Raios X"
+        },
+        "nome": "Tinta Fluorescente Vermelho",
+        "rotulo": "Tinta Fluorescente Vermelho 1013 Corfix Óleo",
+        "decada": "2010",
+        "medium": "Óleo",
+        "elementos": {
+            "Ag": {
+                "Majoritários": {
+                    "Al": 3101,
+                    "Si": 3581,
+                    "P": 1765,
+                    "S": 97152,
+                    "Fe": 5273,
+                    "Zn": 1867
+                },
+                "Traço": {
+                    "Ti": 908,
+                    "Cr": 1187,
+                    "Mn": 1186,
+                    "Co": 1582,
+                    "Ni": 1321
+                }
+            },
+            "Rh": {
+                "Majoritários": {
+                    "Al": 4135,
+                    "Si": 4128,
+                    "S": 109979,
+                    "Ti": 7308,
+                    "Cr": 2937,
+                    "Mn": 2347,
+                    "Fe": 9856,
+                    "Zn": 2002
+                },
+                "Traço": {
+                    "P": 718,
+                    "Ca": 1781,
+                    "Sc": 982,
+                    "V": 556,
+                    "Co": 1932,
+                    "Ni": 1544
+                }
+            },
+            "Au": {
+                "Majoritários": {
+                    "Si": 791,
+                    "S": 12435,
+                    "Ca": 1068,
+                    "Ti": 924,
+                    "Cr": 633,
+                    "Mn": 925,
+                    "Fe": 4700,
+                    "Co": 1288,
+                    "Ni": 842,
+                    "Zn": 4013
+                },
+                "Traço": {
+                    "Al": 605,
+                    "P": 178,
+                    "Cl": 379,
+                    "V": 424
+                }
+            }
+        },
+        "imagem": "dados/imagem-tinta/220725al_agv.png",
+        "espectros": {
+            "Ag": "dados/espectros/frx/agv/220725al_agv.png",
+            "Rh": "dados/espectros/frx/rhv/150725al_rhv.png",
+            "Au": "dados/espectros/frx/auv/220725al_auv.png"
+        }
+    },
+    {
+        "id": "FRXA-0003",
+        "filename": "251024ac - 141124ac - 040225ac",
+        "tecnica": {
+            "sigla": "FRX",
+            "nome": "Espectroscopia de Fluorescência de Raios X"
+        },
+        "nome": "Tinta Fluorescente Vermelho",
+        "rotulo": "Tinta Fluorescente Vermelho 1013 Corfix Acrílica",
+        "decada": "2010",
+        "medium": "Acrílica",
+        "elementos": {
+            "Ag": {
+                "Majoritários": {
+                    "S": 150556,
+                    "Ti": 209463,
+                    "Sr": 18916,
+                    "Ba": 277922
+                },
+                "Traço": {
+                    "Si": 1352,
+                    "P": 2622,
+                    "Cl": 1949,
+                    "K": 5326,
+                    "Fe": 2010,
+                    "Cu": 978,
+                    "Zn": 1753,
+                    "Br": 1475
+                }
+            },
+            "Rh": {
+                "Majoritários": {
+                    "S": 81719,
+                    "Ti": 150036,
+                    "Sr": 13699,
+                    "Ba": 173712
+                },
+                "Traço": {
+                    "Ca": 1505,
+                    "Fe": 3353,
+                    "Ni": 928,
+                    "Cu": 2937,
+                    "Zn": 2425,
+                    "As": 771,
+                    "Br": 939
+                }
+            },
+            "Au": {
+                "Majoritários": {
+                    "Cl": 1976,
+                    "Ca": 741,
+                    "Sc": 441,
+                    "Ti": 3819,
+                    "Fe": 2613,
+                    "Ba": 6666
+                },
+                "Traço": {
+                    "P": 285,
+                    "S": 240
+                }
+            }
+        },
+        "imagem": "dados/imagem-tinta/251024ac_agv.png",
+        "espectros": {
+            "Ag": "dados/espectros/frx/agv/251024ac_agv.png",
+            "Rh": "dados/espectros/frx/rhv/141124ac_rhv.png",
+            "Au": "dados/espectros/frx/auv/040225ac_auv.png"
+        }
+    },
+    {
+        "id": "FRXA-0004",
+        "filename": "251024ag - 291124ab - 040225ag",
+        "tecnica": {
+            "sigla": "FRX",
+            "nome": "Espectroscopia de Fluorescência de Raios X"
+        },
+        "nome": "Tinta Fluorescente Azul",
+        "rotulo": "Tinta Fluorescente Azul 1023 Corfix Acrílica",
+        "decada": "2010",
+        "medium": "Acrílica",
+        "elementos": {
+            "Ag": {
+                "Majoritários": {
+                    "S": 146441,
+                    "Ba": 339118
+                },
+                "Traço": {
+                    "Si": 1405,
+                    "P": 2417,
+                    "Cl": 925,
+                    "Fe": 1751,
+                    "Cu": 5016,
+                    "Co": 1137,
+                    "Zn": 1175,
+                    "Sr": 5882
+                }
+            },
+            "Rh": {
+                "Majoritários": {
+                    "S": 72896,
+                    "Ti": 155904,
+                    "Ba": 170069
+                },
+                "Traço": {
+                    "Ca": 1774,
+                    "Fe": 2131,
+                    "Ni": 957,
+                    "Cu": 2950,
+                    "Sr": 3815
+                }
+            },
+            "Au": {
+                "Majoritários": {
+                    "Cl": 1686,
+                    "Ca": 901,
+                    "Sc": 628,
+                    "Ti": 2344,
+                    "Mn": 803,
+                    "Fe": 2159
+                },
+                "Traço": {
+                    "P": 149,
+                    "Cr": 289
+                }
+            }
+        },
+        "imagem": "dados/imagem-tinta/251024ag_agv.png",
+        "espectros": {
+            "Ag": "dados/espectros/frx/agv/251024ag_agv.png",
+            "Rh": "dados/espectros/frx/rhv/291124ab_rhv.png",
+            "Au": "dados/espectros/frx/auv/040225ag_auv.png"
+        }
+    },
+    {
+        "id": "FRXA-0005",
+        "filename": "251024ah - 291124ac - 040225ah",
+        "tecnica": {
+            "sigla": "FRX",
+            "nome": "Espectroscopia de Fluorescência de Raios X"
+        },
+        "nome": "Tinta Fluorescente Magenta",
+        "rotulo": "Tinta Fluorescente Magenta 1015 Corfix Acrílica",
+        "decada": "2010",
+        "medium": "Acrílica",
+        "elementos": {
+            "Ag": {
+                "Majoritários": {
+                    "S": 200945,
+                    "Ti": 267246,
+                    "Ba": 334571
+                },
+                "Traço": {}
+            },
+            "Rh": {
+                "Majoritários": {
+                    "S": 73286,
+                    "Ti": 118070,
+                    "Ba": 129410
+                },
+                "Traço": {
+                    "Ca": 1644,
+                    "Fe": 2284,
+                    "Ni": 771,
+                    "Zn": 1174,
+                    "As": 657,
+                    "Br": 695,
+                    "Sr": 7322
+                }
+            },
+            "Au": {
+                "Majoritários": {
+                    "S": 19158,
+                    "Ti": 218899,
+                    "Sr": 11755,
+                    "Ba": 280663
+                },
+                "Traço": {
+                    "Cl": 3102,
+                    "Ca": 1263,
+                    "Sc": 2019,
+                    "Fe": 1588,
+                    "Co": 502,
+                    "Ni": 1163,
+                    "Zn": 4524
+                }
+            }
+        },
+        "imagem": "dados/imagem-tinta/251024ah_agv.png",
+        "espectros": {
+            "Ag": "dados/espectros/frx/agv/251024ah_agv.png",
+            "Rh": "dados/espectros/frx/rhv/291124ac_rhv.png",
+            "Au": "dados/espectros/frx/auv/040225ah_auv.png"
+        }
+    },
+    {
+        "id": "FRXA-0006",
+        "filename": "251024ai - 291124ad - 040225ai",
+        "tecnica": {
+            "sigla": "FRX",
+            "nome": "Espectroscopia de Fluorescência de Raios X"
+        },
+        "nome": "Tinta Fluorescente Amarelo Limão",
+        "rotulo": "Tinta Fluorescente Amarelo Limão 1002 Corfix Acrílica",
+        "decada": "2010",
+        "medium": "Acrílica",
+        "elementos": {
+            "Ag": {
+                "Majoritários": {
+                    "S": 151908,
+                    "Ti": 189115,
+                    "Ba": 241690
+                },
+                "Traço": {
+                    "Si": 1347,
+                    "Cl": 1633,
+                    "K": 1086,
+                    "Sc": 2583,
+                    "Fe": 1985,
+                    "Co": 773,
+                    "Cu": 873,
+                    "Zn": 1498,
+                    "Ge": 1017,
+                    "As": 907,
+                    "Br": 1484,
+                    "Sr": 13024
+                }
+            },
+            "Rh": {
+                "Majoritários": {
+                    "S": 3476,
+                    "Fe": 3051,
+                    "Sr": 1244,
+                    "Ba": 14377
+                },
+                "Traço": {
+                    "Ca": 764,
+                    "Ni": 737
+                }
+            },
+            "Au": {
+                "Majoritários": {
+                    "S": 17111,
+                    "Ti": 206806,
+                    "Sr": 13831,
+                    "Ba": 277805
+                },
+                "Traço": {
+                    "Cl": 2643,
+                    "Ca": 1202,
+                    "Sc": 1893,
+                    "Fe": 1228,
+                    "Ni": 1198
+                }
+            }
+        },
+        "imagem": "dados/imagem-tinta/251024ai_agv.png",
+        "espectros": {
+            "Ag": "dados/espectros/frx/agv/251024ai_agv.png",
+            "Rh": "dados/espectros/frx/rhv/291124ad_rhv.png",
+            "Au": "dados/espectros/frx/auv/040225ai_auv.png"
+        }
+    }
+]
