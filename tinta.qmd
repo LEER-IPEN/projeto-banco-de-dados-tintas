@@ -47,6 +47,71 @@ execute:
       })
     }
 
+    // Função para gerar os Badges Majoritários com segurança
+    function renderizarMajoritarios(tinta) {
+      const listaRaw = [
+        ...Object.keys(tinta.elementos?.Ag?.Majoritários || {}),
+        ...Object.keys(tinta.elementos?.Rh?.Majoritários || {}),
+        ...Object.keys(tinta.elementos?.Au?.Majoritários || {})
+      ];
+      const elementos = ordenarElementos([...new Set(listaRaw)]);
+      
+      // Condicional sem usar símbolos que o Quarto possa converter
+      if (elementos.length === 0) {
+        return "-";
+      }
+      
+      return elementos.map(function(el) {
+        return '<span class="badge badge-maj">' + el + '</span>';
+      }).join('');
+    }
+
+    // Função para gerar os Badges de Traço com segurança
+    function renderizarTracos(tinta) {
+      const listaRaw = [
+        ...Object.keys(tinta.elementos?.Ag?.Traço || {}),
+        ...Object.keys(tinta.elementos?.Rh?.Traço || {}),
+        ...Object.keys(tinta.elementos?.Au?.Traço || {})
+      ];
+      const elementos = ordenarElementos([...new Set(listaRaw)]);
+      
+      if (elementos.length === 0) {
+        return "-";
+      }
+      
+      return elementos.map(function(el) {
+        return '<span class="badge badge-traco">' + el + '</span>';
+      }).join('');
+    }
+
+    // Função genérica e segura para criar Badges Majoritários por Alvo
+    function badgeAnaliticoMaj(tinta, alvo) {
+      const chaves = Object.keys(tinta.elementos?.[alvo]?.Majoritários || {});
+      const elementos = ordenarElementos(chaves);
+      
+      if (elementos.length === 0) {
+        return "-";
+      }
+      
+      return elementos.map(function(el) {
+        return '<span class="badge badge-maj">' + el + '</span>';
+      }).join('');
+    }
+
+    // Função genérica e segura para criar Badges de Traço por Alvo
+    function badgeAnaliticoTraco(tinta, alvo) {
+      const chaves = Object.keys(tinta.elementos?.[alvo]?.Traço || {});
+      const elementos = ordenarElementos(chaves);
+      
+      if (elementos.length === 0) {
+        return "-";
+      }
+      
+      return elementos.map(function(el) {
+        return '<span class="badge badge-traco">' + el + '</span>';
+      }).join('');
+    }
+
     let botoesEspectro = "";
     let conteudoEspectro = "";
 
@@ -174,13 +239,9 @@ execute:
           <tr class="center">
             <td>Elementos Majoritários</td>
             <td>
-              ${ordenarElementos(
-                [...new Set([
-                  ...Object.keys(tinta.elementos.Ag?.Majoritários || {}),
-                  ...Object.keys(tinta.elementos.Rh?.Majoritários || {}),
-                  ...Object.keys(tinta.elementos.Au?.Majoritários || {})
-                ])]).join(", ") || "-"
-              }
+              <div class="container-badges">
+                ${renderizarMajoritarios(tinta)}
+              </div>
             </td>
             <td>
               <a href="#" class="btn-detalhes-2" data-tipo="Majoritários">Detalhes</a>
@@ -189,13 +250,9 @@ execute:
           <tr class="center">
             <td>Elementos Traço</td>
             <td>
-              ${ordenarElementos(
-                [...new Set([
-                  ...Object.keys(tinta.elementos.Ag?.Traço || {}),
-                  ...Object.keys(tinta.elementos.Rh?.Traço || {}),
-                  ...Object.keys(tinta.elementos.Au?.Traço || {})
-                ])]).join(", ") || "-"
-              }
+              <div class="container-badges">
+                ${renderizarTracos(tinta)}
+              </div>
             </td>
             <td>
               <a href="#" class="btn-detalhes-2" data-tipo="Traço">Detalhes</a>
@@ -212,7 +269,9 @@ execute:
             <th rowspan="2">Ag</th>
             <td>Elementos Majoritários</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Ag?.Majoritários || {})).join(", ") || "-"}
+              <div class="container-badges">
+                ${badgeAnaliticoMaj(tinta, 'Ag')}
+              </div>
             </td>
             <td rowspan="2">
               <a href="#" class="btn-detalhes" data-tipo="Ag">Detalhes</a>
@@ -221,7 +280,9 @@ execute:
           <tr class="center-bottom">
             <td>Elementos Traço</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Ag?.Traço || {})).join(", ") || "-"}
+              <div class="container-badges">
+                ${badgeAnaliticoTraco(tinta, 'Ag')}
+              </div>
             </td>
           </tr>
 
@@ -229,7 +290,9 @@ execute:
             <th rowspan="2">Rh</th>
             <td>Elementos Majoritários</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Rh?.Majoritários || {})).join(", ") || "-"}
+              <div class="container-badges">
+                ${badgeAnaliticoMaj(tinta, 'Rh')}
+              </div>
             </td>
             <td rowspan="2">
               <a href="#" class="btn-detalhes" data-tipo="Rh">Detalhes</a>
@@ -238,7 +301,9 @@ execute:
           <tr class="center-bottom">
             <td>Elementos Traço</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Rh?.Traço || {})).join(", ") || "-"}
+              <div class="container-badges">
+                ${badgeAnaliticoTraco(tinta, 'Rh')}
+              </div>
             </td>
           </tr>
 
@@ -246,7 +311,9 @@ execute:
             <th rowspan="2">Au</th>
             <td>Elementos Majoritários</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Au?.Majoritários || {})).join(", ") || "-"}
+              <div class="container-badges">
+                ${badgeAnaliticoMaj(tinta, 'Au')}
+              </div>
             </td>
             <td rowspan="2">
               <a href="#" class="btn-detalhes" data-tipo="Au">Detalhes</a>
@@ -255,7 +322,9 @@ execute:
           <tr class="center-bottom">
             <td>Elementos Traço</td>
             <td>
-              ${ordenarElementos(Object.keys(tinta.elementos.Au?.Traço || {})).join(", ") || "-"}
+              <div class="container-badges">
+                ${badgeAnaliticoTraco(tinta, 'Au')}
+              </div>
             </td>
           </tr>
         </table>
