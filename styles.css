@@ -619,6 +619,7 @@
 
 .tabela-horizontal th {
   text-align: center;
+  vertical-align: middle;
   padding: 6px;
   background-color: #f4f4f4;
   border-bottom: 2px solid #ccc;
@@ -627,13 +628,15 @@
 
 .tabela-horizontal td {
   text-align: center;
-  vertical-align: top;
+  vertical-align: middle;
   padding: 8px;
 }
 
 /* Container que abriga os elementos dentro da célula da tabela */
 .container-badges {
   display: flex;
+  justify-content: center;  /* Centraliza horizontalmente os badges na célula */
+  align-items: center;
   flex-wrap: wrap;
   gap: 6px;          /* Espaçamento uniforme entre as tags */
   padding: 4px 0;
