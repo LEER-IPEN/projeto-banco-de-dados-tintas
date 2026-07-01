@@ -21,4 +21,5 @@ toc: true
 </div>
 <br>
 
+A Fluorescência de Raios - X por Dispersão de Energia (FRXDE) é uma técnica não destrutiva utilizada para análise de uma ampla gama de amostras.
 ::::
